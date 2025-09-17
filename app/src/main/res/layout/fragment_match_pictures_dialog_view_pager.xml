@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".applicationActivityFragments.matchScreenFragment.MatchPicturesDialogViewPagerFragment">
+
+    <ImageView
+        android:id="@+id/matchPicturesDialogViewPagerImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/icon_round_person_large_24"
+        android:contentDescription="@string/match_screen_fragment_dialog_fragment_image_content_description" />
+
+</FrameLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="0"
+                android:startColor="@color/colorPrimary"
+                android:endColor="#80c2c6"
+                />
+            <corners android:radius="@dimen/modify_profile_fragment_selection_border_radius" />
+        </shape>
+    </item>
+    <item
+        android:bottom="@dimen/modify_profile_fragment_selection_border_width"
+        android:left="@dimen/modify_profile_fragment_selection_border_width"
+        android:right="@dimen/modify_profile_fragment_selection_border_width"
+        android:top="@dimen/modify_profile_fragment_selection_border_width">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/modify_profile_background_color" />
+            <corners android:radius="@dimen/modify_profile_fragment_selection_border_radius" />
+        </shape>
+    </item>
+</layer-list>

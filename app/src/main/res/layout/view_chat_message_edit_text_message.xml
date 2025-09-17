@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/match_list_item_message_corner_radius">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/chatMessageEditTextPrimaryConstrainLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/match_list_item_primary_constraint_padding_wide">
+
+        <EditText
+            android:id="@+id/chatMessageEditTextHeaderTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/match_list_item_various_message_constraint_padding"
+            android:hint="@string/chat_message_adapter_message_edited_edit_text_hint"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:text="@string/general_placeholder"
+            app:layout_constraintBottom_toTopOf="@+id/chatMessageEditTextSaveButtonTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/chatMessageEditTextSaveButtonTextView"
+            style="@style/dialog_clickable_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Save"
+            app:drawableLeftCompat="@drawable/icon_round_done_green_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/chatMessageEditTextCancelButtonTextView"
+            app:layout_constraintTop_toBottomOf="@+id/chatMessageEditTextHeaderTextView" />
+
+        <TextView
+            android:id="@+id/chatMessageEditTextCancelButtonTextView"
+            style="@style/dialog_clickable_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Cancel"
+            app:drawableLeftCompat="@drawable/icon_round_close_red_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/chatMessageEditTextSaveButtonTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/chatMessageEditTextSaveButtonTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

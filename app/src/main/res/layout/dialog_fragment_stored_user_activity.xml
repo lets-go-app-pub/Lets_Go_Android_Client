@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/iconStoredActivityDialogTextView"
+            style="@style/clickable_icon_text_view"
+            android:layout_weight="1"
+            android:text="@string/stored_user_activity_placeholder_activity_name"
+            app:drawableTopCompat="@drawable/a_icon_adventures_boating" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/deleteActivityStoredIconDataTextView"
+            style="@style/dialog_clickable_text_view"
+            android:layout_weight="1"
+            android:text="@string/stored_user_activity_delete"
+            app:drawableStartCompat="@drawable/icon_round_close_red_24"
+            app:drawableLeftCompat="@drawable/icon_round_close_red_24" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/displayTimesHorizontalLineStoredIconDataTextView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/displayTimesTitleStoredIconDataTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:textSize="18sp"
+        android:text="@string/stored_user_activity_time_frames_title" />
+
+    <LinearLayout
+        android:id="@+id/timeFramesHeaderStoredIconDataLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingLeft="8dp"
+        android:paddingStart="8dp"
+        android:paddingRight="8dp"
+        android:paddingEnd="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/editHeaderStoredIconDataTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/stored_user_activity_header_edit_title" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/deleteHeaderStoredIconDataTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/stored_user_activity_header_delete_title" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/timeFramesScrollViewStoredIconDataScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/timeFramesOuterLinearLayoutStoredIconDataLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/timeFramesLinearLayoutStoredIconDataLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/timeFramesHeaderLineStoredIconDataView"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/timeFramesDefaultValueStoredIconDataTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/select_categories_anytime_message"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/newTimeFrameStoredIconDataTextView"
+                style="@style/dialog_clickable_text_view"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:text="@string/stored_user_activity_new_time_frame_button_text"
+                android:layout_height="match_parent"
+                app:drawableStartCompat="@drawable/icon_round_access_time_control_color_24"
+                app:drawableLeftCompat="@drawable/icon_round_access_time_control_color_24" />
+
+            <TextView
+                android:id="@+id/newTimeFramePlaceHolderStoredIconDataTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/stored_user_activity_maximum_time_frames_reached"
+                android:layout_margin="10dp"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

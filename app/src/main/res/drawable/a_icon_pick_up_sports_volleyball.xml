@@ -1,0 +1,192 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:height="60dp"
+    android:width="60dp"
+    android:viewportWidth="56"
+    android:viewportHeight="56">
+    <path
+        android:pathData="m56,37v3h-18.852c2.1803,-1.0022 4.1826,-2.3533 5.928,-4h11.924c0.5523,0 1,0.4477 1,1z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m5,42h4v4h-4z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m11,42h4v4h-4z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m17,42h4v4h-4z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m9.219,13.19c0.5367,-1.4885 1.248,-2.908 2.119,-4.229 1.727,-0.24 16.554,-1.951 24.019,8.4 -2.1369,1.3176 -4.5178,2.19 -7,2.565 -5.0036,-5.0696 -12.0622,-7.5539 -19.138,-6.736z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m44.91,9.37c0.843,1.3325 1.5245,2.7605 2.03,4.254 -4.288,9.131 -14.789,13.555 -18.756,14.941 -0.4,-3.133 -0.133,-3.906 0.616,-6.682 7.1261,-1.2112 13.1732,-5.9082 16.11,-12.513z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m48,20c-0.0072,1.0907 -0.1039,2.1791 -0.289,3.254 -4.4906,5.6364 -10.5178,9.8513 -17.353,12.135 -0.8117,-1.5257 -1.4212,-3.1508 -1.813,-4.834 3.669,-1.25 13.916,-5.4 19.127,-14.063 0.2124,1.1574 0.3222,2.3313 0.328,3.508z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m33.084,39.32c-0.6047,-0.6844 -1.1614,-1.4098 -1.666,-2.171 5.7123,-1.9401 10.88,-5.2135 15.075,-9.549 -2.3963,5.7848 -7.3556,10.1194 -13.409,11.72z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m41,42h4v4h-4z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m47,48h4v3h-4z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m41,48h4v3h-4z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m5,48h4v3h-4z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m11,48h4v3h-4z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m17,48h4v3h-4z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m23,48h4v3h-4z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m21.134,17.169c2.1414,1.0314 4.0881,2.4257 5.754,4.121 -1.0114,2.8523 -1.1798,5.9355 -0.485,8.881v0.014c0.4685,2.4255 1.3467,4.7534 2.597,6.884 0.5519,0.9467 1.1761,1.8494 1.867,2.7 -2.2804,0.3586 -4.607,0.3014 -6.867,-0.169 -3.4803,-6.9329 -4.4913,-14.8457 -2.866,-22.431z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m29,42h4v4h-4z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m23,42h4v4h-4z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m29,48h4v3h-4z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m35,48h4v3h-4z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m35,42h4v4h-4z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m14.153,34.4c-2.795,-9.7 -1.644,-16.066 -0.5,-19.319 1.9197,0.1703 3.8071,0.602 5.61,1.283 -1.7099,7.544 -0.9445,15.4381 2.183,22.513 -2.7253,-0.9493 -5.2131,-2.4765 -7.293,-4.477z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m5,53h4v3h-4z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m11,53h4v3h-4z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m17,53h4v3h-4z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m23,53h4v3h-4z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m29,53h4v3h-4z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m35,53h4v3h-4z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m41,53h4v3h-4z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m47,53h4v3h-4z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m47,42h4v4h-4z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m43.555,7.456c-0.3196,0.8035 -0.6869,1.5873 -1.1,2.347 -4.839,-5.498 -11.6746,-8.834 -18.986,-9.266 7.4701,-1.7743 15.2934,0.9206 20.086,6.919z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m18.059,2.67c8.7779,-1.1741 17.5518,2.186 23.3,8.923 -1.2002,1.762 -2.6713,3.3233 -4.359,4.626 -6.854,-9.568 -18.982,-9.8 -23.958,-9.447 1.4397,-1.6295 3.134,-3.0148 5.017,-4.102z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m8.583,15.292c0.9872,-0.1657 1.9852,-0.259 2.986,-0.279 -0.988,3.12 -1.829,8.387 -0.338,15.849 -3.0149,-4.5938 -3.9748,-10.2378 -2.648,-15.57z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m0,37c0,-0.5523 0.4477,-1 1,-1h11.924c1.7454,1.6467 3.7477,2.9978 5.928,4h-18.852z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m0,42h3v14h-3z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+    <path
+        android:pathData="m53,42h3v14h-3z"
+        android:fillColor="@color/activity_icon_color"
+        android:fillType="nonZero"
+        tools:ignore="VectorRaster" />
+</vector>

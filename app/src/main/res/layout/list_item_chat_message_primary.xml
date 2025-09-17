@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chatRoomDisplayItemPrimaryLayoutConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/chatMessageListItemDateTextView"
+        style="@style/chat_room_fragment_single_message_or_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chat_message_primary_list_item_date_placeholder"
+        app:layout_constraintBottom_toTopOf="@+id/chatMessageListItemTextBubbleConstraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/chatMessageListItemThumbnailImageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        android:contentDescription="@string/chat_message_primary_list_item_thumbnail_image_view_content_description"
+        app:layout_constraintBottom_toBottomOf="@+id/chatMessageListItemTextBubbleConstraintLayout"
+        app:layout_constraintEnd_toStartOf="@+id/chatMessageListItemTextBubbleConstraintLayout"
+        app:layout_constraintHorizontal_bias="0.001"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/icon_round_person_large_24" />
+
+    <!-- NOTE: paddingBottom is taken care of on the bottom views of the layout. -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/chatMessageListItemTextBubbleConstraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="@dimen/match_list_item_half_gap_between_messages_or_dates"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="@dimen/match_list_item_half_gap_between_messages_or_dates"
+        android:background="@drawable/background_chat_message_received"
+        android:padding="@dimen/match_list_item_primary_constraint_padding_wide"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/chatMessageListItemThumbnailImageView"
+        app:layout_constraintTop_toBottomOf="@+id/chatMessageListItemDateTextView">
+
+        <!-- NOTE: if layout_constraintHorizontal_bias is set to 0 ANYWHERE in the layout then ellipsize on the text views will sporadically not work-->
+        <TextView
+            android:id="@+id/chatMessageListItemNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/match_list_item_vertical_gaps_between_bubble_items"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/chat_message_primary_list_item_name_placeholder"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/chatMessageListItemTextReplyInclude"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.001"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <!-- NOTE: must have marginStart for narrow padding on text views-->
+        <include
+            android:id="@+id/chatMessageListItemTextReplyInclude"
+            layout="@layout/include_chat_message_reply_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/match_list_item_vertical_gaps_between_bubble_items"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toTopOf="@+id/chatMessageListItemMessageBodyCardView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatMessageListItemNameTextView" />
+
+        <!--The width of this will be measured so if any padding or margins are added to start or end they need to be worked into the code-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/chatMessageListItemMessageBodyCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            app:cardCornerRadius="@dimen/match_list_item_message_corner_radius"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/chatMessageListItemEditedTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatMessageListItemTextReplyInclude" />
+
+        <ProgressBar
+            android:id="@+id/chatMessageListItemProgressBar"
+            android:layout_width="@dimen/progress_bar_width"
+            android:layout_height="@dimen/progress_bar_height"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/chatMessageListItemMessageBodyCardView"
+            app:layout_constraintEnd_toEndOf="@+id/chatMessageListItemMessageBodyCardView"
+            app:layout_constraintStart_toStartOf="@+id/chatMessageListItemMessageBodyCardView"
+            app:layout_constraintTop_toTopOf="@+id/chatMessageListItemMessageBodyCardView" />
+
+        <!-- NOTE: layout_constraintHorizontal_bias must be set to 0 here in order for it to work.-->
+        <TextView
+            android:id="@+id/chatMessageListItemEditedTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="@string/chat_message_primary_list_item_message_edited"
+            android:textSize="10sp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/chatMessageListItemBarrier"
+            app:layout_constraintTop_toBottomOf="@+id/chatMessageListItemMessageBodyCardView"
+            tools:ignore="SmallSp" />
+
+        <!-- NOTE: The Barrier is used because. If the 2 text views are made into a chain they will
+         take up all available space, so a small edited message will appear large. If edited text view
+         is constrained to start and time text view is constrained to end, the views will overlap each
+         other on very small edited messages.-->
+        <androidx.constraintlayout.widget.Barrier
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chatMessageListItemBarrier"
+            app:barrierDirection="start"
+            app:constraint_referenced_ids="chatMessageListItemTimeTextView"
+            />
+
+        <!--        NOTE: leave this as part of the vertical chain because when the imageView is part of it and set to View.GONE the vertical chain can have problems-->
+        <TextView
+            android:id="@+id/chatMessageListItemTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="@string/chat_message_primary_list_item_time_placeholder"
+            android:textSize="10sp"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toEndOf="@+id/chatMessageListItemBarrier"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatMessageListItemMessageBodyCardView"
+            tools:ignore="SmallSp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

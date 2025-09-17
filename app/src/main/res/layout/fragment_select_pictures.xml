@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--NOTE: This doesn't have much in it but views will be dynamically added.-->
+<!--NOTE: layout_width should be kept to match_parent in order for justifyContent to work.-->
+<com.google.android.flexbox.FlexboxLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/categoryListItemFlexBoxLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:alignItems="center"
+    app:flexWrap="wrap"
+    app:justifyContent="space_evenly"
+    android:visibility="visible">
+
+<!--    android:paddingTop="0dp"-->
+<!--    android:paddingBottom="@dimen/get_pictures_image_view_padding"-->
+<!--    android:paddingStart="0dp"-->
+<!--    android:paddingEnd="@dimen/get_pictures_image_view_padding"-->
+
+    <!--    NOTE: This is the layout primarily used by this (imported programmatically)-->
+    <!--    <include-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        layout="@layout/select_picture_box"-->
+    <!--        />-->
+
+</com.google.android.flexbox.FlexboxLayout>

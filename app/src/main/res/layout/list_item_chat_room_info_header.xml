@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_grey"
+    android:orientation="vertical"
+    android:paddingBottom="15dp"
+    tools:context=".applicationActivityFragments.chatRoomInfoFragment.ChatRoomInfoFragment">
+
+    <TextView
+        android:id="@+id/chatRoomInfoNotificationsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:maxLines="1"
+        android:paddingStart="@dimen/chat_room_info_header_left_right_offset"
+        android:paddingTop="8dp"
+        android:paddingEnd="0dp"
+        android:paddingBottom="3dp"
+        android:text="@string/chat_room_info_header_list_item_notifications"
+        android:textColor="@color/colorBlack"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/chatRoomInfoNotificationStateTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:maxLines="1"
+        android:paddingStart="@dimen/chat_room_info_header_left_right_offset"
+        android:paddingTop="3dp"
+        android:paddingEnd="0dp"
+        android:paddingBottom="8dp"
+        android:text="@string/Off"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatRoomInfoNotificationsTextView" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/modifyAlgorithmMatchOptionsStateSwitchCompat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/chat_room_info_header_left_right_offset"
+        app:layout_constraintBottom_toBottomOf="@+id/chatRoomInfoNotificationStateTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/chatRoomInfoNotificationsTextView" />
+
+    <LinearLayout
+        android:id="@+id/chatRoomInfoChatRoomInfoLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/chatRoomInfoNotificationStateTextView"
+        tools:layout_editor_absoluteX="-1dp">
+
+        <TextView
+            android:id="@+id/chatRoomInfoTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/chat_room_info_header_list_item_chat_room_info_title"
+            android:textSize="16sp" />
+
+        <View style="@style/chat_room_info_fragment_chat_room_info_line_view" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/chatRoomInfoIdTitleTextView"
+                style="@style/chat_room_info_fragment_chat_room_info_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/chat_room_info_header_left_right_offset"
+                android:paddingEnd="0dp"
+                android:text="@string/chat_room_info_fragment_id"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/chatRoomInfoIdBodyTextView"
+                style="@style/chat_room_info_fragment_chat_room_info_naming_text_view"
+                android:text="@string/chat_room_info_header_list_item_chat_room_id_placeholder"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/chatRoomInfoIdTitleTextView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View style="@style/chat_room_info_fragment_chat_room_info_line_view" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/chatRoomInfoNameTitleTextView"
+                style="@style/chat_room_info_fragment_chat_room_info_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/chat_room_info_header_left_right_offset"
+                android:paddingEnd="0dp"
+                android:text="@string/chat_room_info_fragment_name"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/chatRoomInfoNameBodyTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/chatRoomInfoNameBodyTextView"
+                style="@style/chat_room_info_fragment_chat_room_info_naming_text_view"
+                android:text="@string/chat_room_info_header_list_item_chat_room_name_placeholder"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/chatRoomInfoNameImageView"
+                app:layout_constraintStart_toEndOf="@+id/chatRoomInfoNameTitleTextView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/chatRoomInfoNameImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/chat_room_info_header_list_item_edit_name_image_view_content_description"
+                android:padding="@dimen/chat_room_info_header_left_right_offset"
+                android:src="@drawable/icon_round_edit_activity_time_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/chatRoomInfoNameBodyTextView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View style="@style/chat_room_info_fragment_chat_room_info_line_view" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/chatRoomInfoPasswordTitleTextView"
+                style="@style/chat_room_info_fragment_chat_room_info_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/chat_room_info_header_left_right_offset"
+                android:paddingEnd="0dp"
+                android:text="@string/chat_room_info_fragment_password"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/chatRoomInfoPasswordBodyTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/chatRoomInfoPasswordBodyTextView"
+                style="@style/chat_room_info_fragment_chat_room_info_naming_text_view"
+                android:text="@string/chat_room_info_header_list_item_chat_room_password_placeholder"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/chatRoomInfoPasswordImageView"
+                app:layout_constraintStart_toEndOf="@+id/chatRoomInfoPasswordTitleTextView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/chatRoomInfoPasswordImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/chat_room_info_header_list_item_edit_password_image_view_content_description"
+                android:padding="@dimen/chat_room_info_header_left_right_offset"
+                android:src="@drawable/icon_round_edit_activity_time_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/chatRoomInfoPasswordBodyTextView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/chatRoomInfoPinnedLocationConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite">
+
+            <View
+                style="@style/chat_room_info_fragment_chat_room_info_line_view"
+                android:id="@+id/chatRoomInfoPinnedLocationSeparatorView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/chatRoomInfoPinnedLocationTitleTextView"
+                style="@style/chat_room_info_fragment_chat_room_info_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/chat_room_info_header_left_right_offset"
+                android:paddingEnd="@dimen/chat_room_info_header_left_right_offset"
+                android:text="@string/chat_room_info_fragment_pinned_location"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chatRoomInfoPinnedLocationSeparatorView"
+                app:layout_constraintBottom_toBottomOf="@+id/chatRoomInfoPinnedLocationImageViewFrameLayout" />
+
+            <FrameLayout
+                android:id="@+id/chatRoomInfoPinnedLocationImageViewFrameLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/chatRoomInfoPinnedLocationSeparatorView"
+                app:layout_constraintEnd_toEndOf="parent"
+                >
+                <ProgressBar
+                    android:id="@+id/chatRoomInfoPinnedLocationImageViewProgressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/progress_bar_width"
+                    android:layout_height="@dimen/progress_bar_height"
+                    android:visibility="invisible"/>
+
+                <ImageView
+                    android:id="@+id/chatRoomInfoPinnedLocationImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/chat_room_info_header_list_item_edit_pinned_location_image_view_content_description"
+                    android:padding="@dimen/chat_room_info_header_left_right_offset"
+                    android:src="@drawable/icon_round_edit_activity_time_24"
+                    android:visibility="visible"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/chatRoomInfoPinnedLocationMapViewFrameLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chatRoomInfoPinnedLocationImageViewFrameLayout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                >
+
+                <ProgressBar
+                    android:id="@+id/chatRoomInfoPinnedLocationMapViewProgressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/progress_bar_width"
+                    android:layout_height="@dimen/progress_bar_height"
+                    android:elevation="-1dp" />
+
+                <ImageView
+                    android:id="@+id/chatRoomInfoPinnedLocationMapViewImageView"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/icon_map_close_button"
+                    android:layout_gravity="end|top"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="10dp"
+                    android:elevation="12dp"
+                    android:contentDescription="@string/chat_room_info_header_list_item_remove_pinned_location_image_view_content_description" />
+
+                <!-- MapView does not seem to support layout_marginVertical-->
+                <com.google.android.gms.maps.MapView
+                    android:id="@+id/chatRoomInfoPinnedLocationMapView"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="8dp"
+                    app:liteMode="true"
+                    />
+            </FrameLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/chatRoomInfoQrCodeConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <View
+                android:id="@+id/chatRoomInfoQrCodeSeparatorView"
+                style="@style/chat_room_info_fragment_chat_room_info_line_view"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/chatRoomInfoQrCodeTitleTextView"
+                style="@style/chat_room_info_fragment_chat_room_info_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/chat_room_info_header_left_right_offset"
+                android:paddingEnd="0dp"
+                android:text="@string/chat_room_info_fragment_qr_code"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chatRoomInfoQrCodeSeparatorView" />
+
+            <ImageView
+                android:id="@+id/chatRoomInfoQrCodeImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/chat_room_info_header_list_item_edit_password_image_view_content_description"
+                android:padding="14dp"
+                android:src="@drawable/icon_qr_code"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chatRoomInfoQrCodeSeparatorView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--NOTE: In order to make this a circle, app:CardCornerRadius must be set to 1/2 width minus a little bit.
+     It is important that a very large radius is not used. This is because it will not display the picture
+     properly (or at all) on older APIs if this 'trick' is used.-->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/user_picture_frame_size"
+    android:layout_height="@dimen/user_picture_frame_size"
+    android:layout_margin="5dp"
+    android:id="@+id/matchLayoutPictureCardView"
+    app:strokeColor="@color/colorPrimary"
+    app:strokeWidth="2dp"
+    app:cardElevation="9dp"
+    app:cardBackgroundColor="@color/card_background_color">
+    <ImageView
+        android:id="@+id/matchLayoutPictureImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/match_screen_fragment_match_card_user_picture_content_description"
+        android:src="@drawable/icon_round_person_large_24" />
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/outside_card_background_color"
+    android:fillViewport="true"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_background_margin_with_custom_card_compat"
+        app:cardCornerRadius="@dimen/various_items_border_radius"
+        app:cardElevation="@dimen/card_general_elevation"
+        app:contentPadding="@dimen/card_general_inner_padding"
+        app:cardBackgroundColor="@color/card_background_color">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/fragmentMatchMadeScreenTitleImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/match_made_fragment_title_content_description"
+                android:src="@drawable/kashie_mercy_match_found"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <include
+                android:id="@+id/fragmentMatchMadeScreenThumbnailInclude"
+                android:layout_width="@dimen/user_picture_match_made_size"
+                android:layout_height="@dimen/user_picture_match_made_size"
+                layout="@layout/view_user_picture"
+                android:layout_marginTop="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragmentMatchMadeScreenTitleImageView" />
+
+            <TextView
+                android:id="@+id/fragmentMatchMadeScreenMatchNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/match_made_fragment_name"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragmentMatchMadeScreenThumbnailInclude" />
+
+            <LinearLayout
+                android:id="@+id/fragmentMatchMadeButtonsVerticalLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragmentMatchMadeScreenThumbnailInclude">
+
+                <Button
+                    android:id="@+id/fragmentMatchMadeScreenSendMessageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    app:backgroundTint="@null"
+                    android:background="@drawable/background_match_made_send_message"
+                    android:text="@string/match_made_fragment_send_message_button_text"
+                    android:textSize="@dimen/match_made_button_text_size" />
+
+                <Button
+                    android:id="@+id/fragmentMatchMadeScreenKeepSwipingButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:backgroundTint="@null"
+                    android:background="@drawable/background_match_made_keep_swiping"
+                    android:text="@string/match_made_fragment_keep_swiping_button_text"
+                    android:textSize="@dimen/match_made_button_text_size" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</ScrollView>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardContainerLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="4dp"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/categoryTitleConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:paddingHorizontal="13dp"
+        android:background="@drawable/background_category_list_item">
+
+        <TextView
+            android:id="@+id/categoryListItemTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/select_categories_title_layout_vertical_padding"
+            android:paddingStart="@dimen/select_categories_title_layout_horizontal_padding"
+            android:paddingEnd="0dp"
+            android:text=""
+            android:textColor="@color/color_activities_background"
+            android:textSize="@dimen/select_categories_title_text_size"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintHorizontal_bias="0.001"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/categoryListItemChevron"/>
+
+        <!-- NOTE: paddingStart == paddingEnd and paddingTop == paddingBottom -->
+        <!-- otherwise when the chevron animates it will move instead of just rotating. -->
+        <ImageView
+            android:id="@+id/categoryListItemChevron"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:paddingVertical="@dimen/select_categories_title_layout_vertical_padding"
+            android:paddingHorizontal="@dimen/select_categories_title_layout_horizontal_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/categoryListItemTitleTextView"
+            tools:srcCompat="@android:drawable/arrow_down_float"
+            android:contentDescription="@string/category_list_item_chevron_image_view_content_description" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_categories_box">
+
+        <TableLayout
+            android:id="@+id/categoryListItemTableLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="18dp"
+            android:visibility="visible"/>
+    </HorizontalScrollView>
+
+</LinearLayout>

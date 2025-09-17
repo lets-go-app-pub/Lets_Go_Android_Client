@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/selectLocationScreenMapConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/selectLocationScreenSendLocationConstraintLayout">
+
+    <!-- If this is a fragment instead of a FragmentContainerView, it will fail on Nexus 5 API 32-->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".applicationActivityFragments.selectLocationScreenFragment.SelectLocationMapsFragment" />
+
+    <!--        NOTE: the margin bottom must be the same size as the height here assuming the image is cropped so that the pointer will be in the center-->
+    <ImageView
+        android:id="@+id/selectLocationScreenMarkerImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="40dp"
+        android:clickable="false"
+        app:layout_constraintBottom_toBottomOf="@+id/map"
+        app:layout_constraintEnd_toEndOf="@+id/map"
+        app:layout_constraintStart_toStartOf="@+id/map"
+        app:layout_constraintTop_toTopOf="@+id/map"
+        app:srcCompat="@drawable/icon_google_maps_pin"
+        android:contentDescription="@string/select_location_maps_fragment_map_marker_image_view_content_description" />
+
+    <ImageView
+        android:id="@+id/selectLocationScreenMapLayersImageView"
+        android:layout_width="@dimen/select_location_layers_image_view_height_width"
+        android:layout_height="@dimen/select_location_layers_image_view_height_width"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="19dp"
+        android:background="@drawable/background_chat_room_scroll_to_bottom"
+        android:padding="@dimen/select_location_layers_image_view_padding"
+        android:src="@drawable/icon_round_layers_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/select_location_maps_fragment_layers_image_view_content_description" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

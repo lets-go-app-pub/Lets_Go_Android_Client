@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="top_toolbar_chat_room_members_placeholder">
+        <item quantity="one">%1$d member</item>
+        <item quantity="other">%1$d members</item>
+    </plurals>
+
+    <plurals name="chat_message_members_chat_room">
+        <item quantity="one"><b>%1$s</b>(%3$d) %4$s.</item>
+        <item quantity="other"><b>%2$s</b>: <b>%1$s</b>(%3$d) %4$s.</item>
+    </plurals>
+
+    <plurals name="chat_messages_member_one_message_chat_room">
+        <item quantity="one"><b>%1$s</b> %3$s.</item>
+        <item quantity="other"><b>%2$s</b>: <b>%1$s</b> %3$s.</item>
+    </plurals>
+
+    <plurals name="chat_message_chat_room_name">
+        <item quantity="one"/>
+        <item quantity="other">%1$s</item>
+    </plurals>
+
+    <plurals name="chat_message_new_messages">
+        <item quantity="one"><b>1</b> new message.</item>
+        <item quantity="other"><b>%1$d</b> new messages.</item>
+    </plurals>
+
+</resources>

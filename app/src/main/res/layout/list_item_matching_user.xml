@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--NOTE: When margins are set using this as an include, it will override the other setting of cardUseCompatPadding. However,
+ cardUseCompatPadding provides things outside the margin settings and so it is important to leave it on.-->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/matchPrimaryViewCardView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardElevation="@dimen/card_general_elevation"
+    app:cardUseCompatPadding="true"
+    app:cardPreventCornerOverlap="false"
+    app:cardCornerRadius="@dimen/various_items_border_radius"
+    app:cardBackgroundColor="@color/card_background_color">
+
+    <ScrollView
+        android:id="@+id/matchLayoutScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/match_screen_card_adapter_distance_from_picture"
+        android:paddingBottom="@dimen/match_screen_card_adapter_scroll_view_padding">
+
+        <LinearLayout
+            android:id="@+id/matchLayoutLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/match_screen_card_adapter_scroll_view_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/matchLayoutEventTypeTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/match_screen_card_adapter_distance_from_picture"
+                android:layout_marginHorizontal="@dimen/match_screen_card_adapter_text_margin"
+                android:textColor="@color/match_list_item_text_color"
+                android:text="@string/local_event"
+                android:textSize="28sp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/matchLayoutLeftChevronImageView"
+                    android:layout_width="@dimen/chevron_icon_size"
+                    android:layout_height="@dimen/chevron_icon_size"
+                    android:layout_marginEnd="@dimen/chevron_distance_from_pic"
+                    android:contentDescription="@string/match_screen_fragment_match_card_left_chevron_content_description"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/matchLayoutPictureInclude"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/image_left_arrow" />
+
+                <ImageView
+                    android:id="@+id/matchLayoutRightChevronImageView"
+                    android:layout_width="@dimen/chevron_icon_size"
+                    android:layout_height="@dimen/chevron_icon_size"
+                    android:layout_marginStart="@dimen/chevron_distance_from_pic"
+                    android:contentDescription="@string/match_screen_fragment_match_card_right_chevron_content_description"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/matchLayoutPictureInclude"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/image_right_arrow" />
+
+                <!-- The margin is here to protect the shadow from being sliced off.-->
+                <include
+                    android:id="@+id/matchLayoutPictureInclude"
+                    android:layout_width="@dimen/user_picture_frame_size"
+                    android:layout_height="@dimen/user_picture_frame_size"
+                    android:layout_margin="16dp"
+                    layout="@layout/view_user_picture"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <LinearLayout
+                    android:id="@+id/matchLayoutPictureIndexLinearLayout"
+                    android:layout_width="@dimen/user_picture_frame_size"
+                    android:layout_height="@dimen/picture_index_height"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/match_screen_card_adapter_distance_from_picture"
+                    android:layout_marginHorizontal="@dimen/match_screen_card_adapter_text_margin"
+                    app:layout_constraintTop_toBottomOf="@+id/matchLayoutPictureInclude"
+                    app:layout_constraintEnd_toEndOf="@+id/matchLayoutPictureInclude"
+                    app:layout_constraintStart_toStartOf="@+id/matchLayoutPictureInclude"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/matchLayoutNameAgeTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/match_screen_card_adapter_distance_from_picture"
+                android:layout_marginHorizontal="@dimen/match_screen_card_adapter_text_margin"
+                android:textColor="@color/match_list_item_text_color"
+                android:text="@string/general_placeholder"
+                />
+
+            <TextView
+                android:id="@+id/matchLayoutLocationTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/match_screen_card_adapter_space_between_text"
+                android:layout_marginHorizontal="@dimen/match_screen_card_adapter_text_margin"
+                android:textColor="@color/match_list_item_text_color"
+                android:text="@string/general_placeholder"
+                />
+
+            <TextView
+                android:id="@+id/matchLayoutBioTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/match_screen_card_adapter_space_between_text"
+                android:layout_marginHorizontal="@dimen/match_screen_card_adapter_text_margin"
+                android:textColor="@color/match_list_item_text_color"
+                android:text="@string/general_placeholder"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/image_lets_go_globe_top"
+                android:layout_marginTop="@dimen/match_screen_card_adapter_space_between_text"
+                android:layout_gravity="start"
+                android:layout_marginStart="-6dp"
+                android:layout_marginBottom="-32dp"
+                android:elevation="-1dp"
+                />
+
+            <LinearLayout
+                android:id="@+id/matchLayoutActivitiesListLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="36dp"
+                android:orientation="vertical" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/image_lets_go_globe_bottom"
+                android:layout_gravity="end"
+                android:layout_marginEnd="-1dp"
+                android:layout_marginTop="-23dp"
+                android:elevation="-1dp"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/right_overlay"
+        style="@style/card_stack_fragment_swipe_animation_image_view_frame_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            style="@style/card_stack_fragment_swipe_animation_image_view"
+            app:srcCompat="@drawable/image_thumb_up"
+            android:contentDescription="@string/match_screen_fragment_match_card_right_swipe_image_content_description" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/left_overlay"
+        style="@style/card_stack_fragment_swipe_animation_image_view_frame_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            style="@style/card_stack_fragment_swipe_animation_image_view"
+            app:srcCompat="@drawable/image_thumb_down"
+            android:contentDescription="@string/match_screen_fragment_match_card_left_swipe_image_content_description" />
+
+    </FrameLayout>
+
+</androidx.cardview.widget.CardView>

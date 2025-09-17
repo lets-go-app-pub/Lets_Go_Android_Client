@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- General-->
+    <dimen name="various_items_border_radius">30dp</dimen>
+    <dimen name="card_background_margin_with_custom_card_compat">8dp</dimen>
+    <dimen name="card_general_elevation">3dp</dimen>
+    <dimen name="card_general_inner_padding">8dp</dimen>
+
+    <!-- Login shared values-->
+    <dimen name="login_edit_text_values_generic_size">24sp</dimen>
+    <dimen name="login_edit_text_value_email_size">20sp</dimen>
+    <dimen name="login_title_text_value_generic_size">20sp</dimen>
+    <dimen name="login_globe_half_margin">45dp</dimen>
+
+    <!-- Image Button Border Drawable-->
+    <dimen name="image_button_border_radius">@dimen/various_items_border_radius</dimen>
+    <dimen name="image_button_border_width">2dp</dimen>
+
+    <!-- Progress Bar-->
+    <dimen name="progress_bar_width">48dp</dimen>
+    <dimen name="progress_bar_height">48dp</dimen>
+
+    <!-- Loading Dialog Fragment -->
+    <dimen name="loading_dialog_width">128dp</dimen>
+    <dimen name="loading_dialog_height">72dp</dimen>
+
+    <!-- Continue Button-->
+    <dimen name="continue_button_width">250dp</dimen>
+
+    <!-- App Activity -->
+    <dimen name="app_activity_default_nav_bar_height">48dp</dimen>
+
+    <!-- Select Pictures -->
+    <dimen name="select_pictures_margin">10dp</dimen>
+
+    <dimen name="get_pictures_image_view_height">95dp</dimen>
+
+    <dimen name="get_pictures_image_view_padding">10dp</dimen>
+    <!-- This value should be 2*get_pictures_image_view_padding-->
+    <dimen name="get_pictures_layout_view_padding">20dp</dimen>
+
+    <dimen name="select_pictures_picture_box_border_radius">9dp</dimen>
+
+    <!-- Select Categories -->
+    <dimen name="select_categories_title_layout_vertical_padding">8dp</dimen>
+    <dimen name="select_categories_title_layout_horizontal_padding">2dp</dimen>
+    <dimen name="select_categories_title_text_size">18sp</dimen>
+
+    <dimen name="select_categories_flexbox_top_bottom_padding">10dp</dimen>
+    <dimen name="select_categories_flexbox_start_end_padding">5dp</dimen>
+
+    <dimen name="select_categories_icon_left_right_padding">6dp</dimen>
+    <dimen name="select_categories_icon_text_size">12sp</dimen>
+    <dimen name="select_categories_icon_height">100dp</dimen>
+    <dimen name="select_categories_icon_width">60dp</dimen>
+
+    <dimen name="select_categories_choose_icon_layout_padding">7dp</dimen>
+
+    <dimen name="select_categories_time_calendar_icon_size">24dp</dimen>
+    <dimen name="select_categories_time_calendar_viewport_size">24</dimen>
+
+    <!-- Categories List Items (Category Header included here) -->
+    <dimen name="select_categories_separator_line_width">2dp</dimen>
+    <dimen name="select_categories_header_margin_bottom">15dp</dimen>
+    <dimen name="select_categories_header_margin_horizontal">20dp</dimen>
+
+    <!-- This value is select_categories_header_margin_bottom - select_categories_separator_line_width-->
+    <dimen name="select_categories_header_margin_top">13dp</dimen>
+
+    <!-- Chat Room Fragment -->
+    <dimen name="chat_room_fragment_primary_message_layout_padding">5dp</dimen>
+    <dimen name="chat_room_fragment_bottom_bar_height">42dp</dimen>
+    <dimen name="chat_room_fragment_bottom_bar_image_padding_top_bot">5dp</dimen>
+    <!-- NOTE: This value is chat_room_fragment_bottom_bar_height-2*chat_room_fragment_bottom_bar_image_padding_top_bot. -->
+    <dimen name="chat_room_fragment_bottom_bar_image_height">26dp</dimen>
+    <dimen name="chat_room_fragment_bottom_bar_image_margin_end">8dp</dimen>
+    <dimen name="chat_room_fragment_menu_icon_height_width">24dp</dimen>
+
+    <!-- Messenger screen fragment -->
+    <dimen name="messenger_screen_fragment_thumbnail_height">80dp</dimen>
+    <dimen name="messenger_screen_fragment_thumbnail_width">80dp</dimen>
+
+    <!-- Select Categories Single Activity -->
+    <dimen name="select_categories_single_activity_max_icon_height">100dp</dimen>
+    <dimen name="select_categories_single_activity_max_icon_width">60dp
+    </dimen> <!-- assuming icons come in at 60 width give a little extra for text-->
+    <dimen name="select_categories_single_activity_icon_drawable_height">55dp</dimen>
+    <dimen name="select_categories_single_activity_icon_drawable_width">55dp</dimen>
+    <dimen name="select_categories_single_activity_icon_min_space_between_icons">2dp</dimen>
+    <dimen name="select_categories_single_activity_distance_between_rows">8dp</dimen>
+    <dimen name="select_categories_single_activity_text_size">12sp</dimen>
+
+    <!-- Chat Room Info Fragment -->
+    <dimen name="chat_room_info_fragment_divider_line_height">3dp</dimen>
+    <dimen name="chat_room_info_constraint_layout_padding_top_bot">5dp</dimen>
+    <dimen name="chat_room_info_constraint_layout_padding_start_end">8dp</dimen>
+    <dimen name="chat_room_info_thumbnail_image_view_height_width">60dp</dimen>
+    <!--NOTE: this is 2*chat_room_info_constraint_layout_padding_top_bot+chat_room_info_thumbnail_image_view_height_width+chat_room_info_fragment_divider_line_height (it represents the height of the CardView)-->
+    <dimen name="chat_room_info_card_view_min_height">73dp</dimen>
+    <dimen name="chat_room_info_menu_icon_height">30dp</dimen>
+    <dimen name="chat_room_info_header_left_right_offset">20dp</dimen>
+    <dimen name="chat_room_info_header_padding_start_id_name_password">7dp</dimen>
+
+    <!-- Match Screen Card Adapter -->
+    <dimen name="match_screen_card_adapter_user_time_frame_top_margin">1dp</dimen>
+    <dimen name="match_screen_card_adapter_distance_from_picture">8dp</dimen>
+    <dimen name="match_screen_card_adapter_scroll_view_padding">10dp</dimen>
+    <dimen name="match_screen_card_adapter_text_margin">15dp</dimen>
+    <dimen name="match_screen_card_adapter_space_between_text">3dp</dimen>
+    <dimen name="match_screen_card_adapter_match_time_frame_bottom_margin">1dp</dimen>
+    <dimen name="match_screen_card_adapter_separator_bar_width">2dp</dimen>
+    <dimen name="match_screen_card_adapter_title_start_padding">3dp</dimen>
+    <dimen name="match_screen_card_adapter_activity_border_width">2dp</dimen>
+    <item name="match_screen_card_adapter_picture_size_divisor" format="integer" type="dimen">3
+    </item>
+    <dimen name="match_screen_card_adapter_time_frame_separator_bar_margin">4dp</dimen>
+    <dimen name="match_screen_card_adapter_time_frame_bar_height">16dp</dimen>
+
+    <!-- Dialog Layout -->
+    <dimen name="dialog_layout_primary_layout_padding">8dp</dimen>
+
+    <!-- Choices Dialog-->
+    <dimen name="choices_dialog_icon_size">20dp</dimen>
+    <dimen name="choices_dialog_margin_distance">15dp</dimen>
+
+    <!-- Border Line -->
+    <dimen name="border_line_thickness">1dp</dimen>
+
+    <dimen name="test_dimens">47dp</dimen>
+
+    <dimen name="default_text_size">14dp</dimen>
+
+    <!-- Profile Screen -->
+    <dimen name="profile_screen_button_height">50dp</dimen>
+    <dimen name="profile_screen_image_view_padding">4dp</dimen>
+    <!-- NOTE: This value is profile_screen_button_height-profile_screen_image_view_padding. -->
+    <dimen name="profile_screen_image_height">70dp</dimen>
+    <dimen name="profile_screen_edit_image_max_height_width">40dp</dimen>
+    <dimen name="profile_screen_button_border_width">1px</dimen>
+    <dimen name="profile_screen_spacing_between_buttons">30dp</dimen>
+
+    <!-- Modify Profile Fragment-->
+    <dimen name="modify_profile_fragment_text_padding">12dp</dimen>
+    <dimen name="modify_profile_fragment_selection_border_width">2dp</dimen>
+    <dimen name="modify_profile_fragment_selection_border_radius">20dp</dimen>
+    <dimen name="modify_profile_fragment_title_border_radius">9dp</dimen>
+    <dimen name="modify_profile_fragment_linear_layout_spacing">12dp</dimen>
+    <dimen name="modify_profile_fragment_linear_layout_distance_from_edges">20dp</dimen>
+    <dimen name="modify_profile_fragment_email_verified_border_width">1dp</dimen>
+    <dimen name="modify_profile_fragment_email_verified_corner_radius">15dp</dimen>
+
+    <!-- MatchScreenFragment-->
+    <dimen name="thumbs_image_size">85dp</dimen>
+
+    <!-- Match List Item-->
+    <dimen name="match_list_item_margin_between_items">10dp</dimen>
+    <dimen name="match_list_item_thumbs_size">50dp</dimen>
+    <dimen name="match_list_item_reply_indentation_line_width">5dp</dimen>
+    <dimen name="match_list_item_half_gap_between_messages_or_dates">2dp</dimen>
+    <dimen name="match_list_item_primary_constraint_padding_wide">8dp</dimen>
+    <dimen name="match_list_item_primary_constraint_padding_narrow">2dp</dimen>
+    <dimen name="match_list_item_margin_for_narrow_padding">2dp</dimen>
+    <dimen name="match_list_item_text_message_text_size">16sp</dimen>
+    <dimen name="match_list_item_icon_height_width">11dp</dimen>
+    <dimen name="match_list_item_various_message_constraint_padding">15dp</dimen>
+    <dimen name="match_list_item_message_corner_radius">15dp</dimen>
+    <dimen name="match_list_item_vertical_gaps_between_bubble_items">3dp</dimen>
+
+    <!-- Bottom navigation view -->
+    <!-- Default value for bottom_navigation_icon_size is 25dp -->
+    <dimen name="bottom_navigation_icon_size" tools:override="true">38dp</dimen>
+    <dimen name="design_bottom_navigation_height" tools:override="true">60dp</dimen>
+    <dimen name="bottom_navigation_item_inset">30dp</dimen>
+
+    <dimen name="messages_icon_layers_width">200dp</dimen>
+    <dimen name="messages_icon_layers_height">200dp</dimen>
+    <dimen name="messages_icon_layers_top">100dp</dimen>
+    <dimen name="messages_icon_layers_left">100dp</dimen>
+
+    <!-- User Info Card-->
+    <dimen name="user_picture_match_made_size">170dp</dimen>
+    <dimen name="half_user_picture_match_made_size">85dp</dimen> <!-- This is the card corner radius, it should be 1/2 the size of user_picture_match_made_size rounded down (if too large will not load on older APIs).-->
+    <dimen name="user_picture_settings_size">165dp</dimen>
+    <dimen name="half_user_picture_settings_size">82dp</dimen> <!-- This is the card corner radius, it should be 1/2 the size of user_picture_settings_size rounded down (if too large will not load on older APIs).-->
+    <dimen name="user_picture_frame_size">150dp</dimen>
+    <dimen name="half_user_picture_frame_size">75dp</dimen> <!-- This is the card corner radius, it should be 1/2 the size of user_picture_frame_size rounded down (if too large will not load on older APIs).-->
+    <dimen name="user_picture_size">150dp</dimen>
+    <dimen name="chevron_icon_size">25dp</dimen>
+    <dimen name="chevron_distance_from_pic">20dp</dimen>
+    <dimen name="chevron_viewport_size">24</dimen>
+    <dimen name="chevron_image_view_padding">10dp</dimen>
+    <dimen name="picture_index_height">10dp</dimen>
+    <dimen name="picture_index_margin">6dp</dimen> <!-- Currently this is ~1/2 of picture_index_height -->
+
+    <!-- Select Location Maps-->
+    <dimen name="select_location_layers_image_view_height_width">30dp</dimen>
+    <dimen name="select_location_layers_image_view_padding">4dp</dimen>
+    <!-- NOTE: This value is select_location_layers_image_view_height_width-select_location_layers_image_view_padding. -->
+    <dimen name="select_location_layers_icon_height">26dp</dimen>
+
+    <!-- Invite Message-->
+    <dimen name="invite_message_space_between_lines">2dp</dimen>
+
+    <!-- Display QR Code-->
+    <dimen name="display_qr_code_margins">10dp</dimen>
+
+    <!-- Match Made Screen -->
+    <dimen name="match_made_keep_swiping_center_diameter">24dp</dimen>
+    <dimen name="match_made_keep_swiping_border_width">4dp</dimen>
+    <dimen name="match_made_button_text_size">15sp</dimen>
+    <dimen name="match_made_button_border_width">1px</dimen>
+
+    <!-- Select Method Screen -->
+    <dimen name="select_method_distance_between_buttons">28sp</dimen>
+    <dimen name="select_method_login_with_phone_button_border_width">2dp</dimen>
+    <dimen name="select_method_login_with_phone_button_corner_radius">22dp</dimen>
+    <dimen name="select_method_login_with_facebook_button_border_width">3dp</dimen>
+    <dimen name="select_method_login_with_facebook_button_corner_radius">3dp</dimen>
+    <dimen name="select_method_login_with_google_button_corner_radius">3dp</dimen>
+    <dimen name="select_method_login_with_google_button_border_width">3dp</dimen>
+
+    <!-- Show Rules Screen -->
+    <dimen name="show_rules_and_promotional_text_spacing">8dp</dimen>
+    <dimen name="show_rules_and_promotional_screen_body_text_size">18sp</dimen>
+    <dimen name="show_rules_and_promotional_screen_text_indentation">20dp</dimen>
+    <dimen name="show_rules_and_promotional_screen_title_text_size">22sp</dimen>
+    <dimen name="show_rules_and_promotional_title_spacing">10dp</dimen>
+
+</resources>

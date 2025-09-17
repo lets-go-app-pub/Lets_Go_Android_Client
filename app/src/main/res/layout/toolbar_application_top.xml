@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbarApplicationTopPrimaryToolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    app:subtitleTextColor="@color/colorWhite"
+    app:titleTextColor="@color/colorWhite">
+
+    <RelativeLayout
+        android:id="@+id/toolbarApplicationTopLayoutRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/toolbarApplicationTopTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:maxLines="1"
+            android:text="@string/top_toolbar_chat_room_name_placeholder"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/toolbarApplicationTopMemberCountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbarApplicationTopTitleTextView"
+            android:layout_alignParentStart="true"
+            android:maxLines="1"
+            android:text="@string/top_toolbar_chat_room_members_placeholder"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</androidx.appcompat.widget.Toolbar>

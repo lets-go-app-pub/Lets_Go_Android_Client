@@ -1,0 +1,21 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="@dimen/select_categories_single_activity_icon_drawable_height"
+    android:width="@dimen/select_categories_single_activity_icon_drawable_width"
+    android:viewportWidth="512"
+    android:viewportHeight="512">
+    <path
+        android:fillColor="@color/activity_icon_color"
+        android:pathData="m206.321,363.665h99.359v33.082h-99.359z" />
+    <path
+        android:fillColor="@color/activity_icon_color"
+        android:pathData="m497.324,255.169 l-59.579,-90.401 -74.589,117.89h-214.528l-72.628,-120.54 -61.325,93.05 25.081,16.53 43.284,-65.676 28.841,305.978h288.239l28.84,-305.976 43.284,65.676zM176.282,333.626h159.437v93.16h-159.437z" />
+    <path
+        android:fillColor="@color/activity_icon_color"
+        android:pathData="m412.535,148.433h-309.71l62.774,104.187h181.017z" />
+    <path
+        android:fillColor="@color/activity_icon_color"
+        android:pathData="m82.424,29.601 l-21.705,20.766 65.083,68.027h41.572z" />
+    <path
+        android:fillColor="@color/activity_icon_color"
+        android:pathData="m153.699,0 l-26.769,13.628 53.336,104.766h33.708z" />
+</vector>

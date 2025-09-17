@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="@dimen/various_items_border_radius" />
+    <stroke
+        android:width="@dimen/image_button_border_width"
+        android:color="@color/color_rounded_corner_borders" />
+</shape>

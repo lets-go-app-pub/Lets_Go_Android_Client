@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/match_list_item_various_message_constraint_padding">
+
+    <TextView
+        android:id="@+id/chatMessageInviteHeaderTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/general_placeholder"
+        app:layout_constraintBottom_toTopOf="@+id/chatMessageInviteChatRoomNameTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/chatMessageInviteChatRoomNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/invite_message_space_between_lines"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/general_placeholder"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/chatMessageInviteThirdLineTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatMessageInviteHeaderTextView" />
+
+    <TextView
+        android:id="@+id/chatMessageInviteThirdLineTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/invite_message_space_between_lines"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/general_placeholder"
+        app:layout_constraintBottom_toTopOf="@+id/chatMessageInviteJoinButtonTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatMessageInviteChatRoomNameTextView" />
+
+    <TextView
+        android:id="@+id/chatMessageInviteJoinButtonTextView"
+        style="@style/dialog_clickable_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/match_list_item_various_message_constraint_padding"
+        android:text="@string/chat_message_adapter_invite_message_join_chat_room_button_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatMessageInviteThirdLineTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

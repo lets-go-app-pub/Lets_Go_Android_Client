@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/mapOptionsMenuNormalMap"
+        android:title="@string/map_options_map"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/mapOptionsMenuSatelliteMap"
+        android:title="@string/map_options_satellite"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/mapOptionsMenuHybridMap"
+        android:title="@string/map_options_hybrid"
+        app:showAsAction="never" />
+</menu>

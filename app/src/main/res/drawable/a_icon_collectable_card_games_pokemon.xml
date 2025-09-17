@@ -1,0 +1,33 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="@dimen/select_categories_single_activity_icon_drawable_height"
+    android:width="@dimen/select_categories_single_activity_icon_drawable_width"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+    <path
+        android:pathData="m5.799,18.381c-1.826,1.243 -2.299,3.731 -1.057,5.557l7.187,10.561 -4.781,-17.036z"
+        android:fillColor="@color/activity_icon_color" />
+    <path
+        android:pathData="m28.947,2.629 l-2.867,1.951 7.238,-2.031c-1.304,-0.815 -3.018,-0.841 -4.371,0.08z"
+        android:fillColor="@color/activity_icon_color" />
+    <path
+        android:pathData="m35.053,61.371 l2.867,-1.951 -7.238,2.031c1.304,0.815 3.018,0.841 4.371,-0.08z"
+        android:fillColor="@color/activity_icon_color" />
+    <path
+        android:pathData="m58.201,45.619c1.826,-1.243 2.299,-3.731 1.057,-5.557l-7.187,-10.561 4.781,17.037z"
+        android:fillColor="@color/activity_icon_color" />
+    <path
+        android:pathData="m8.725,15.681 l3.275,11.669v-16.742l-0.504,0.141c-2.127,0.597 -3.367,2.805 -2.771,4.932z"
+        android:fillColor="@color/activity_icon_color" />
+    <path
+        android:pathData="m38.455,3.184 l-2.907,0.816h6.59c-0.981,-0.839 -2.347,-1.19 -3.683,-0.816z"
+        android:fillColor="@color/activity_icon_color" />
+    <path
+        android:pathData="m25.545,60.816 l2.907,-0.816h-6.59c0.981,0.839 2.347,1.19 3.683,0.816z"
+        android:fillColor="@color/activity_icon_color" />
+    <path
+        android:pathData="m52,53.392 l0.504,-0.141c2.127,-0.597 3.367,-2.805 2.771,-4.932l-3.275,-11.67z"
+        android:fillColor="@color/activity_icon_color" />
+    <path
+        android:pathData="m14,10v44c0,2.209 1.791,4 4,4h28c2.209,0 4,-1.791 4,-4v-44c0,-2.209 -1.791,-4 -4,-4h-28c-2.209,0 -4,1.791 -4,4zM19,55h-2v-2h2zM45,9h2v2h-2zM45,53h2v2h-2zM32,21c5.738,0 10.444,4.394 10.95,10h-7.09c-0.45,-1.72 -2,-3 -3.86,-3s-3.41,1.28 -3.86,3h-7.09c0.506,-5.606 5.212,-10 10.95,-10zM34,32c0,1.1 -0.9,2 -2,2s-2,-0.9 -2,-2 0.9,-2 2,-2 2,0.9 2,2zM28.14,33c0.45,1.72 2,3 3.86,3s3.41,-1.28 3.86,-3h7.09c-0.506,5.606 -5.212,10 -10.95,10s-10.444,-4.394 -10.95,-10zM19,11h-2v-2h2z"
+        android:fillColor="@color/activity_icon_color" />
+</vector>

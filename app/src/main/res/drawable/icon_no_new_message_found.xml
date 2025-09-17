@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><!--NOTE: the only purpose of this xml is to keep the no_new_messages icon the exact same as the new_messages icon-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/icon_speech_bubble_512" />
+    <item
+        android:top="@dimen/messages_icon_layers_top"
+        android:left="@dimen/messages_icon_layers_left">
+        <shape android:shape="oval">
+            <solid android:color="#00000000" />
+            <size
+                android:width="@dimen/messages_icon_layers_width"
+                android:height="@dimen/messages_icon_layers_height" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="@dimen/various_items_border_radius" />
+    <solid android:color="@color/initial_login_buttons" />
+</shape>

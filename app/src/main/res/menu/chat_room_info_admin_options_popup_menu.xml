@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/adminOptionsPopupMenuBlockReportMenuItem"
+        android:title="@string/chat_room_info_fragment_popup_menu_block_and_report" />
+    <item
+        android:id="@+id/adminOptionsPopupMenuUnBlockMenuItem"
+        android:title="@string/chat_room_info_fragment_popup_menu_unblock" />
+    <item
+        android:id="@+id/adminOptionsPopupMenuUnInviteMenuItem"
+        android:title="@string/chat_room_info_fragment_popup_menu_invite_to_chat_room" />
+    <item
+        android:id="@+id/adminOptionsPopupMenuPromoteToAdminMenuItem"
+        android:title="@string/chat_room_info_fragment_popup_menu_promote_to_admin" />
+    <item
+        android:id="@+id/adminOptionsPopupMenuKickMenuItem"
+        android:title="@string/chat_room_info_fragment_popup_menu_kick" />
+    <item
+        android:id="@+id/adminOptionsPopupMenuBanMenuItem"
+        android:title="@string/chat_room_info_fragment_popup_menu_ban" />
+</menu>

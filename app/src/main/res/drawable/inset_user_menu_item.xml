@@ -1,0 +1,4 @@
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/icon_round_person_large_24"
+    android:inset="2dp" />
+

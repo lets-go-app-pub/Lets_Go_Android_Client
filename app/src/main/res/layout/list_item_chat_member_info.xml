@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/chatMemberInfoListPrimaryLayoutCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/chat_room_info_card_view_min_height"
+    app:cardPreventCornerOverlap="false">
+
+    <TextView
+        android:id="@+id/chatMemberInfoListEventTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:text="@string/chat_member_list_item_event_completed_text"
+        android:textColor="@color/colorBlack"
+        android:textSize="18sp"
+        android:visibility="visible" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/chatMemberInfoListPrimaryConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/chat_room_info_constraint_layout_padding_start_end"
+        android:paddingTop="@dimen/chat_room_info_constraint_layout_padding_top_bot"
+        android:paddingEnd="@dimen/chat_room_info_constraint_layout_padding_start_end"
+        android:paddingBottom="@dimen/chat_room_info_constraint_layout_padding_top_bot">
+
+        <ImageView
+            android:id="@+id/chatMemberInfoListThumbnailImageView"
+            android:layout_width="@dimen/chat_room_info_thumbnail_image_view_height_width"
+            android:layout_height="@dimen/chat_room_info_thumbnail_image_view_height_width"
+            android:contentDescription="@string/chat_member_list_item_thumbnail_image_view_content_description"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_round_person_large_24" />
+
+        <TextView
+            android:id="@+id/chatMemberInfoListUserNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chat_member_list_item_user_name_placeholder"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/chatMemberInfoListLastTimeSeenTextView"
+            app:layout_constraintStart_toEndOf="@+id/chatMemberInfoListThumbnailImageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/chatMemberInfoListLastTimeSeenTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/chat_member_list_item_last_seen_placeholder"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/chatMemberInfoListMenuIconFrameLayout"
+            app:layout_constraintHorizontal_bias="0.001"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@+id/chatMemberInfoListThumbnailImageView"
+            app:layout_constraintTop_toBottomOf="@+id/chatMemberInfoListUserNameTextView" />
+
+        <TextView
+            android:id="@+id/chatMemberInfoBlockedTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chat_member_list_item_blocked_text"
+            android:textColor="@android:color/holo_red_dark"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/chatMemberInfoListMemberStatusTextView"
+            app:layout_constraintStart_toEndOf="@+id/chatMemberInfoListUserNameTextView"
+            app:layout_constraintTop_toTopOf="@+id/chatMemberInfoListUserNameTextView" />
+
+        <TextView
+            android:id="@+id/chatMemberInfoListMemberStatusTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chat_member_list_item_admin_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/chatMemberInfoListMenuIconFrameLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatMemberInfoListMemberStatusTextView">
+
+            <ImageView
+                android:id="@+id/chatMemberInfoListMenuIconImageView"
+                android:layout_width="40dp"
+                android:layout_height="@dimen/chat_room_info_menu_icon_height"
+                android:layout_gravity="center"
+                android:contentDescription="@string/chat_member_list_item_other_user_menu_image_view_content_description"
+                app:srcCompat="@drawable/icon_round_more_vert_24" />
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

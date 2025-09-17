@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/selectLocationScreenPrimaryLayoutRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".applicationActivityFragments.selectLocationScreenFragment.SelectLocationScreen">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/selectLocationScreenMapsFragment"
+        android:name="site.letsgoapp.letsgo.applicationActivityFragments.selectLocationScreenFragment.SelectLocationMapsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@+id/selectLocationScreenSendLocationConstraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/selectLocationScreenSendLocationConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectLocationScreenMapsFragment">
+
+        <ImageView
+            android:id="@+id/selectLocationScreenLocationImageView"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_google_maps_pin"
+            android:contentDescription="@string/select_location_screen_fragment_send_image_view_content_description" />
+
+        <TextView
+            android:id="@+id/selectLocationScreenTitleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/selectLocationScreenAddressTextView"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="3dp"
+            android:text="@string/select_location_screen_fragment_send_title"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/selectLocationScreenAddressTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/selectLocationScreenLocationImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/selectLocationScreenAddressTextView"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="3dp"
+            android:text="@string/select_location_screen_fragment_current_address_title_placeholder"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/selectLocationScreenLocationImageView"
+            app:layout_constraintTop_toBottomOf="@+id/selectLocationScreenTitleTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:id="@+id/matchTimeFramesOverlapPrimaryLinearLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/matchTimeFramesOverlapStartTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/match_screen_fragment_match_time_text_example_size"
+        android:textColor="@color/match_list_item_text_color" />
+
+    <Space
+        android:id="@+id/matchTimeFramesOverlapStartTimeSpace"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="33" />
+
+    <TextView
+        android:id="@+id/matchTimeFramesOverlapColorTextView"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/match_screen_card_adapter_time_frame_bar_height"
+        android:layout_gravity="center"
+        android:layout_weight="34"
+        android:background="@color/match_list_item_matching_user_time_frame_bar"
+        android:textColor="@color/match_list_item_text_color" />
+
+    <Space
+        android:id="@+id/matchTimeFramesOverlapStopTimeSpace"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="33" />
+
+    <TextView
+        android:id="@+id/matchTimeFramesOverlapStopTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/match_screen_fragment_match_time_text_example_size"
+        android:gravity="center"
+        android:textColor="@color/match_list_item_text_color" />
+
+</LinearLayout>
+

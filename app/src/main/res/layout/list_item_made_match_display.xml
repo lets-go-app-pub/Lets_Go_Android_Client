@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/madeMatchDisplayPrimaryFrameLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/madeMatchDisplayListItemImageView"
+        android:layout_width="@dimen/messenger_screen_fragment_thumbnail_width"
+        android:layout_height="@dimen/messenger_screen_fragment_thumbnail_height"
+        android:contentDescription="@string/messenger_screen_fragment_match_list_item_picture_content_description"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        app:srcCompat="@drawable/icon_round_person_large_24" />
+
+</FrameLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/dialogFeedbackActivitySuggestionOtherEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/background_various_box_borders"
+        android:ems="10"
+        android:gravity="top|start"
+        android:hint="@string/general_placeholder"
+        android:inputType="textMultiLine"
+        android:minLines="8"
+        android:padding="10dp"
+        android:importantForAutofill="no" />
+
+</FrameLayout>

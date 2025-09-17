@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="@dimen/various_items_border_radius" />
+
+    <stroke
+        android:color="@color/selection_screen_activities_border"
+        android:width="@dimen/match_made_button_border_width" />
+
+    <gradient
+        android:type="linear"
+        android:angle="0"
+        android:startColor="@color/fifth_color"
+        android:endColor="@color/fifth_color_thirty_percent_tint"
+        />
+
+</shape>

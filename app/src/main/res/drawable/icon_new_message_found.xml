@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/icon_speech_bubble_512" />
+    <item
+        android:top="@dimen/messages_icon_layers_top"
+        android:left="@dimen/messages_icon_layers_left">
+        <shape android:shape="oval">
+            <solid
+                android:color="#000000"
+                android:width="12dp" />
+            <size
+                android:width="@dimen/messages_icon_layers_width"
+                android:height="@dimen/messages_icon_layers_height" />
+        </shape>
+    </item>
+</layer-list>

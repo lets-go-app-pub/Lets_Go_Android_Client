@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <!-- Meant to be the background, don't want it inside the ScrollView because
+     adjustViewBounds can cause trouble. -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/select_method_background_content_description"
+        android:elevation="-1dp"
+        android:scaleType="centerCrop"
+        android:tintMode="src_atop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image_home_screen_background"
+        app:tint="#85000000" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".loginActivityFragments.loginSelectMethodFragment.LoginSelectMethodFragment"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+<!--            This View is here to push the LinearLayouts down a bit if there is room on the screen to-->
+<!--            make it look better.-->
+            <View
+                android:id="@+id/loginSelectMethodChainPiece"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:visibility="invisible"
+                app:layout_constraintVertical_chainStyle="spread"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/loginSelectMethodWhiteLogoImageLinearLayout"
+                />
+
+            <LinearLayout
+                android:id="@+id/loginSelectMethodWhiteLogoImageLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/loginSelectMethodAlternateLoginButtonsLinearLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/loginSelectMethodChainPiece">
+
+                <ImageView
+                    android:id="@+id/loginSelectMethodLogoImageView"
+                    android:layout_width="128dp"
+                    android:layout_height="128dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:contentDescription="@string/general_logo_content_description"
+                    android:elevation="1dp"
+                    android:src="@drawable/image_white_lets_go_logo" />
+
+                <Button
+                    android:id="@+id/loginWithPhoneButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/background_login_with_phone"
+                    android:maxLines="2"
+                    android:paddingHorizontal="40dp"
+                    android:text="@string/select_method_phone_login_button_text"
+                    android:textColor="@color/home_screen_text_color"
+                    android:textSize="26sp"
+                    android:textAllCaps="false"
+                    app:backgroundTint="@null" />
+
+                <TextView
+                    android:id="@+id/retrieveAccountTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/select_method_retrieve_account_text"
+                    android:textColor="@color/home_screen_text_color"
+                    android:textSize="18sp"
+                    android:minHeight="48dp"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/loginSelectMethodTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@android:color/holo_red_light"
+                    app:layout_constraintBottom_toTopOf="@+id/selectMethodTopGuideline"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/retrieveAccountTextView" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loginSelectMethodAlternateLoginButtonsLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/loginSelectMethodWhiteLogoImageLinearLayout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ProgressBar
+                    android:id="@+id/LoginSelectMethodPBar"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="@dimen/progress_bar_width"
+                    android:layout_height="@dimen/progress_bar_height"
+                    android:layout_marginVertical="15dp"
+                    android:visibility="invisible"
+                    android:layout_gravity="center_horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/loginSelectMethodTextView" />
+
+<!--                ~FACEBOOK TAG~-->
+<!--                <Button-->
+<!--                    android:id="@+id/fragmentLoginSelectMethodDummyFacebookButton"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:backgroundTint="@null"-->
+<!--                    android:minHeight="0dp"-->
+<!--                    android:minWidth="0dp"-->
+<!--                    android:paddingVertical="1dp"-->
+<!--                    android:background="@drawable/background_login_with_facebook"-->
+<!--                    android:maxLines="1"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:text="@string/select_method_facebook_login_button_text"-->
+<!--                    android:textColor="@color/home_screen_text_color"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textAllCaps="false"-->
+<!--                    app:icon="@drawable/com_facebook_button_icon"-->
+<!--                    app:backgroundTint="@null"-->
+<!--                    />-->
+
+                <!-- Here to be clicked on and start the login process. The above
+                 button is simply to show a different image. -->
+                <!--                ~FACEBOOK TAG~-->
+<!--                <com.facebook.login.widget.LoginButton-->
+<!--                    android:id="@+id/facebook_login_button"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:textSize="17sp"-->
+<!--                    android:visibility="gone"/>-->
+
+                <Button
+                    android:id="@+id/fragmentLoginSelectMethodDummyGoogleButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@null"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:minHeight="48dp"
+                    android:minWidth="0dp"
+                    android:paddingVertical="1dp"
+                    android:paddingHorizontal="25dp"
+                    android:background="@drawable/background_login_with_facebook"
+                    android:maxLines="1"
+                    android:text="@string/select_method_google_login_button_text"
+                    android:textColor="@color/home_screen_text_color"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    app:icon="@drawable/icon_google_logo"
+                    app:backgroundTint="@null"
+                    />
+
+<!--                <com.google.android.gms.common.SignInButton-->
+<!--                    android:id="@+id/google_sign_in_button"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:layout_marginTop="13dp"-->
+<!--                    app:colorScheme="light"-->
+<!--                    android:visibility="gone"/>-->
+
+                <TextView
+                    android:id="@+id/selectMethodTermsOfServiceLink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/home_screen_text_color"
+                    android:text="@string/home_screen_terms_of_service_links"
+                    android:textSize="15sp"
+                    android:layout_marginTop="20dp"
+                    android:minHeight="48dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

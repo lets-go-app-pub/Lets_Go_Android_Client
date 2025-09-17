@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/enterStartStopDateTimePrimaryLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/selectStartDateTimeLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:id="@+id/selectStartDateLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/startDateTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/start_stop_datetime_start_date" />
+
+            <TextView
+                style="@style/dialog_clickable_text_view"
+                android:id="@+id/setStartDateTextView"
+                android:text=""
+                app:drawableStartCompat="@drawable/icon_round_calendar_month_24"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/selectStartTimeLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/startTimeTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/start_stop_datetime_start_time" />
+
+            <TextView
+                style="@style/dialog_clickable_text_view"
+                android:id="@+id/setStartTimeTextView"
+                android:text=""
+                app:drawableStartCompat="@drawable/icon_round_access_time_control_color_24"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/selectStopDateTimeLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:id="@+id/selectStopDateLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/stopDateTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/start_stop_datetime_stop_date" />
+
+            <TextView
+                style="@style/dialog_clickable_text_view"
+                android:id="@+id/setStopDateTextView"
+                android:text=""
+                app:drawableStartCompat="@drawable/icon_round_calendar_month_24" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/selectStopTimeLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/stopTimeTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/start_stop_datetime_stop_time" />
+
+            <TextView
+                style="@style/dialog_clickable_text_view"
+                android:id="@+id/setStopTimeTextView"
+                android:text=""
+                app:drawableStartCompat="@drawable/icon_round_access_time_control_color_24" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/enterStartStopDialogErrorMessageTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@android:color/holo_red_light" />
+
+
+</LinearLayout>

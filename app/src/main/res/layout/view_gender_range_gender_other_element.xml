@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@+id/genderRangeGenderOtherImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_various_box_borders"
+        android:padding="9dp"
+        app:srcCompat="@drawable/icon_round_close_red_24"
+        android:contentDescription="@string/gender_range_gender_other_close_button_content_description" />
+
+    <EditText
+        android:id="@+id/genderRangeGenderOtherEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/gender_range_gender_other_layout_gender_hint"
+        android:importantForAutofill="no" />
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".applicationActivityFragments.selectChatRoomForInviteFragment.SelectChatRoomForInviteFragment">
+
+    <TextView
+        android:id="@+id/selectChatRoomForInviteHeaderTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/background_grey"
+        android:text="@string/general_placeholder"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/selectChatRoomForInviteChatRoomListFragmentContainerView"
+        android:name="site.letsgoapp.letsgo.applicationActivityFragments.chatRoomsListFragment.ChatRoomsListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/selectChatRoomForInviteHeaderTextView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        tools:layout="@layout/fragment_chat_rooms_list" />
+
+</RelativeLayout>

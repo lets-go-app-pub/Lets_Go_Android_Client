@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loginActivityFragments.loginGetEmailFragment.LoginGetEmailFragment">
+
+    <Button
+        android:id="@+id/getEmailContinueButton"
+        android:text="@string/Continue"
+        android:visibility="visible"
+        style="@style/initial_login_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getEmailEditText" />
+
+    <EditText
+        android:id="@+id/getEmailEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="emailAddress"
+        android:ems="15"
+        android:hint="@string/get_email_address_text"
+        android:inputType="textEmailAddress"
+        android:visibility="visible"
+        android:imeOptions="actionDone"
+        android:textSize="@dimen/login_edit_text_value_email_size"
+        app:layout_constraintBottom_toTopOf="@+id/getEmailContinueButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginGetEmailTitleTextView" />
+
+    <TextView
+        android:id="@+id/loginGetEmailErrorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_red_light"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getEmailEditText" />
+
+    <ProgressBar
+        android:id="@+id/loginGetEmailProgressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="@dimen/progress_bar_width"
+        android:layout_height="@dimen/progress_bar_height"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/loginGetEmailTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/get_email_title"
+        android:textSize="@dimen/login_edit_text_values_generic_size"
+        app:layout_constraintBottom_toTopOf="@+id/getEmailEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

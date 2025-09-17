@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".reUsedFragments.selectGenderFragment.SelectGenderFragment">
+
+    <RadioGroup
+        android:id="@+id/loginGetGenderRadioGroup"
+        android:layout_gravity="start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/loginGetGenderMaleRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/get_gender_gender_male" />
+
+        <RadioButton
+            android:id="@+id/loginGetGenderFemaleRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/get_gender_gender_female" />
+
+        <RadioButton
+            android:id="@+id/loginGetGenderOtherRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/get_gender_gender_other"
+            android:visibility="gone"/>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/loginGetGenderEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="@string/get_gender_gender_other_hint"
+        android:importantForAutofill="no"
+        android:layout_gravity="start"
+        android:inputType="text"
+        android:imeOptions="actionDone"
+        android:visibility="gone" />
+
+</LinearLayout>

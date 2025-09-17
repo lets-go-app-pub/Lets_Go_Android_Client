@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chatMessageListItemTextReplyBodyRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".applicationActivityFragments.chatRoomFragment.ChatRoomFragment">
+
+    <View
+        android:id="@+id/chatRoomChatFloatingView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRoomChatRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/chatRoomMessagesVerticalLineView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"
+        tools:listitem="@layout/list_item_chat_message_primary" />
+
+    <include
+        android:id="@+id/chatRoomFragmentMatchItem"
+        layout="@layout/list_item_matching_user"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/chatRoomMessagesVerticalLineView"
+        android:layout_margin="@dimen/card_background_margin_with_custom_card_compat"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/chatRoomChatScrollToBottomImageView"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_above="@+id/chatRoomMessagesVerticalLineView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/background_chat_room_scroll_to_bottom"
+        android:rotation="90"
+        android:padding="5dp"
+        android:src="@drawable/icon_round_chevron_right_24"
+        android:contentDescription="@string/chat_room_fragment_scroll_to_bottom_image_view_content_description" />
+
+    <View
+        android:id="@+id/chatRoomMessagesVerticalLineView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/chatRoomTextReplyInclude"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/colorGrey"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/chatRoomTextReplyInclude"
+        layout="@layout/include_chat_message_reply_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_above="@+id/chatRoomMessagesSeparatorLineView"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/chatRoomCloseReplyImageView"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/chatRoomCloseReplyImageView"
+        android:layout_width="@dimen/chat_room_fragment_bottom_bar_height"
+        android:layout_height="@dimen/chat_room_fragment_bottom_bar_height"
+        android:layout_above="@+id/chatRoomMessagesSeparatorLineView"
+        android:layout_below="@+id/chatRoomMessagesVerticalLineView"
+        android:layout_alignParentEnd="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingTop="11dp"
+        android:paddingBottom="11dp"
+        android:src="@drawable/icon_round_close_grey_24"
+        android:visibility="gone"
+        android:contentDescription="@string/chat_room_fragment_close_reply_image_view_content_description" />
+
+    <View
+        android:id="@+id/chatRoomMessagesSeparatorLineView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/chatRoomSendMessageTextButtonLinearLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/colorGrey" />
+
+    <LinearLayout
+        android:id="@+id/chatRoomSendMessageTextButtonLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+<!--                android:layout_height="@dimen/chat_room_fragment_bottom_bar_height"-->
+        <EditText
+            android:id="@+id/chatRoomSendMessageEditText"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:inputType="textMultiLine"
+            android:paddingVertical="5dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp"
+            android:hint="@string/chat_room_fragment_edit_text_hint"
+            android:importantForAutofill="no" />
+
+        <ImageView
+            android:id="@+id/chatRoomSendMessageImageView"
+            android:layout_weight="0"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/chat_room_fragment_bottom_bar_height"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="@dimen/chat_room_fragment_bottom_bar_image_margin_end"
+            android:clickable="true"
+            android:contentDescription="@string/chat_room_fragment_send_message_image_view_content_description"
+            android:focusable="true"
+            android:padding="@dimen/chat_room_fragment_bottom_bar_image_padding_top_bot"
+            android:src="@drawable/icon_round_send_24"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/chatRoomSendPictureImageView"
+            android:layout_weight="0"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/chat_room_fragment_bottom_bar_height"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="@dimen/chat_room_fragment_bottom_bar_image_margin_end"
+            android:clickable="true"
+            android:contentDescription="@string/chat_room_fragment_select_picture_image_view_content_description"
+            android:focusable="true"
+            android:padding="@dimen/chat_room_fragment_bottom_bar_image_padding_top_bot"
+            android:src="@drawable/icon_round_image_search_24"
+            android:visibility="visible" />
+
+        <FrameLayout
+            android:id="@+id/chatRoomSendLocationFrameLayout"
+            android:layout_weight="0"
+            android:layout_width="@dimen/chat_room_fragment_bottom_bar_height"
+            android:layout_height="@dimen/chat_room_fragment_bottom_bar_height"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="@dimen/chat_room_fragment_bottom_bar_image_margin_end"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/chatRoomSendLocationImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:contentDescription="@string/chat_room_fragment_select_location_view_content_description"
+                android:focusable="true"
+                android:padding="@dimen/chat_room_fragment_bottom_bar_image_padding_top_bot"
+                android:src="@drawable/icon_google_maps_pin_control_color" />
+
+            <ProgressBar
+                android:id="@+id/chatRoomSendLocationProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+    <!--NOTE: This is an implementation of the above layout using a ConstraintLayout. It was not used because
+     although it should be more efficient. The GUI will 'jump' when scrolling (especially noticeable when
+     multiple pictures/mime_types are sent in a row).-->
+    <!--
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/chatMessageListItemTextReplyBodyConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".applicationActivityFragments.chatRoomFragment.ChatRoomFragment">
+
+        <FrameLayout
+            android:id="@+id/chatRoomChatRecyclerViewFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toTopOf="@+id/chatRoomMessagesVerticalLineView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/chatRoomChatRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/chat_message_list_item" />
+
+            <include
+                android:id="@+id/chatRoomFragmentMatchItem"
+                layout="@layout/fragment_match_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/chatRoomChatScrollToBottomImageView"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/background_chat_room_scroll_to_bottom"
+            android:padding="5dp"
+            android:rotation="90"
+            android:src="@drawable/icon_round_chevron_right_24"
+            app:layout_constraintBottom_toTopOf="@+id/chatRoomMessagesVerticalLineView"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            android:id="@+id/chatRoomMessagesVerticalLineView"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrey"
+            app:layout_constraintBottom_toTopOf="@+id/chatRoomTextReplyInclude"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatRoomChatRecyclerViewFrameLayout"
+            android:visibility="gone"
+            />
+
+        <include
+            android:id="@+id/chatRoomTextReplyInclude"
+            layout="@layout/chat_message_reply_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toTopOf="@+id/chatRoomMessagesSeparatorLineView"
+            app:layout_constraintEnd_toStartOf="@+id/chatRoomCloseReplyImageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatRoomMessagesVerticalLineView"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/chatRoomCloseReplyImageView"
+            android:layout_width="@dimen/chat_room_fragment_bottom_bar_height"
+            android:layout_height="@dimen/chat_room_fragment_bottom_bar_height"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingTop="11dp"
+            android:paddingBottom="11dp"
+            android:src="@drawable/icon_round_close_black_24"
+            app:layout_constraintBottom_toTopOf="@+id/chatRoomMessagesSeparatorLineView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/chatRoomTextReplyInclude"
+            app:layout_constraintTop_toBottomOf="@+id/chatRoomMessagesVerticalLineView"
+            android:visibility="gone"
+            />
+
+        <View
+            android:id="@+id/chatRoomMessagesSeparatorLineView"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrey"
+            app:layout_constraintBottom_toTopOf="@+id/chatRoomSendMessageEditText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatRoomTextReplyInclude" />
+
+        <EditText
+            android:id="@+id/chatRoomSendMessageEditText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/chat_room_fragment_bottom_bar_height"
+            android:autofillHints=""
+            android:hint="@string/chat_room_fragment_edit_text_hint"
+            android:background="@android:color/transparent"
+            android:inputType="textAutoComplete"
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/chatRoomSendMessageImageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatRoomMessagesSeparatorLineView" />
+
+        <ImageView
+            android:id="@+id/chatRoomSendMessageImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/chat_room_fragment_bottom_bar_height"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="@dimen/chat_room_fragment_bottom_bar_image_margin_end"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="@dimen/chat_room_fragment_bottom_bar_image_padding_top_bot"
+            android:src="@drawable/icon_round_send_24"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/chatRoomSendPictureImageView"
+            app:layout_constraintStart_toEndOf="@+id/chatRoomSendMessageEditText" />
+
+        <ImageView
+            android:id="@+id/chatRoomSendPictureImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/chat_room_fragment_bottom_bar_height"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="@dimen/chat_room_fragment_bottom_bar_image_margin_end"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="@dimen/chat_room_fragment_bottom_bar_image_padding_top_bot"
+            android:src="@drawable/icon_round_image_search_24"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/chatRoomSendLocationFrameLayout"
+            app:layout_constraintStart_toEndOf="@+id/chatRoomSendMessageImageView" />
+
+        <FrameLayout
+            android:id="@+id/chatRoomSendLocationFrameLayout"
+            android:layout_width="@dimen/chat_room_fragment_bottom_bar_height"
+            android:layout_height="@dimen/chat_room_fragment_bottom_bar_height"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="@dimen/chat_room_fragment_bottom_bar_image_margin_end"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/chatRoomSendPictureImageView">
+
+            <ImageView
+                android:id="@+id/chatRoomSendLocationImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="@dimen/chat_room_fragment_bottom_bar_image_padding_top_bot"
+                android:src="@drawable/icon_google_maps_pin_control_color" />
+
+            <ProgressBar
+                android:id="@+id/chatRoomSendLocationProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    -->

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/chatRoomDisplayItemPrimaryLayoutCardView"
+    app:cardBackgroundColor="@color/chat_room_list_chat_room_item_background_color"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/chatRoomDisplayItemPrimaryConstrainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+
+        <ImageView
+            android:id="@+id/chatRoomDisplayItemImageView"
+            android:layout_width="@dimen/messenger_screen_fragment_thumbnail_width"
+            android:layout_height="@dimen/messenger_screen_fragment_thumbnail_height"
+            android:contentDescription="@string/chat_room_list_item_chat_room_image_image_view_content_description"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:src="@drawable/icon_round_person_large_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Oddly enough unless this is set explicitly to AppCompatImageView the image will not show up -->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/chatRoomDisplayMessageNotificationView"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:contentDescription="@string/chat_room_list_item_message_notification_image_view_content_description"
+            android:theme="@style/AppTheme"
+            app:layout_constraintBottom_toBottomOf="@+id/chatRoomDisplayItemImageView"
+            app:layout_constraintEnd_toEndOf="@+id/chatRoomDisplayItemImageView"
+            app:srcCompat="@drawable/shape_circle_message_indicator" />
+
+        <TextView
+            android:id="@+id/chatRoomDisplayItemMessageTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="1"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/chat_room_list_item_message_placeholder"
+            android:textColor="@color/match_list_item_text_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/chatRoomDisplayItemProgressBar"
+            app:layout_constraintStart_toEndOf="@+id/chatRoomDisplayItemImageView"
+            app:layout_constraintTop_toBottomOf="@+id/chatRoomDisplayItemNameTextView" />
+
+        <ProgressBar
+            android:id="@+id/chatRoomDisplayItemProgressBar"
+            android:layout_width="@dimen/progress_bar_width"
+            android:layout_height="@dimen/progress_bar_height"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatRoomDisplayItemDateTextView" />
+
+        <TextView
+            android:id="@+id/chatRoomDisplayItemNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="0dp"
+            android:text="@string/chat_room_list_item_most_name_placeholder"
+            android:textColor="@color/match_list_item_text_color"
+            app:layout_constraintEnd_toStartOf="@+id/chatRoomDisplayItemDateTextView"
+            app:layout_constraintStart_toEndOf="@+id/chatRoomDisplayItemImageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/chatRoomDisplayItemDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:maxLines="1"
+            android:paddingStart="0dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:text="@string/chat_room_list_item_most_date_placeholder"
+            android:textColor="@color/match_list_item_text_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

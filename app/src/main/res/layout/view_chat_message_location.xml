@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--NOTE: this layout seems a bit redundant (it could be created in 1 line of code), however this needs to be done for map:liteMode="true" -->
+<com.google.android.gms.maps.MapView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/chatRoomAdapterListItemMapView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    map:liteMode="true" />

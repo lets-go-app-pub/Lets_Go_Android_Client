@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/chatMessageListItemReplyRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/chatRoomMessagesIndentationLineView"
+        android:layout_width="3dp"
+        android:layout_height="50dp"
+        android:background="@drawable/background_reply_indentation_line_received"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/chatMessageListItemReplyImageViewCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:layout_constraintHorizontal_bias="0.001"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/chatRoomMessagesIndentationLineView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="5dp">
+        <!-- NOTE: if layout_constraintHorizontal_bias is set to 0 ANYWHERE in the layout then ellipsize on the text views will sporadically not work-->
+        <ImageView
+            android:id="@+id/chatMessageListItemReplyImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="@dimen/chat_room_fragment_bottom_bar_height"
+            android:maxHeight="@dimen/chat_room_fragment_bottom_bar_height"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/chat_message_reply_item_image_content_description" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- NOTE: if layout_constraintHorizontal_bias is set to 0 ANYWHERE in the layout then ellipsize on the text views will sporadically not work-->
+    <TextView
+        android:id="@+id/chatMessageListItemReplyNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/chat_message_reply_item_name_placeholder"
+        android:textStyle="bold"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintHorizontal_bias="0.001"
+        app:layout_constraintStart_toEndOf="@+id/chatMessageListItemReplyImageViewCardView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/chatMessageListItemReplyMessageTypeTextView"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- NOTE: if layout_constraintHorizontal_bias is set to 0 ANYWHERE in the layout then ellipsize on the text views will sporadically not work-->
+    <TextView
+        android:id="@+id/chatMessageListItemReplyMessageTypeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/chat_message_reply_item_message_placeholder"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintHorizontal_bias="0.001"
+        app:layout_constraintStart_toEndOf="@+id/chatMessageListItemReplyImageViewCardView"
+        app:layout_constraintTop_toBottomOf="@+id/chatMessageListItemReplyNameTextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

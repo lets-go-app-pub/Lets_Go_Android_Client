@@ -1,0 +1,24 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="@dimen/select_categories_single_activity_icon_drawable_height"
+    android:width="@dimen/select_categories_single_activity_icon_drawable_width"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <path
+        android:fillColor="@color/activity_icon_color"
+        android:pathData="m9,17.58c-0.73,1.56 -1.49,2.75 -0.53,4.79 2.53,5.42 12.04,5.12 12.53,-0.16l0.38,-4.12a1,1 0,0 0,-0.65 -1c-5.8,-2.15 -4.9,1.83 -10.54,0a1,1 0,0 0,-1.19 0.49z" />
+    <path
+        android:fillColor="@color/activity_icon_color"
+        android:pathData="m39.57,25.36c0.94,-2 0.18,-3.22 -0.54,-4.78s-2.41,1 -6.11,-0.53c-1.24,-0.52 -2.63,-1.11 -5.65,0a1,1 0,0 0,-0.65 1l0.38,4.16c0.48,5.24 10,5.64 12.57,0.15z" />
+    <path
+        android:fillColor="@color/activity_icon_color"
+        android:pathData="m41.48,39.07 l-2.73,0.73 -2.2,-8.16c4.92,-1.81 7.83,-6.7 5.81,-11l-4.69,-10a1,1 0,0 0,-1.16 -0.64l-11.66,3.1 0.15,-1.62a1,1 0,0 0,-0.74 -1.06l-12.77,-3.42a1,1 0,0 0,-1.16 0.55l-4.69,10c-2.06,4.42 1,9.26 5.81,11l-2.2,8.25 -2.73,-0.73a1,1 0,0 0,-0.52 1.93l7.39,2a1,1 0,0 0,0.51 -2l-2.72,-0.72c0.24,-0.88 2.17,-8 2.21,-8.17 5.39,0.9 9.52,-1.93 10.44,-5.65 0.23,2.52 0.2,5 3.28,7.17a10,10 0,0 0,7.5 1.48c0,0.13 0.34,1.24 2.21,8.17l-2.72,0.72a1,1 0,0 0,0.26 2c0.26,0 5.41,-1.4 7.64,-2a1,1 0,0 0,-0.52 -1.93zM22,22.31c-0.3,3.37 -4.3,6 -9.06,4.69 -4.07,-1.08 -7.15,-5 -5.47,-8.54l4.33,-9.28 11.14,3zM28.26,29a5.06,5.06 0,0 1,-2.26 -3.69l-0.94,-10.17 11.14,-3 4.33,9.28c2.73,5.82 -6.53,11.58 -12.27,7.58z" />
+    <path
+        android:fillColor="@color/activity_icon_color"
+        android:pathData="m21.29,8.71a1,1 0,0 0,1.42 -1.42l-2,-2a1,1 0,0 0,-1.42 1.42z" />
+    <path
+        android:fillColor="@color/activity_icon_color"
+        android:pathData="m26,7v-3a1,1 0,0 0,-2 0v3a1,1 0,0 0,2 0z" />
+    <path
+        android:fillColor="@color/activity_icon_color"
+        android:pathData="m28,9c0.54,0 0.57,-0.15 2.71,-2.29a1,1 0,0 0,-1.42 -1.42l-2,2a1,1 0,0 0,0.71 1.71z" />
+</vector>

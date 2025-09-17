@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE resources [<!ENTITY categories_and_activites "Categories And Activities"><!ENTITY activities_only "Activities Only"><!ENTITY block_and_report "Block &amp; Report"><!ENTITY edited "edited"><!ENTITY app_human_name "LetsGo">]>
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">LetsGo</string>
+    <string name="app_human_name">&app_human_name;</string>
+
+    <!-- General -->
+    <string name="general_error">ERROR</string>
+    <string name="unmanageable_error_occurred">An error has occurred.</string>
+    <string name="function_called_too_quickly_error">An error occurred with this action. Please try again later.</string>
+    <string name="general_logo_content_description">&app_human_name; Logo</string>
+    <string name="shared_preferences_lets_go_key">lets_go_app_shared_preferences_key</string>
+    <string name="shared_preferences_version_code_key">version_code_key</string>
+    <string name="shared_preferences_installation_id">installation_id</string>
+    <string name="shared_preferences_tutorial_shown_key">tutorial_shown</string>
+    <string name="shared_preferences_most_recent_chat_message_time">chat_message_time</string> <!-- OBSOLETE -->
+    <string name="general_connection_error">Connection Error</string>
+    <string name="server_down_error">Server is temporarily down.</string>
+    <string name="general_login_token_expired">@string/general_connection_error</string>
+    <string name="general_placeholder">PLACEHOLDER</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="Ok">OK</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Save">Save</string>
+    <string name="Enable">Enable</string>
+    <string name="You">You</string>
+    <string name="You_have">You have</string>
+    <string name="You_were_space">You were </string>
+    <string name="User_has">%1$s has</string>
+    <string name="Has"> has</string>
+    <string name="On">On</string>
+    <string name="Off">Off</string>
+    <string name="Admin">Admin</string>
+    <string name="User">User</string>
+    <string name="New_match">New Match</string>
+    <string name="Chat_room">Chat Room</string>
+    <string name="un_match">UnMatch</string>
+    <string name="password">Password</string>
+    <string name="lowercase_password">password</string>
+    <string name="pinned_location">pinned location</string>
+    <string name="message">Message</string>
+    <string name="name">Name</string>
+    <string name="lowercase_name">name</string>
+    <string name="user">User</string>
+    <string name="Continue">Continue</string>
+    <string name="IAccept">I Accept</string>
+    <string name="Info">Info</string>
+    <string name="delete">Delete</string>
+    <string name="edited">&edited;</string>
+    <string name="deleted">deleted</string>
+    <string name="space">\u0020</string>
+    <string name="info">info</string>
+    <string name="location">Location</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="select_activities">Select Activities</string>
+    <string name="local_event">Local Event</string>
+    <string name="user_event">User Event</string>
+
+    <string name="activities">activities</string>
+    <string name="gender">gender</string>
+    <string name="age_range">age range</string>
+    <string name="genders_to_match">genders to match</string>
+    <string name="max_distance">max distance</string>
+    <string name="bio">bio</string>
+    <string name="city">city</string>
+    <string name="matching_options">matching options</string>
+    <string name="search_options">search options</string>
+    <string name="opted_in_to_promotional_emails">promotional email opt in</string>
+    <string name="phone_number_text_input_layout_content_description">Text field to enter phone number.</string>
+    <string name="sms_verification_long_cool_down">An error has occurred, please try again later.</string>
+    <string name="terms_of_service_link"><a href="https://letsgoapp.site/terms-of-service/">Terms of Service</a></string>
+    <string name="home_screen_terms_of_service_links">By signing up you agree to our <a href="https://letsgoapp.site/terms-of-service/">Terms</a> and <a href="https://letsgoapp.site/end-user-license-agreement/">EULA</a>. See how we use your data in our <a href="https://letsgoapp.site/privacy-policy/">Privacy Policy</a>.</string>
+
+    <!-- Activities Shared -->
+    <string name="activities_shared_enable_location_dialog_message">&app_human_name; requires location to be enabled, do you want to enable it?</string>
+    <string name="activities_shared_manually_label_location">Error setting up location. Please manually enable location inside Settings.</string>
+    <string name="activities_shared_error_requesting_location">Error occurred when requesting location.</string>
+    <string name="activities_shared_error_requesting_location_manually_enable">Error requesting location. Please make sure to enable location inside Settings.</string>
+    <string name="activities_shared_location_snack_bar_message">&app_human_name; requires access to the device location.</string>
+    <string name="activities_shared_location_snack_bar_button_name">SETTINGS</string>
+
+    <!-- Menu Item Names -->
+    <string name="menu_item_names_leave_chat_room">Leave Chat Room</string>
+    <string name="menu_item_names_clear_history">Clear History</string>
+    <string name="menu_item_names_block_and_report">&block_and_report;</string>
+    <string name="menu_item_names_un_match">@string/un_match</string>
+    <string name="menu_item_names_invite_to_chat_room">Invite To Chat Room</string>
+
+    <!-- Block and Report Dialog-->
+    <string name="block_and_report_dialog_title">Report Reason</string>
+    <string name="block_and_report_language_text">Language</string>
+    <string name="block_and_report_inappropriate_picture_text">Inappropriate picture</string>
+    <string name="block_and_report_advertising_text">Advertising</string>
+    <string name="block_and_report_other_text">Other</string>
+    <string name="block_and_report_text_edit_title">Other Reason</string>
+    <string name="block_and_report_text_edit_hint">Reason for reporting this person.</string>
+
+    <!-- Notifications -->
+    <string name="chat_messages_channel_name">Chat Messages</string> <!-- NOTE: The user will see this inside Settings->Apps->Let's Go->Notifications -->
+    <string name="chat_messages_channel_description">&app_human_name; chat message notification.</string>
+    <string name="chat_messages_new_messages">%1$d new messages.</string>
+    <string name="chat_messages_across_chat_rooms">Across %1$d chat rooms.</string>
+    <string name="chat_messages_across_chat_notification">Chat message notifications.</string>
+    <string name="chat_messages_message_heads_up_edited_deleted">%1$s a message.</string>
+    <string name="chat_messages_message_heads_up_edited_deleted_placeholder">edited a message.</string>
+
+    <string name="chat_messages_new_match_title">Matched!</string>
+
+    <!-- Database Names -->
+    <string name="database_name_account_info_database">account_info_database_name</string>
+    <string name="database_name_icons_database">icons_database_name</string>
+    <string name="database_name_messages_database">messages_database_name</string>
+    <string name="database_name_other_users_database">other_users_database_name</string>
+
+    <!-- Clean Database -->
+    <string name="clean_database_worker_title_synchronizing">Synchronizing</string>
+    <string name="clean_database_worker_name">Synchronization</string> <!-- NOTE: The user will see this inside Settings->Apps->LetsGo->Notifications -->
+    <string name="clean_database_worker_description">Running synchronization and various database cleanup methods. This process should only run once a day for a small amount of time.</string>
+    <string name="shared_preferences_storage_error_for_too_full_key">storage_error_for_too_full_key</string>
+
+    <!-- User Picture -->
+    <!-- NOTE: when adding file prefixes make sure they are removed inside the clearFilesHelper() in RepositoryUtilities -->
+    <string name="user_picture_file_name_prefix">self_picture</string> <!--NOTE: do not put spaces in this-->
+    <string name="user_pictures_from_camera_file_prefix">camera_selfie</string> <!--NOTE: do not put spaces in this-->
+    <string name="user_temporary_pictures_chat_message_file_prefix">TempChatPic</string> <!--NOTE: do not put spaces in this-->
+    <string name="user_picture_chat_message_file_prefix">ChatPic</string> <!--NOTE: do not put spaces in this-->
+    <string name="user_mime_type_chat_qr_code_file_prefix">ChatQRCode</string> <!--NOTE: do not put spaces in this-->
+    <string name="user_mime_type_chat_message_file_prefix">ChatGif</string> <!--NOTE: do not put spaces in this-->
+    <string name="user_reply_thumbnail_chat_message_file_prefix">ReplyThumbnail</string> <!--NOTE: do not put spaces in this-->
+
+    <!-- User Picture -->
+    <string name="other_user_picture_file_name_prefix">other_user_picture</string> <!--NOTE: do not put spaces in this-->
+
+    <!-- User Thumbnail-->
+    <string name="other_user_thumbnail_file_name_prefix">other_user_thumbnail</string> <!--NOTE: do not put spaces in this-->
+
+    <!-- Error Worker -->
+    <string name="error_worker_file_name_prefix">ERR_</string> <!--NOTE: do not put spaces in this-->
+
+    <!--IconsUser -->
+    <string name="icon_file_name_prefix">icon</string> <!--NOTE: do not put spaces in this-->
+    <string name="standard_image_file_name_prefix">standard</string> <!--NOTE: do not put spaces in this-->
+
+    <!-- General Login Errors -->
+    <string name="general_login_error_requires_info_invalid">\'Requires Info\' Field returned an invalid value of \'%1$s\'.</string>
+    <string name="general_login_error_invalid_return_status">An invalid return status was received of \'%1$s\' when login function returned \'NO_ERRORS\'.</string>
+    <string name="general_login_error_invalid_phone_number">An invalid phone number was extracted from the database with account type \'%1$s\'.</string>
+
+    <!-- General Repository Errors -->
+    <string name="general_repository_line_failed_at">Line Failed At: \'%1$d\'"</string>
+
+    <!-- facebook ID -->
+    <string name="facebook_app_id">647487093419678</string>
+    <string name="fb_login_protocol_scheme">fb3051199788272394</string>
+    <string name="facebook_client_token">5e6c91b8fbfe74868caf94edac618653</string>
+
+    <!-- google ID NOTE: DO NOT FIX THIS WARNING IT WILL BREAK GOOGLE SIGN IN -->
+    <string name="google_client_id" tools:ignore="TypographyDashes">1003529567130-hl2v2s77lhli9mioif1thg7lvp07ah2e.apps.googleusercontent.com</string> <!-- Release -->
+    <!--    <string name="google_client_id" tools:ignore="TypographyDashes">1003529567130-assrsu956qgs8v1i400sanubdctslho5.apps.googleusercontent.com</string> &lt;!&ndash; Debug &ndash;&gt;-->
+
+    <!-- error handling gRPC Client stuff -->
+    <string name="error_handle_num_times_sent_key">sent</string>
+
+    <!-- Login Splash Screen -->
+    <string name="splash_screen_connection_error">@string/general_connection_error</string>
+    <string name="logo_content_description">@string/general_logo_content_description</string>
+
+    <!-- Login Select Method Fragment-->
+    <string name="select_method_account_recovery_error">An error occurred, please try again later.</string>
+    <string name="select_method_account_recovery_success">Please check the attached email of the phone number.</string>
+    <string name="select_method_account_recovery_email_cool_down">Email is on cool down, please try again later.</string>
+    <string name="select_method_account_recovery_account_closed">This account is currently closed.</string>
+    <string name="select_method_account_recovery_account_does_not_exist">No Account exists for the passed phone number.</string>
+    <string name="select_method_account_recovery_invalid_phone_number">Invalid phone number was entered.</string>
+    <string name="select_method_android_error">Android side error.</string>
+    <string name="select_method_lets_go_runtime_exception">Unmanageable Error Returned In Login Select Method Fragment.</string>
+    <string name="select_method_phone_login_button_text">Phone Sign In</string>
+    <string name="select_method_facebook_login_button_text">Continue with Facebook</string>
+    <string name="select_method_google_login_button_text">Sign in</string>
+    <string name="select_method_retrieve_account_text">Trouble Logging In?</string>
+    <string name="select_method_background_content_description">Home screen background.</string>
+
+    <!-- Login Get Phone -->
+    <string name="phone_login_number_hint">(XXX) XXX-XXXX   </string>
+    <string name="phone_login_invalid_phone_number_entered">Invalid phone number entered.</string>
+    <string name="phone_login_connection_error">@string/general_connection_error</string>
+    <string name="phone_login_update_app">Error please update &app_human_name; app.</string>
+    <string name="phone_login_invalid_device">Error invalid device.</string>
+    <string name="phone_login_android_error">Error Android Error.</string>
+    <string name="phone_login_invalid_phone_number">Error invalid phone number.</string>
+    <string name="phone_login_invalid_account_type">Error invalid account type.</string>
+    <string name="phone_login_get_phone_number_title">Enter Phone Number</string>
+    <string name="phone_login_sending_sms_verification_code_on_cool_down">Verification message is still on cool down.</string>
+
+    <!-- Login Set Phone Birthday Dialog -->
+    <string name="set_phone_dialog_select_birthday_title">Select Birthday</string>
+    <string name="set_phone_dialog_new_device_detected_title">New Device Detected.</string>
+    <string name="set_phone_dialog_new_device_detected_body">A new device has been detected attempting to log into an existing account. Would you like to use the existing account or create a new account?</string>
+    <string name="set_phone_dialog_new_device_detected_replace">Create New</string>
+    <string name="set_phone_dialog_new_device_detected_existing">Use Existing</string>
+    <string name="set_phone_dialog_confirmation_title">Confirmation.</string>
+    <string name="set_phone_dialog_confirmation_body">This will permanently delete the existing account associated with this phone number. Are you sure?</string>
+    <string name="set_phone_dialog_enter_birthday_title">Enter Birthday</string>
+    <string name="set_phone_dialog_enter_birthday_invalid_title">Invalid Birthday Was Entered</string>
+
+    <!-- Login SMS verification errors -->
+    <string name="sms_verification_verification_code_sent">Verification code sent!</string>
+    <string name="sms_verification_new_verification_code">Sending new verification code.</string>
+    <string name="sms_verification_codes_do_not_match">Verification code does not match.</string>
+    <string name="sms_verification_code_expired">Verification code expired, sending new code.</string>
+    <string name="sms_verification_invalid_phone_number_entered">Invalid phone number entered.</string>
+    <string name="sms_verification_invalid_verification_code_entered">Invalid verification code entered.</string>
+    <string name="sms_verification_connection_error">@string/general_connection_error</string>
+    <string name="sms_verification_update_app">Error please update &app_human_name; app.</string>
+    <string name="sms_verification_birthday_does_not_match">Entered birthday does match birthday on file.</string>
+    <string name="sms_verification_sms_on_cool_down">Send message on cool down for %1$d seconds.</string>
+    <string name="sms_verification_button_send_new_code">Send New Verification Code.</string>
+    <string name="sms_verification_verification_on_cool_down_error">An error has occurred. Please try verification again later.</string>
+    <string name="sms_verification_edit_text_hint">XXXXXX</string>
+    <string name="sms_verification_get_code_title">Enter Verification Code</string>
+    <string name="sms_verification_sms_still_on_cool_down_general">Messenger is still on cool down.</string>
+    <string name="sms_verification_requires_authorization_verification_code_sent">Account requires authorization, verification code has been sent.</string>
+
+    <!-- Login Show Rules -->
+    <string name="show_rules_rules_title"><b>&app_human_name; Culture Guidelines</b></string>
+    <string name="show_rules_intro_text">Welcome to <b>&app_human_name;</b> &amp; the <b>Go Getter</b> community!\n\nWe are EXCITED to have you join us and want to create the BEST EXPERIENCE possible for EVERYONE.\n</string>
+    <string name="show_rules_authenticity_title"><b>BE AUTHENTIC:</b></string>
+    <string name="show_rules_authenticity_body">Authenticity is vital for <b>Go Getters</b>. You are AMAZING. So be yourself! Please be honest and verify your age, photos, and bio are AUTHENTICALLY you!</string>
+    <string name="show_rules_kindness_title"><b>KINDNESS IS KEY:</b></string>
+    <string name="show_rules_kindness_body">Treat ALL <b>Go Getters</b> with KINDNESS &amp; RESPECT!</string>
+    <string name="show_rules_be_safe_title"><b>BE SAFE &amp; SAVVY:</b></string>
+    <string name="show_rules_be_safe_text">Be SAFE &amp; SAVVY about what you share with other <b>Go Getters!</b></string>
+    <string name="show_rules_be_toxic_title"><b>DON’T BE TOXIC:</b></string>
+    <string name="show_rules_be_toxic_text">Please REPORT all toxic, malicious, or illegal accounts RUINING the <b>&app_human_name;</b> community &amp; culture!</string>
+    <string name="show_rules_full_list_text">For a full list of the rules, check out the below link!</string>
+
+    <!-- Login Promotional Opt In -->
+    <string name="show_promotional_opt_in_title"><b>Your Privacy Matters</b></string>
+    <string name="show_promotional_opt_in_body">At <b>&app_human_name;</b> we NEVER sell your personal information to ANYONE. Instead, the combined influence of all <b>Go Getters</b> allows us to offer FREE merchandise and EXCLUSIVE deals on AWESOME events &amp; products based on the activities you choose!</string>
+    <string name="show_promotional_opt_in_link_text">Watch for our weekly <b>Go Getter</b> newsletter coming soon!</string>
+
+    <!-- Login Get Email -->
+    <string name="get_email_connection_error">@string/general_connection_error</string>
+    <string name="get_email_invalid_email">Invalid email address please try again.</string>
+    <string name="get_email_error">Error validating email.</string>
+    <string name="get_email_address_text">Email</string>
+    <string name="get_email_title">Enter Email Address</string>
+
+    <!-- Login Get Birthday -->
+    <string name="get_birthday_connection_error">@string/general_connection_error</string>
+    <string name="get_birthday_invalid_birthday">Invalid birthday please try again.</string>
+    <string name="get_birthday_title">Enter Birthday</string>
+    <string name="get_birthday_date">MM/DD/YYYY</string>
+
+    <!-- Login Get First Name -->
+    <string name="get_first_name_connection_error">@string/general_connection_error</string>
+    <string name="get_first_name_invalid_name">Invalid name please try again.</string>
+    <string name="get_first_name_edit_text_hint">First Name</string>
+    <string name="get_first_name_title">Enter First Name</string>
+
+    <!-- Login Get Gender -->
+    <string name="get_gender_connection_error">@string/general_connection_error</string>
+    <string name="get_gender_invalid_gender">Invalid input please try again.</string>
+    <string name="get_gender_title">Select Gender</string>
+    <string name="get_gender_gender_male">Male</string>
+    <string name="get_gender_gender_female">Female</string>
+    <string name="get_gender_gender_other">Other</string>
+    <string name="get_gender_gender_other_hint">Gender</string>
+
+    <!-- Select Pictures -->
+    <string name="get_pictures_title">Select Pictures</string>
+    <string name="get_pictures_picture_context">User Picture Selector</string>
+    <string name="get_pictures_connection_error">@string/general_connection_error</string>
+    <string name="get_pictures_invalid_picture">Invalid Picture</string>
+    <string name="get_pictures_choose_picture">Please choose at least one picture in order to continue.</string>
+    <string name="get_pictures_picture_incompatible">Error picture incompatible. Please choose a different picture.</string>
+    <string name="get_pictures_error_loading_picture">Error loading picture</string>
+    <string name="get_pictures_error_loading_camera">Error loading camera</string>
+
+    <!-- Select Categories -->
+    <string name="select_categories_screen_header"><font size="22">Choose your favorite activities.\n</font><font size="14">Don\'t worry you can change or add to them anytime.</font></string>
+    <string name="select_categories_icon_content">Activity Icon</string>
+    <string name="select_categories_max_time_frames_reached">Error, maximum number of time frames reached. Please delete existing time frame in order to add another.</string>
+    <string name="select_categories_stop_time_before_start_time">Error saving selected time frame. Stop point must come after start point.</string>
+    <string name="select_categories_generic_error">An error occurred saving the selected time frame. Please try again.</string>
+    <string name="select_categories_activity_menu_full">All activities are used. Please remove one in order to add this.</string>
+    <string name="select_categories_anytime_message">Matching with other people interested in \"%1$s\" anytime!</string>
+    <string name="select_categories_combine_overlapping_time_frames">Combined overlapping time frames.</string>
+    <string name="select_categories_invalid_login_information">Error logging in please retry login process.</string>
+    <string name="select_categories_login_activity_select_one_activity">Please select at least one activity.</string>
+    <string name="select_categories_application_activity_select_one_activity">Update failed, please leave at least one activity selected.</string>
+    <string name="select_categories_invalid_info_passed">Invalid info passed please try again.</string>
+    <string name="select_categories_connection_error">@string/general_connection_error</string>
+    <string name="select_categories_start_date_title">Select Start Date</string>
+    <string name="select_categories_start_time_title">Select Start Time</string>
+    <string name="select_categories_stop_date_title">Select Stop Date</string>
+    <string name="select_categories_stop_time_title">Select Stop Time</string>
+    <string name="select_categories_choose_categories_scroll_view_content_description">View or modify selected activities.</string>
+
+    <!-- Profile Screen-->
+    <string name="profile_screen_feedback_type_selection_dialog_title">We would love to hear any feedback from you!</string>
+    <string name="profile_screen_feedback_type_selection_activity_suggestion">Activity Suggestion</string>
+    <string name="profile_screen_feedback_type_selection_bug_report">Bug Report</string>
+    <string name="profile_screen_feedback_type_selection_other_feedback">Other Feedback</string>
+    <string name="profile_screen_feedback_activity_suggestion_name_hint">Activity Name</string>
+    <string name="profile_screen_feedback_activity_suggestion_body_hint">Description (Optional)</string>
+    <string name="profile_screen_feedback_bug_report_body_hint">Please try to include what you were doing when the bug occurred. Or if possible list the steps to reproduce the bug.</string>
+    <string name="profile_screen_feedback_other_feedback_body_hint">Feedback description</string>
+    <string name="profile_screen_feedback_thank_you_toast">Thank you for your support!</string>
+    <string name="profile_screen_share_title">Check out this app!</string>
+    <string name="profile_screen_picture_image_view_content_description">User Profile Picture</string>
+    <string name="profile_screen_edit_image_view_content_description">Edit User Profile</string>
+    <string name="profile_screen_activities_image_view_content_description">Modify Activities Icon</string>
+    <string name="profile_screen_feedback_image_view_content_description">Send Feedback Icon</string>
+    <string name="profile_screen_share_image_view_content_description">Share App Icon</string>
+
+    <!-- Modify Profile Screen-->
+    <string name="modify_profile_screen_categories_and_activities">&categories_and_activites;</string>
+    <string name="modify_profile_screen_only_activities">&activities_only;</string>
+    <string name="modify_profile_screen_algorithm_match_options_title">Matching By\u0020\u0020\u0020</string> <!-- \u0020 is space-->
+    <string name="modify_profile_screen_log_out_warning_title">Log out Warning</string>
+    <string name="modify_profile_screen_log_out_warning_body">This will log the account out of this device.</string>
+    <string name="modify_profile_screen_successfully_logged_out_toast">Successfully logged out.</string>
+    <string name="modify_profile_screen_delete_warning_title">Account Deletion Warning</string>
+    <string name="modify_profile_screen_delete_warning_body">This will permanently delete this account.</string>
+    <string name="modify_profile_screen_successfully_deleted_account_toast">Successfully deleted account.</string>
+    <string name="modify_profile_screen_set_email_title">New Email</string>
+    <string name="modify_profile_screen_set_email_body">Enter a new email address below.</string>
+    <string name="modify_profile_screen_save_email_positive_button_name">Save</string>
+    <string name="modify_profile_screen_invalid_email">Invalid email address.</string>
+    <string name="modify_profile_screen_email_address_successfully_saved">Email address successfully saved.</string>
+    <string name="modify_profile_screen_user_max_distance_text">%1$d mi.</string>
+    <string name="modify_profile_screen_verify_email_requires_verification">REQUIRES VERIFICATION</string>
+    <string name="modify_profile_screen_verify_email_verified">VERIFIED</string>
+    <string name="modify_profile_screen_algorithm_match_options_tooltip"><b>&categories_and_activites;</b>\nWill find all matches for the activities (e.g. baseball) first. After that, it will find matches for the categories (e.g. pick-up sports).\n\n<b>&activities_only;</b>\nWill only find matches for the activities (e.g. baseball).</string>
+    <string name="modify_profile_screen_visit_web_page_text"><a href="https://letsgoapp.site/">Visit web page</a></string>
+    <string name="modify_profile_screen_privacy_policy_text"><a href="https://letsgoapp.site/privacy-policy/">Privacy Policy</a></string>
+
+    <!-- Modify Profile Layout-->
+    <string name="modify_profile_layout_opted_in_to_promotional_email_title">Receive Promotional Emails</string>
+    <string name="modify_profile_layout_bio_title">Enter Bio</string>
+    <string name="modify_profile_layout_bio_body_hint">A little about me…</string>
+    <string name="modify_profile_layout_city_title">Enter City</string>
+    <string name="modify_profile_layout_city_body_hint">City Name</string>
+    <string name="modify_profile_layout_age_range_title">Age Range</string>
+    <string name="modify_profile_layout_age_range_title_value_placeholder">18–80+</string>
+    <string name="modify_profile_layout_max_distance_title">Max Distance</string>
+    <string name="modify_profile_layout_max_distance_title_value_placeholder">30 mi.</string>
+    <string name="modify_profile_layout_email_title">Email Address</string>
+    <string name="modify_profile_layout_verify_email_button_text">Verify Email</string>
+    <string name="modify_profile_layout_gender_title">My Gender</string>
+    <string name="modify_profile_layout_gender_range_title">Genders To Match With</string>
+    <string name="modify_profile_layout_gender_range_everyone_text">Everyone</string>
+    <string name="modify_profile_layout_gender_range_male_text">Male</string>
+    <string name="modify_profile_layout_gender_range_female_text">Female</string>
+    <string name="modify_profile_layout_gender_range_other_genders_text">Other Genders</string>
+    <string name="modify_profile_layout_gender_range_other_genders_chevron_content_description">Other Genders Dropdown Chevron</string>
+    <string name="modify_profile_layout_gender_range_other_genders_button_text">Add Other Gender</string>
+    <string name="modify_profile_layout_gender_range_other_genders_error_text">Maximum number of genders to match with reached.</string>
+    <string name="modify_profile_layout_log_out_button_text">Log out</string>
+    <string name="modify_profile_layout_delete_button_text">@string/delete</string>
+    <string name="modify_profile_layout_email_successfully_sent">An email has been sent to the selected email address.</string>
+    <string name="modify_profile_layout_email_on_cool_down">Send email is on cool down. Please try again later.</string>
+    <string name="modify_profile_layout_email_error_sending_email">An error occurred sending the email. Please try again later.</string>
+    <string name="modify_profile_layout_email_email_already_verified">Email is verified.</string>
+
+    <!-- Match Screen Fragment-->
+    <string name="match_screen_fragment_block_and_report">&block_and_report;</string>
+    <string name="match_screen_fragment_name_age_text">%1$s, %2$d</string>
+    <string name="match_screen_fragment_location_text">%1$s, %2$s miles away</string>
+    <string name="match_screen_fragment_no_city_location_text">%1$s miles away</string>
+    <string name="match_screen_fragment_now_text">NOW</string>
+    <string name="match_screen_fragment_anytime_text">ANYTIME</string>
+    <string name="match_screen_fragment_completed_text">COMPLETED</string>
+    <string name="match_screen_fragment_canceled_text">CANCELED</string>
+    <string name="match_screen_fragment_other_times_plural_text">Other Time(s)</string>
+    <string name="match_screen_fragment_other_times_singular_text">Time(s)</string>
+    <string name="match_screen_fragment_overlapping_times_plural_text">Overlapping Times</string>
+    <string name="match_screen_fragment_overlapping_times_singular_text">Overlapping Time</string>
+    <string name="match_screen_fragment_close_times_plural_text">Close Times</string>
+    <string name="match_screen_fragment_close_times_singular_text">Close Time</string>
+    <string name="match_screen_fragment_match_time_text_example_size">WWW, WWW 99\n5:00 PM</string> <!--NOTE: This is used to calculate necessary space for TextView; careful when changing-->
+    <string name="match_screen_fragment_activity_image_content_description">Activity Image</string>
+    <string name="match_screen_fragment_chevron_activity_image_content_description">Chevron for dropdown menu</string>
+    <string name="match_screen_fragment_dialog_fragment_image_content_description">Dialog fragment image view for maximizing picture.</string>
+    <string name="match_screen_fragment_match_card_left_chevron_content_description">Match card left chevron.</string>
+    <string name="match_screen_fragment_match_card_right_chevron_content_description">Match card right chevron.</string>
+    <string name="match_screen_fragment_match_card_user_picture_content_description">Match card user picture.</string>
+    <string name="match_screen_fragment_match_card_left_swipe_image_content_description">Match card user left swipe thumbs down.</string>
+    <string name="match_screen_fragment_match_card_right_swipe_image_content_description">Match card user right swipe thumbs up.</string>
+    <string name="match_screen_fragment_no_matches_found">No Matches Found.\nTry expanding search criteria by adding activities, changing matching distance etc…</string>
+    <string name="match_screen_fragment_swipes_used_up_show_time_remaining">Swipes used up, reset in\n%1$s</string>
+    <string name="match_screen_fragment_swipes_used_up_no_timer">Swipes used up, check back later!</string>
+    <string name="match_screen_fragment_thumbs_down_image_view_content_description">Thumbs Down</string>
+    <string name="match_screen_fragment_thumbs_up_image_view_content_description">Thumbs Up</string>
+
+    <!-- Messenger screen fragment-->
+    <string name="messenger_screen_fragment_account_banned_from_chat_room">Account has been banned from this chat room.</string>
+    <string name="messenger_screen_fragment_no_chat_room_id_exists">No chat room with that Id exists.</string>
+    <string name="messenger_screen_fragment_invalid_chat_room_password">Invalid chat room password.</string>
+    <string name="messenger_screen_fragment_invalid_chat_room_id_entered">Invalid chat room id.</string>
+    <string name="messenger_screen_fragment_user_too_young_for_chat_room">An age restriction has been set on this chat room. You are too young to join.</string>
+    <string name="messenger_screen_fragment_error_joining_chat_room">Error occurred when joining chat room.</string>
+    <string name="messenger_screen_fragment_join_chat_room_dialog_title">Join Chat Room</string>
+    <string name="messenger_screen_fragment_join_chat_room_dialog_id_header">Chat Room Id</string>
+    <string name="messenger_screen_fragment_join_chat_room_dialog_password_header">Chat Room Password</string>
+    <string name="messenger_screen_fragment_create_chat_room_dialog_title">Create New Chat Room</string>
+    <string name="messenger_screen_fragment_create_chat_room_dialog_name_header">Chat Room Name</string>
+    <string name="messenger_screen_fragment_match_queue_title">Match Queue</string>
+    <string name="messenger_screen_fragment_match_list_item_picture_content_description">Matching User Picture</string>
+
+    <!-- Chat room general-->
+    <string name="chat_room_general_double_check_leave_chat_room_title">Leave chat room</string>
+    <string name="chat_room_general_double_check_leave_chat_room_message">Are you sure you want to leave the chat room?</string>
+    <string name="chat_room_general_double_check_clear_history_title">Clear History</string>
+    <string name="chat_room_general_double_check_clear_history_message">Are you sure you want to clear the chat room history?</string>
+    <string name="chat_room_general_double_check_un_match_title">@string/un_match</string>
+
+    <!-- Chat room fragment -->
+    <string name="chat_room_fragment_user_default">User has</string>
+    <string name="chat_room_fragment_user_kicked">%1$s been kicked from chat.</string>
+    <string name="chat_room_fragment_user_banned">%1$s been banned from chat.</string>
+    <string name="chat_room_fragment_user_joined">%1$s joined chat.</string>
+    <string name="chat_room_fragment_user_left">%1$s left chat.</string>
+    <string name="chat_room_fragment_name_updated">Chat room name has been changed to %1$s.</string>
+    <string name="chat_room_fragment_name_removed">Chat room name has been removed.</string>
+    <string name="chat_room_fragment_password_updated">Chat room password has been changed to %1$s.</string>
+    <string name="chat_room_fragment_password_removed">Chat room password has been removed.</string>
+    <string name="chat_room_fragment_admin_promoted">%1$s been promoted to Admin.</string>
+    <string name="chat_room_fragment_history_cleared">History has been cleared.</string>
+    <string name="chat_room_fragment_new_pinned_location">Chat room pinned location changed.</string>
+    <string name="chat_room_fragment_pinned_location_removed">Chat room pinned location has been removed.</string>
+    <string name="chat_room_fragment_delete_message_for_all_users">Delete for all users.</string>
+    <string name="chat_room_fragment_delete_message_for_self">Delete for self only.</string>
+    <string name="chat_room_fragment_permanently_delete_message_check_title">Delete Message</string>
+    <string name="chat_room_fragment_permanently_delete_message_check">Are you sure you want to permanently delete this message?</string>
+    <string name="chat_room_fragment_message_copied_notification">Message Copied</string>
+    <string name="chat_room_fragment_message_copied_clipboard_label">Text Message Copy</string>
+    <string name="chat_room_fragment_user_no_longer_inside_chat_room">User is no longer inside chat room.</string>
+    <string name="chat_room_fragment_image_failed_to_load_image">Error occurred loading image.</string>
+    <string name="chat_room_fragment_image_error_loading_chat_room">Error occurred loading chat room.</string>
+    <string name="chat_room_fragment_error_sending_edited_message">Error occurred sending message edit.</string>
+    <string name="chat_room_fragment_error_sending_delete_message">Error occurred deleting message.</string>
+    <string name="chat_room_fragment_error_sending_reply_message">Error occurred attempting to reply to message.</string>
+    <string name="chat_room_fragment_message_must_be_sent_to_server_reply">Message must be sent to server before reply can be used.</string>
+    <string name="chat_room_fragment_wait_for_download_to_complete_reply">Please wait for image to finish downloading before replying.</string>
+    <string name="chat_room_fragment_account_already_exists_inside_chat_room">Account already exists inside this chat room.</string>
+    <string name="chat_room_fragment_double_check_un_match_message">Are you sure you want to cancel the match?</string>
+    <string name="chat_room_fragment_invite_expired">Invite expired.</string>
+    <string name="chat_room_fragment_edit_text_hint">@string/message</string>
+    <string name="chat_room_fragment_scroll_to_bottom_image_view_content_description">Scroll To Bottom Chevron Button</string>
+    <string name="chat_room_fragment_close_reply_image_view_content_description">Close Reply Button</string>
+    <string name="chat_room_fragment_send_message_image_view_content_description">Send Message Button</string>
+    <string name="chat_room_fragment_select_picture_image_view_content_description">Select Image To Send Button</string>
+    <string name="chat_room_fragment_select_location_view_content_description">Select Location To Send Button</string>
+
+    <!-- Chat room info fragment -->
+    <string name="chat_room_info_fragment_id">Id:</string>
+    <string name="chat_room_info_fragment_name">Name:</string>
+    <string name="chat_room_info_fragment_no_name">No Name Set</string>
+    <string name="chat_room_info_fragment_password">Password:</string>
+    <string name="chat_room_info_fragment_qr_code"> Event QR Code</string>
+    <string name="chat_room_info_fragment_pinned_location">Pinned Location</string>
+    <string name="chat_room_info_fragment_no_password">No Password Set</string>
+    <string name="chat_room_info_fragment_change_info_dialog_title">Chat Room %1$s</string>
+    <string name="chat_room_info_fragment_change_info_dialog_hint">Enter Chat Room %1$s Here</string>
+
+    <!-- Chat room member fragment -->
+    <string name="chat_room_member_fragment_error_blocking_user">Error blocking user.</string>
+
+    <!-- Chat room list fragment -->
+    <string name="chat_room_list_fragment_parent_instance_id_key">chatRoomListFragmentInstanceIdKey</string>
+    <string name="chat_room_list_fragment_parent_chat_room_unique_id_key">chatRoomListFragmentUniqueIdKey</string>
+    <string name="chat_room_list_fragment_type_of_parent_key">chatRoomListFragmentTypeOfParentKey</string>
+    <string name="chat_room_list_fragment_chat_room_options_title">Select Option</string>
+    <string name="chat_room_list_fragment_chat_room_currently_loading">Chat room is currently loading.</string>
+    <string name="chat_room_list_fragment_chat_title">Chat</string>
+    <string name="chat_room_list_fragment_search_bar_title">Search</string>
+    <string name="chat_room_list_fragment_popup_menu_image_view_content_description">Chat Rooms Popup Menu</string>
+    <string name="chat_room_list_fragment_close_search_bar_image_view_content_description">Close Search Bar</string>
+
+    <!-- Select location screen fragment-->
+    <string name="select_location_screen_fragment_send_title">Send selected location</string>
+    <string name="select_location_screen_fragment_current_address_title_placeholder">Address</string>
+    <string name="select_location_screen_fragment_send_image_view_content_description">Send selected location.</string>
+
+    <!-- Select location maps fragment-->
+    <string name="select_location_maps_fragment_map_marker_image_view_content_description">Map Marker</string>
+    <string name="select_location_maps_fragment_layers_image_view_content_description">Select Layer Button</string>
+
+    <!-- Display Qr Code fragment-->
+    <string name="display_qr_code_fragment_image_view_content_description">QR Code</string>
+
+    <!-- Select chat room for invite fragment -->
+    <string name="select_chat_room_for_invite_title">Select chat room for %1$s invite.</string>
+    <string name="select_chat_room_for_invite_user_exists_inside_chat_room">%1$s is already a member of selected chat room.</string>
+    <string name="select_chat_room_for_invite_user_exists_not_eligible_chat_room">%1$s is not eligible to join selected chat room.</string>
+
+    <!-- Chat message types in text -->
+    <string name="chat_message_type_text_invite">Chat Room Invite</string>
+    <string name="chat_message_type_text_location">Location Message</string>
+    <string name="chat_message_type_text_gif">Gif Message</string>
+    <string name="chat_message_type_text_png">Sticker Message</string>
+    <string name="chat_message_type_text_generic_mime">Image Message</string>
+    <string name="chat_message_type_text_picture">Picture Message</string>
+    <string name="chat_message_different_user_joined_chat_room">%1$s joined chat.</string>
+    <string name="chat_message_different_user_left_chat_room">%1$s left chat.</string>
+    <string name="chat_message_user_kicked_chat_room">%1$s kicked from chat.</string>
+    <string name="chat_message_user_banned_chat_room">%1$s banned from chat.</string>
+    <string name="chat_message_chat_room_name_updated">Chat room name updated.</string>
+    <string name="chat_message_chat_room_password_updated">Chat room password updated.</string>
+    <string name="chat_message_chat_room_pinned_location_updated">Chat room pinned location updated.</string>
+    <string name="chat_message_new_admin_promoted">New admin promoted.</string>
+    <string name="chat_message_new_pinned_location">Chat room pinned location changed.</string>
+    <string name="chat_message_match_canceled">Match canceled.</string>
+    <string name="chat_message_history_cleared">History cleared.</string>
+    <string name="chat_message_match_has_been_made">You\'ve matched with %1$s!</string>
+
+    <!-- Chat message adapter -->
+    <string name="chat_message_adapter_invited_to_chat_room_header">Invited to chat room</string>
+    <string name="chat_message_adapter_invite_to_chat_room_sent_header">Invite to chat room</string>
+    <string name="chat_message_adapter_invite_to_chat_room_sent_final_line">sent to %1$s</string>
+    <string name="chat_message_adapter_invite_to_chat_room_sent_with_error">Invite to join chat room sent.</string>
+    <string name="chat_message_adapter_invite_to_chat_room_expired">Invite Expired</string>
+    <string name="chat_message_adapter_reply_to_message_generic">@string/message</string>
+    <string name="chat_message_adapter_default_user_name">@string/user</string>
+    <string name="chat_message_adapter_message_edited_edit_text_hint">Delete Message</string>
+    <string name="chat_message_adapter_invite_message_join_chat_room_button_text">JOIN CHAT ROOM</string>
+
+    <!-- Match Made Fragment -->
+    <string name="match_made_fragment_close_image_view_content_description">Close match made screen.</string>
+    <string name="match_made_fragment_title">\u0020Match Found!\u0020</string> <!-- Must have space before and after to avoid letters getting 'chopped' for the font.-->
+    <string name="match_made_fragment_name">Name Placeholder</string>
+    <string name="match_made_fragment_user_picture_image_view_content_description">User Picture</string>
+    <string name="match_made_fragment_send_message_button_text">Send A Message</string>
+    <string name="match_made_fragment_keep_swiping_button_text">Keep Swiping</string>
+    <string name="match_made_fragment_title_content_description">Match Made Logo</string>
+
+    <!-- Gender Range Gender Other Layout-->
+    <string name="gender_range_gender_other_close_button_content_description">Delete Other Gender Button</string>
+    <string name="gender_range_gender_other_layout_gender_hint">@string/delete</string>
+
+    <!-- Select Choice dialog -->
+    <string name="select_choice_dialog_title">Select time frame for activity.</string>
+    <string name="select_choice_dialog_choice_one">AnyTime</string>
+    <string name="select_choice_dialog_choice_two">Pick Specific Time</string>
+
+    <!--AccountRecoveryDialog-->
+    <string name="account_recovery_dialog_title">Account Recovery</string>
+    <string name="account_recovery_dialog_body">An email will be sent to the selected phone number with further instructions.</string>
+
+    <!-- StoredIconDataDialog -->
+    <string name="start_stop_time">Activity Icon</string>
+
+    <!-- ActivityTimeRowCompoundView-->
+    <string name="start_stop_time_linker">TO</string>
+
+    <!-- MyDatePickerDialog-->
+    <string name="my_date_picker_positive_button">Accept</string>
+    <string name="my_date_picker_negative_button">Cancel</string>
+
+    <!-- MyTimePickerDialog-->
+    <string name="my_time_picker_positive_button">Accept</string>
+    <string name="my_time_picker_negative_button">Cancel</string>
+
+    <!-- StartStopChooserDialog-->
+    <string name="start_stop_chooser_title">Select Time Frame</string>
+    <string name="start_stop_chooser_positive_button">Accept</string>
+    <string name="start_stop_chooser_negative_button">Cancel</string>
+    <string name="start_stop_chooser_warning_invalid_time_frame">Warning: Stop point must come after start point.</string>
+
+    <!-- Google Login errors -->
+    <string name="google_cannot_connect_error">Unable to connect to Google.</string>
+    <string name="google_login_error">Google Login Error.</string>
+    <string name="google_login_error_message">Google Returned Login Error \'%1$s\'.</string>
+
+    <!-- Facebook Login errors -->
+    <string name="facebook_login_error">Facebook Login Error.</string>
+    <string name="facebook_login_error_message">Facebook Returned Login Error \'%1$s\'.</string>
+
+    <!-- Logged In Elsewhere dialog -->
+    <string name="logged_in_elsewhere_title">Warning.</string>
+    <string name="logged_in_elsewhere_body">Account has been logged in from a different device.</string>
+
+    <!-- No Valid Intents dialog -->
+    <string name="no_valid_intents_title">Error.</string>
+    <string name="no_valid_intents_body">There is no valid way of loading images found on this device.</string>
+
+    <!-- Runtime Error dialog -->
+    <string name="error_dialog_title">Error.</string>
+    <string name="error_dialog_body">A Runtime Error Has Occurred.</string>
+
+    <!-- Connection Error dialog -->
+    <string name="connection_error_dialog_title">@string/general_connection_error</string>
+    <string name="connection_error_dialog_body">No internet connection detected.</string>
+
+    <!-- Underage dialog -->
+    <string name="underage_dialog_title">Underage</string>
+    <string name="underage_dialog_body">Account creation failed, you must be at least %1$d years of age to use this app.</string>
+
+    <!-- Suspended And Banned dialog -->
+    <string name="suspended_dialog_title">Account Suspended</string>
+    <string name="banned_dialog_title">Account Banned</string>
+    <string name="suspended_banned_reason_unspecified">Unspecified</string>
+    <string name="generic_suspended_reason">Account has been suspended.</string>
+    <string name="generic_banned_reason">Account has been banned.</string>
+
+    <!-- Outdated Version dialog -->
+    <string name="outdated_version_dialog_title">Application Out Of Date.</string>
+    <string name="outdated_version_dialog_body">This version of &app_human_name; is no longer supported. Please update!</string>
+
+    <!-- Start Stop DateTime Dialog-->
+    <string name="start_stop_datetime_start_date">Start Date</string>
+    <string name="start_stop_datetime_start_time">Start Time</string>
+    <string name="start_stop_datetime_stop_date">Stop Date</string>
+    <string name="start_stop_datetime_stop_time">Stop Time</string>
+
+    <!-- Stored User Activity Dialog-->
+    <string name="stored_user_activity_placeholder_activity_name">Boating</string>
+    <string name="stored_user_activity_delete">@string/delete</string>
+    <string name="stored_user_activity_time_frames_title">Time Frames</string>
+    <string name="stored_user_activity_header_edit_title">\u0020\u0020Edit\u0020\u0020</string> <!-- \u0020 is space-->
+    <string name="stored_user_activity_header_delete_title">@string/delete</string>
+    <string name="stored_user_activity_new_time_frame_button_text">New Time Frame</string>
+    <string name="stored_user_activity_maximum_time_frames_reached">Maximum number of time frames reached. Must delete a time frame to add more.</string>
+
+    <!-- Application Menu-->
+    <string name="activities_menu_text"><font size="13">Change your</font>\n<font size="17"><b>Activities</b></font></string>
+    <string name="feedback_menu_text"><font size="13">Send any</font>\n<font size="17"><b>Feedback</b></font></string>
+    <string name="share_menu_text"><font size="17"><b>Share</b></font>\n<font size="13">This app</font></string>
+
+    <!-- Login Activity-->
+    <string name="login_activity_android_errors">Android side error.</string>
+    <string name="login_activity_lets_go_runtime_exception">Unmanageable Error Returned In Login Select Method Fragment.</string>
+    <string name="login_globe_top_content_description">Decorative globe top half.</string>
+    <string name="login_globe_bottom_content_description">Decorative globe bottom half.</string>
+
+    <!-- Application Activity-->
+    <string name="invalid_value_attempts">Invalid %1$s entered, %1$s was not saved.</string>
+    <string name="value_has_not_been_set">Updating %1$s failed.</string>
+    <string name="account_authorization_required">Account requires authorization.</string>
+    <string name="promote_new_admin_failed">Failed to promote user to admin.</string>
+    <string name="update_chat_room_info_failed">Failed to update chat room %1$s.</string>
+    <string name="request_post_notification_dialog_title">Notifications</string>
+    <string name="request_post_notification_dialog_body">Lets go uses notifications for chat messages and to show when you have
+         matched with someone. Notifications can also be turned on or off for each chat room individually. Please allow notifications.</string>
+
+    <!-- Chat message reply item-->
+    <string name="chat_message_reply_item_image_content_description">Reply Image</string>
+    <string name="chat_message_reply_item_name_placeholder">@string/name</string>
+    <string name="chat_message_reply_item_message_placeholder">@string/message</string>
+
+    <!-- Top toolbar -->
+    <string name="top_toolbar_chat_room_name_placeholder">Chat Room Title</string>
+    <string name="top_toolbar_chat_room_members_placeholder">3 members</string>
+
+    <!-- Category list item-->
+    <string name="category_list_item_chevron_image_view_content_description">Expand Drop Down Menu</string>
+
+    <!-- Chat Member list item-->
+    <string name="chat_member_list_item_thumbnail_image_view_content_description">User Thumbnail</string>
+    <string name="chat_member_list_item_user_name_placeholder">@string/name</string>
+    <string name="chat_member_list_item_last_seen_placeholder">last seen May 19 at 6:58 PM</string>
+    <string name="chat_member_list_item_blocked_text">BLOCKED</string>
+    <string name="chat_member_list_item_admin_text">@string/Admin</string>
+    <string name="chat_member_list_item_other_user_menu_image_view_content_description">Other user options menu button.</string>
+    <string name="chat_member_list_item_event_completed_text">Event Completed</string>
+    <string name="chat_member_list_item_event_canceled_text">Event Canceled</string>
+
+    <!-- Chat message primary list item-->
+    <string name="chat_message_primary_list_item_message_edited">(&edited;)</string>
+    <string name="chat_message_primary_list_item_date_placeholder">Month 00</string>
+    <string name="chat_message_primary_list_item_name_placeholder">@string/name</string>
+    <string name="chat_message_primary_list_item_time_placeholder">00:00 PM</string>
+    <string name="chat_message_primary_list_item_thumbnail_image_view_content_description">User Thumbnail</string>
+
+    <!-- Chat message single list item-->
+    <string name="chat_message_single_list_item_message_placeholder">@string/message</string>
+
+    <!-- Chat room dialogs-->
+    <string name="chat_room_dialogs_kicked_title">Kicked</string>
+    <string name="chat_room_dialogs_banned_title">Banned</string>
+    <string name="chat_room_dialogs_kicked_body">You have been kicked from this chat room.</string>
+    <string name="chat_room_dialogs_banned_body">You have been permanently banned from this chat room.</string>
+
+    <!-- Chat room list item-->
+    <string name="chat_room_list_item_most_name_placeholder">Name</string>
+    <string name="chat_room_list_item_most_date_placeholder">Date</string>
+    <string name="chat_room_list_item_message_placeholder">Most recent message.</string>
+    <string name="chat_room_list_item_chat_room_image_image_view_content_description">Chat Room Image</string>
+    <string name="chat_room_list_item_message_notification_image_view_content_description">Unread messages inside chat room.</string>
+
+    <!-- Chat room info header list item -->
+    <string name="chat_room_info_header_list_item_notifications">Notifications</string>
+    <string name="chat_room_info_header_list_item_chat_room_info_title">Chat Room Info</string>
+    <string name="chat_room_info_header_list_item_chat_room_id_placeholder">ahd682sd</string>
+    <string name="chat_room_info_header_list_item_chat_room_name_placeholder">My\'s Chat Room</string>
+    <string name="chat_room_info_header_list_item_chat_room_password_placeholder">T4U</string>
+    <string name="chat_room_info_header_list_item_edit_name_image_view_content_description">Edit chat room name button.</string>
+    <string name="chat_room_info_header_list_item_edit_password_image_view_content_description">Edit chat room password button.</string>
+    <string name="chat_room_info_header_list_item_edit_pinned_location_image_view_content_description">Edit pinned location button.</string>
+    <string name="chat_room_info_header_list_item_remove_pinned_location_image_view_content_description">Remove pinned location button.</string>
+
+    <!-- Chat room fragment popup menu -->
+    <string name="chat_room_fragment_popup_menu_new_chat_room">New Chat Room</string>
+    <string name="chat_room_fragment_popup_menu_join_chat_room">Join Chat Room</string>
+    <string name="chat_room_fragment_popup_menu_search">Search</string>
+    <string name="chat_room_fragment_popup_menu_sort_by">Sort By</string>
+    <string name="chat_room_fragment_popup_menu_unread">Unread</string>
+    <string name="chat_room_fragment_popup_menu_visited">Visited</string>
+    <string name="chat_room_fragment_popup_menu_recent">Recent</string>
+    <string name="chat_room_fragment_popup_menu_joined">Joined</string>
+
+    <!-- Chat room info fragment popup menu -->
+    <string name="chat_room_info_fragment_popup_menu_block_and_report">Block &amp; Report</string>
+    <string name="chat_room_info_fragment_popup_menu_unblock">Unblock</string>
+    <string name="chat_room_info_fragment_popup_menu_invite_to_chat_room">Invite To Chat Room</string>
+    <string name="chat_room_info_fragment_popup_menu_promote_to_admin">Promote To Admin</string>
+    <string name="chat_room_info_fragment_popup_menu_kick">Kick</string>
+    <string name="chat_room_info_fragment_popup_menu_ban">Ban</string>
+
+    <!-- Chat room messages popup menu -->
+    <string name="chat_room_messages_popup_menu_edit">Edit</string>
+    <string name="chat_room_messages_popup_menu_reply">Reply</string>
+    <string name="chat_room_messages_popup_menu_delete">Delete</string>
+    <string name="chat_room_messages_popup_menu_copy">Copy</string>
+
+    <!-- Map options -->
+    <string name="map_options_map">Map</string>
+    <string name="map_options_satellite">Satellite</string>
+    <string name="map_options_hybrid">Hybrid</string>
+
+    <!-- Time frame tutorial strings -->
+    <string name="time_frame_tutorial_title"><b>Tutorial</b></string>
+    <string name="time_frame_tutorial_body"><b>&app_human_name;</b> uniquely matches <b>Go Getters</b> by specified TIME selections(s).\n\nWhen present, the <font color="#3875CE"><b>TOP BLUE BAR</b></font> is ALWAYS the OTHER <b>Go Getters</b> TIME selections(s) &amp; the <font color="#E29D42"><b>BOTTOM ORANGE BAR</b></font> is ALWAYS yours!</string>
+    <string name="time_frame_tutorial_hyperlink">For greater detailed tutorials, FAQs &amp; more, please click <a href="https://letsgoapp.site/faq">here</a>.</string>
+
+</resources>

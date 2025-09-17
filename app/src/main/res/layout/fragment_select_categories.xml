@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/selectCategoriesFragmentRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/outside_card_background_color"
+    tools:context=".reUsedFragments.selectCategoriesFragment.SelectCategoriesFragment">
+
+    <ProgressBar
+        android:id="@+id/selectCategoriesPBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="@dimen/progress_bar_width"
+        android:layout_height="@dimen/progress_bar_height"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <HorizontalScrollView
+        android:id="@+id/chooseCategoryScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/outside_card_background_color"
+        android:contentDescription="@string/select_categories_choose_categories_scroll_view_content_description"
+        android:layout_marginHorizontal="@dimen/select_categories_header_margin_horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/selectCategoriesRecyclerCardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/chooseCategoryLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/select_categories_choose_icon_layout_padding"
+            android:paddingBottom="@dimen/select_categories_choose_icon_layout_padding" />
+    </HorizontalScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/selectCategoriesRecyclerCardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardElevation="@dimen/card_general_elevation"
+        app:cardCornerRadius="@dimen/various_items_border_radius"
+        android:layout_margin="@dimen/card_background_margin_with_custom_card_compat"
+        app:contentPadding="@dimen/card_general_inner_padding"
+        app:cardBackgroundColor="@color/card_background_color"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@+id/continueButtonLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chooseCategoryScrollView"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/selectCategoriesRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/list_item_category"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/continueButtonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/outside_card_background_color"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectCategoriesRecyclerCardView">
+
+        <TextView
+            android:id="@+id/errorMessageSelectCategoriesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_red_light"
+            android:background="@color/outside_card_background_color"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/selectCategoriesContinueButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/selectCategoriesContinueButton"
+            style="@style/initial_login_button"
+            android:text="@string/Continue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

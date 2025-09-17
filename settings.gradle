@@ -1,0 +1,3 @@
+rootProject.name='LetsGo'
+include ':app'
+include ':sharedTestingCode'

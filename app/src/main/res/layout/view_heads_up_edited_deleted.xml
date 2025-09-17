@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/viewHeadsUpTopLineLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/viewHeadsUpIconImageView"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/lets_go_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="@string/app_human_name" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/viewHeadsUpSecondLineLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/viewHeadsUpChatRoomNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Compat.Notification.Title" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/viewHeadsUpThirdLineLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/viewHeadsUpNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="@string/name"
+            android:textAppearance="@style/TextAppearance.Compat.Notification.Title" />
+
+        <TextView
+            android:id="@+id/viewHeadsUpSpaceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="@string/space"
+            android:textAppearance="@style/TextAppearance.Compat.Notification" />
+
+        <TextView
+            android:id="@+id/viewHeadsUpBodyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="@string/chat_messages_message_heads_up_edited_deleted_placeholder"
+            android:textAppearance="@style/TextAppearance.Compat.Notification" />
+    </LinearLayout>
+</LinearLayout>

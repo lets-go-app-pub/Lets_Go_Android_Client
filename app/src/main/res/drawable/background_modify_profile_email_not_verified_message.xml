@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners
+        android:radius="@dimen/modify_profile_fragment_email_verified_corner_radius" />
+
+    <stroke
+        android:color="@color/modify_profile_email_verified_border_color"
+        android:width="@dimen/modify_profile_fragment_email_verified_border_width" />
+
+    <solid
+        android:color="@color/modify_profile_email_not_verified_color" />
+</shape>

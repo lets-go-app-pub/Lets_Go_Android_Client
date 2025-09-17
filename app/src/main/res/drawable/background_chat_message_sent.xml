@@ -1,0 +1,4 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="@dimen/match_list_item_message_corner_radius" />
+    <solid android:color="@color/message_sent_background_color" />
+</shape>

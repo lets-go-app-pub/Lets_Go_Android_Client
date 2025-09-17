@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="LockedOrientationActivity">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- Disable ads for facebook-->
+<!--    ~FACEBOOK TAG~-->
+<!--    <uses-permission android:name="com.google.android.gms.permission.AD_ID" tools:node="remove"/>-->
+
+    <queries>
+        <!-- Camera -->
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+
+        <!-- Gallery -->
+        <intent>
+            <action android:name="android.intent.action.GET_CONTENT" />
+        </intent>
+
+        <!-- Query Open Document -->
+        <intent>
+            <action android:name="android.intent.action.OPEN_DOCUMENT_TREE" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".LetsGoApplicationClass"
+        android:allowBackup="true"
+        android:icon="@mipmap/lets_go_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/lets_go_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:windowSoftInputMode="adjustPan">
+
+        <!--Leave this commented out unless creating a profileable release version-->
+        <!-- <profileable android:shell="true"/>-->
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="site.letsgoapp.letsgo.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".activities.AppActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"
+            />
+
+<!--                ~FACEBOOK TAG~-->
+<!--        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>-->
+<!--        <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>-->
+<!--        &lt;!&ndash; Disable facebook AutoLogAppEvents. (facebook auto data collection)&ndash;&gt;-->
+<!--        <meta-data android:name="com.facebook.sdk.AutoLogAppEventsEnabled" android:value="false"/>-->
+<!--        &lt;!&ndash; Disable facebook advertiser collection.&ndash;&gt;-->
+<!--        <meta-data android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled" android:value="false"/>-->
+<!--        <activity-->
+<!--            android:name="com.facebook.FacebookActivity"-->
+<!--            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"-->
+<!--            android:exported="false" />-->
+
+        <receiver
+            android:name=".loginActivityFragments.verifyPhoneNumbersFragment.SMSBroadcastReceiver"
+            android:exported="true"
+            android:permission="com.google.android.gms.auth.api.phone.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
+            </intent-filter>
+        </receiver> <!-- TODO: put next line in documentation somewhere?-->
+        <!-- Remember if I update the entry point to update it for facebook -->
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

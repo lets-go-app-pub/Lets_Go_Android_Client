@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".applicationActivityFragments.messengerScreenFragment.MessengerScreenFragment">
+
+    <TextView
+        android:id="@+id/fragmentMessengerScreenMatchQueueTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:padding="7dp"
+        android:text="@string/messenger_screen_fragment_match_queue_title"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragmentMessengerScreenMadeMatchesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragmentMessengerScreenMatchQueueTextView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal"
+        tools:listitem="@layout/list_item_made_match_display" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentPrimaryMessengerScreenFragmentContainerView"
+        android:name="site.letsgoapp.letsgo.applicationActivityFragments.chatRoomsListFragment.ChatRoomsListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fragmentMessengerScreenMadeMatchesRecyclerView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        tools:layout="@layout/fragment_chat_rooms_list" />
+
+</RelativeLayout>

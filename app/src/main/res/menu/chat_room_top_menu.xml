@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/chatRoomTopMenuLeaveChatItem"
+        android:title="@string/menu_item_names_leave_chat_room" />
+
+    <item
+        android:id="@+id/chatRoomTopMenuClearHistoryItem"
+        android:title="@string/menu_item_names_clear_history" />
+
+    <item
+        android:id="@+id/chatRoomTopMenuBlockReportItem"
+        android:title="@string/menu_item_names_block_and_report" />
+
+    <item
+        android:id="@+id/chatRoomTopMenuUnMatchItem"
+        android:title="@string/menu_item_names_un_match" />
+
+    <item
+        android:id="@+id/chatRoomTopMenuInviteItem"
+        android:title="@string/menu_item_names_invite_to_chat_room" />
+
+</menu>

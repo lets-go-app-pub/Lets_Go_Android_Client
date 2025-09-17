@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_host"
+    app:startDestination="@id/splashScreenFragment">
+    <fragment
+        android:id="@+id/loginSelectMethodFragment"
+        android:name="site.letsgoapp.letsgo.loginActivityFragments.loginSelectMethodFragment.LoginSelectMethodFragment"
+        tools:layout="@layout/fragment_login_select_method">
+        <action
+            android:id="@+id/action_loginSelectMethodFragment_to_loginGetPhoneNumberFragment"
+            app:destination="@id/loginGetPhoneNumberFragment" />
+        <action
+            android:id="@+id/action_loginSelectMethodFragment_to_verifyPhoneNumbersFragment"
+            app:destination="@id/verifyPhoneNumbersFragment" />
+        <action
+            android:id="@+id/action_loginSelectMethodFragment_to_loginGetEmailFragment"
+            app:destination="@id/loginGetEmailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginGetPhoneNumberFragment"
+        android:name="site.letsgoapp.letsgo.loginActivityFragments.loginGetPhoneNumberFragment.LoginGetPhoneNumberFragment"
+        tools:layout="@layout/fragment_login_get_phone_number">
+        <action
+            android:id="@+id/action_loginGetPhoneNumberFragment_to_verifyPhoneNumbersFragment"
+            app:destination="@id/verifyPhoneNumbersFragment"
+            app:popUpTo="@id/loginGetPhoneNumberFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginGetPhoneNumberFragment_to_loginGetEmailFragment"
+            app:destination="@id/loginGetEmailFragment"
+            app:popUpTo="@id/loginGetPhoneNumberFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginShowRulesFragment"
+        android:name="site.letsgoapp.letsgo.loginActivityFragments.loginShowRulesFragment.LoginShowRulesFragment"
+        tools:layout="@layout/fragment_login_show_rules" >
+        <action
+            android:id="@+id/action_loginShowRulesFragment_to_loginPromotionsOptInFragment"
+            app:destination="@id/loginPromotionsOptInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginGetBirthdayFragment"
+        android:name="site.letsgoapp.letsgo.loginActivityFragments.loginGetBirthdayFragment.LoginGetBirthdayFragment"
+        tools:layout="@layout/fragment_login_get_birthday">
+        <action
+            android:id="@+id/action_loginGetBirthdayFragment_to_loginGetNameFragment"
+            app:destination="@id/loginGetNameFragment" />
+        <action
+            android:id="@+id/action_loginGetBirthdayFragment_to_loginGetNameFragment_pop_back_stack"
+            app:destination="@id/loginGetNameFragment"
+            app:popUpTo="@id/loginGetBirthdayFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginGetNameFragment"
+        android:name="site.letsgoapp.letsgo.loginActivityFragments.loginGetNameFragment.LoginGetNameFragment"
+        tools:layout="@layout/fragment_login_get_name">
+        <action
+            android:id="@+id/action_loginGetNameFragment_to_loginGetGenderFragment"
+            app:destination="@id/loginGetGenderFragment" />
+        <action
+            android:id="@+id/action_loginGetNameFragment_to_loginGetGenderFragment_pop_back_stack"
+            app:destination="@id/loginGetGenderFragment"
+            app:popUpTo="@id/loginGetNameFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/loginGetGenderFragment"
+        android:name="site.letsgoapp.letsgo.loginActivityFragments.loginGetGenderFragment.LoginGetGenderFragment"
+        tools:layout="@layout/fragment_login_get_gender">
+        <action
+            android:id="@+id/action_loginGetGenderFragment_to_loginGetPicturesFragment"
+            app:destination="@id/loginGetPicturesFragment" />
+        <action
+            android:id="@+id/action_loginGetGenderFragment_to_loginGetPicturesFragment_pop_back_stack"
+            app:destination="@id/loginGetPicturesFragment"
+            app:popUpTo="@id/loginGetGenderFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/selectCategoriesFragment"
+        android:name="site.letsgoapp.letsgo.reUsedFragments.selectCategoriesFragment.SelectCategoriesFragment"
+        tools:layout="@layout/fragment_select_categories" >
+    </fragment>
+    <fragment
+        android:id="@+id/verifyPhoneNumbersFragment"
+        android:name="site.letsgoapp.letsgo.loginActivityFragments.verifyPhoneNumbersFragment.VerifyPhoneNumbersFragment"
+        tools:layout="@layout/fragment_verify_phone_numbers" >
+        <action
+            android:id="@+id/action_verifyPhoneNumbersFragment_to_loginGetEmailFragment"
+            app:destination="@id/loginGetEmailFragment"
+            app:popUpTo="@id/verifyPhoneNumbersFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/loginGetEmailFragment"
+        android:name="site.letsgoapp.letsgo.loginActivityFragments.loginGetEmailFragment.LoginGetEmailFragment"
+        tools:layout="@layout/fragment_login_get_email" >
+        <action
+            android:id="@+id/action_loginGetEmailFragment_to_loginShowRulesFragment"
+            app:destination="@id/loginShowRulesFragment" />
+        <action
+            android:id="@+id/action_loginGetEmailFragment_to_loginShowRulesFragment_pop_back_stack"
+            app:destination="@id/loginShowRulesFragment"
+            app:popUpTo="@id/loginGetEmailFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="site.letsgoapp.letsgo.loginActivityFragments.splashScreenFragment.SplashScreenFragment"
+        tools:layout="@layout/fragment_splash_screen">
+        <action
+            android:id="@+id/action_splashScreenFragment_to_timeFrameTutorialFragment2"
+            app:destination="@id/timeFrameTutorialFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginGetPicturesFragment"
+        android:name="site.letsgoapp.letsgo.loginActivityFragments.loginGetPicturesFragment.LoginGetPicturesFragment"
+        tools:layout="@layout/fragment_login_get_pictures">
+        <action
+            android:id="@+id/action_loginGetPicturesFragment_to_selectCategoriesFragment"
+            app:destination="@id/selectCategoriesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginPromotionsOptInFragment"
+        android:name="site.letsgoapp.letsgo.loginActivityFragments.loginPromotionsOptInFragment.LoginPromotionsOptInFragment"
+        android:label="fragment_login_promotions_opt_in"
+        tools:layout="@layout/fragment_login_promotions_opt_in" >
+        <action
+            android:id="@+id/action_loginPromotionsOptInFragment_to_loginGetBirthdayFragment"
+            app:destination="@id/loginGetBirthdayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/timeFrameTutorialFragment2"
+        android:name="site.letsgoapp.letsgo.applicationActivityFragments.timeFrameTutorialFragment.TimeFrameTutorialFragment"
+        android:label="fragment_time_frame_tutorial"
+        tools:layout="@layout/fragment_time_frame_tutorial" />
+
+</navigation>

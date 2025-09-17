@@ -1,0 +1,308 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!-- NOTE: MaterialComponents is needed for RangeSlider to be used inside modify profile screen.-->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="alertDialogTheme">@style/AlertDialogTheme</item>
+        <item name="popupMenuStyle">@style/PopupMenu</item>
+
+        <item name="android:ambientShadowAlpha">0.2</item>
+        <item name="android:spotShadowAlpha">0.2</item>
+    </style>
+
+    <style name="SliderTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+    </style>
+
+    <style name="PopupMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">@drawable/background_dialog_rounded_corners</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <!-- NOTE: This value is set because sometimes the EditText 'imeOptions' will highlight a dialog when the respective button is-->
+        <!--  clicked. Setting the color to the background color of the dialog so no difference can be seen.-->
+        <item name="colorControlHighlight">@color/color_dialog_rounded_corners_solid</item>
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <!-- Dialog TextViews As Buttons-->
+    <style name="dialog_clickable_text_view" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:background">@drawable/background_image_button_border</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <!-- Initial login buttons style -->
+    <style name="initial_login_button" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">@dimen/continue_button_width</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:background">@drawable/background_login_get_info_button</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <!-- Clickable Icon TextViews As Buttons -->
+    <style name="clickable_icon_text_view" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:layout_marginStart">6dp</item>
+        <item name="android:layout_marginEnd">6dp</item>
+        <item name="android:scrollHorizontally">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- Input phone number TextInputEditText -->
+    <style name="input_phone_number_text_input_edit_text">
+        <item name="android:textSize">@dimen/login_edit_text_values_generic_size</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ems">10</item>
+        <item name="android:inputType">phone|number</item>
+        <item name="android:maxLength">16</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <!-- Profile Screen -->
+    <style name="profile_screen_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/profile_screen_button_height</item>
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:layout_marginEnd">15dp</item>
+    </style>
+
+    <style name="profile_screen_button_text_view">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">25dp</item>
+        <item name="android:layout_marginEnd">0dp</item>
+        <item name="android:textColor">@color/card_background_color</item>
+    </style>
+
+    <style name="profile_screen_button_image_view">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/profile_screen_image_view_padding</item>
+    </style>
+
+    <!-- Modify Profile Layout -->
+    <style name="modify_profile_unit_linear_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="modify_profile_surrounded_unit_linear_layout" parent="modify_profile_unit_linear_layout">
+        <item name="android:padding">10dp</item>
+        <item name="android:background">@drawable/background_borders_modify_profile_selections</item>
+    </style>
+
+    <style name="modify_profile_text_size">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="modify_profile_title_text_view" parent="modify_profile_text_size">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="modify_profile_non_slider_matching_by_text_views" parent="modify_profile_title_text_view">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_marginEnd">0dp</item>
+    </style>
+
+    <style name="modify_profile_non_slider_title_text_view">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:layout_marginTop">@dimen/modify_profile_fragment_linear_layout_spacing</item>
+        <item name="android:textColor">@color/modify_profile_background_color</item>
+        <item name="android:background">@drawable/background_modify_profile_field_titles</item>
+    </style>
+
+    <style name="modify_profile_surrounded_title_text_view" parent="modify_profile_title_text_view">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+    </style>
+
+    <style name="modify_profile_slider_title_linear_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+    </style>
+
+    <style name="modify_profile_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/background_various_box_borders</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingEnd">15dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- Card Stack Fragment -->
+    <style name="card_stack_fragment_match_time_frame_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">5dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="card_stack_fragment_swipe_animation_image_view">
+        <item name="android:layout_width">@dimen/thumbs_image_size</item>
+        <item name="android:layout_height">@dimen/thumbs_image_size</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="card_stack_fragment_swipe_animation_image_view_frame_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">#7F000000</item>
+    </style>
+
+    <!-- Chat Room Fragment -->
+    <style name="chat_room_fragment_single_message_or_date">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/background_date</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:layout_marginTop">
+            @dimen/match_list_item_half_gap_between_messages_or_dates
+        </item>
+        <item name="android:layout_marginBottom">
+            @dimen/match_list_item_half_gap_between_messages_or_dates
+        </item>
+    </style>
+
+    <!-- Chat Room Info Fragment -->
+    <style name="chat_room_info_fragment_chat_room_info_text_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:ellipsize">none</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="chat_room_info_fragment_chat_room_info_naming_text_view" parent="chat_room_info_fragment_chat_room_info_text_view">
+        <item name="android:paddingStart">
+            @dimen/chat_room_info_header_padding_start_id_name_password
+        </item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:textIsSelectable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:longClickable">true</item>
+    </style>
+
+    <style name="chat_room_info_fragment_chat_room_info_line_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:background">#60808080</item>
+    </style>
+
+    <!-- DatePickerEditText -->
+    <style name="date_picker_edit_text_general">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:hint">@string/get_birthday_date</item>
+        <item name="android:inputType">none</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/login_edit_text_values_generic_size</item>
+    </style>
+
+    <!-- Modify Profile RangeSliders -->
+    <style name="modify_profile_range_sliders">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:theme">@style/SliderTheme</item>
+        <item name="thumbColor">@color/third_color</item>
+        <item name="trackColor">@color/third_color_thirty_percent_tint</item>
+        <item name="tickColor">@color/colorTransparent</item> <!--A lighter version of color_fifth. -->
+        <item name="haloColor">#a96c61</item>
+        <item name="android:stepSize">1</item>
+        <item name="labelBehavior">floating</item>
+    </style>
+
+    <!-- Login Globe Style Parent-->
+    <style name="login_globe_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:elevation">-1dp</item>
+        <item name="labelBehavior">floating</item>
+    </style>
+
+    <style name="login_globe_top_style" parent="login_globe_style">
+        <item name="android:src">@drawable/image_lets_go_globe_top</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="login_globe_bottom_style" parent="login_globe_style">
+        <item name="android:src">@drawable/image_lets_go_globe_bottom</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <!-- Login Guideline Style Parent-->
+    <style name="login_guideline_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="login_guideline_top_style" parent="login_guideline_style">
+        <item name="layout_constraintGuide_percent">.10</item>
+    </style>
+
+    <style name="login_guideline_bottom_style" parent="login_guideline_style">
+        <item name="layout_constraintGuide_percent">.90</item>
+    </style>
+
+
+</resources>

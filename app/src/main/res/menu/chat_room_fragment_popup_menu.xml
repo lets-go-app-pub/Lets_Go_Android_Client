@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/chatRoomPopupMenuNewChatRoomMenuItem"
+        android:title="@string/chat_room_fragment_popup_menu_new_chat_room" />
+    <item
+        android:id="@+id/chatRoomPopupMenuJoinChatRoomMenuItem"
+        android:title="@string/chat_room_fragment_popup_menu_join_chat_room" />
+    <item
+        android:id="@+id/chatRoomPopupMenuSearchMenuItem"
+        android:title="@string/chat_room_fragment_popup_menu_search" />
+    <item
+        android:id="@+id/chatRoomPopupMenuSortByMenuItem"
+        android:title="@string/chat_room_fragment_popup_menu_sort_by">
+        <menu>
+            <item
+                android:id="@+id/chatRoomPopupMenuSortByUnreadMenuItem"
+                android:title="@string/chat_room_fragment_popup_menu_unread" />
+            <item
+                android:id="@+id/chatRoomPopupMenuSortByRecentMenuItem"
+                android:title="@string/chat_room_fragment_popup_menu_recent" />
+            <item
+                android:id="@+id/chatRoomPopupMenuSortByVisitedMenuItem"
+                android:title="@string/chat_room_fragment_popup_menu_visited" />
+            <item
+                android:id="@+id/chatRoomPopupMenuSortByJoinedMenuItem"
+                android:title="@string/chat_room_fragment_popup_menu_joined" />
+        </menu>
+    </item>
+</menu>

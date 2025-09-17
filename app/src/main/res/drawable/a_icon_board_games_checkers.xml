@@ -1,0 +1,57 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="@dimen/select_categories_single_activity_icon_drawable_height"
+    android:width="@dimen/select_categories_single_activity_icon_drawable_width"
+    android:viewportWidth="68"
+    android:viewportHeight="68">
+    <path
+        android:fillColor="@color/activity_icon_color"
+        android:pathData="m9,9h11v11h-11z" />
+    <path
+        android:fillColor="@color/activity_icon_color"
+        android:pathData="m9,22h11v11h-11z" />
+    <path
+        android:fillColor="@color/activity_icon_color"
+        android:pathData="m9,46h11v-11h-11zM14.5,37.9399c1.4199,0 2.5599,1.1401 2.5599,2.5601 0,1.4102 -1.14,2.5601 -2.5599,2.5601 -1.42,0 -2.5601,-1.1499 -2.5601,-2.5601 0,-1.4199 1.14,-2.5601 2.5601,-2.5601z" />
+    <path
+        android:fillColor="@color/activity_icon_color"
+        android:pathData="m9,48h11v11h-11z" />
+    <path
+        android:fillColor="@color/activity_icon_color"
+        android:pathData="m22,20h11v-11h-11zM27.5,11.9399c1.4199,0 2.5599,1.1401 2.5599,2.5601 0,1.4102 -1.14,2.5601 -2.5599,2.5601 -1.42,0 -2.5601,-1.1499 -2.5601,-2.5601 0,-1.4199 1.14,-2.5601 2.5601,-2.5601z" />
+    <path
+        android:fillColor="@color/activity_icon_color"
+        android:pathData="m22,22h11v11h-11z" />
+    <path
+        android:fillColor="@color/activity_icon_color"
+        android:pathData="m22,35h11v11h-11z" />
+    <path
+        android:fillColor="@color/activity_icon_color"
+        android:pathData="m22,48h11v11h-11z" />
+    <path
+        android:fillColor="@color/activity_icon_color"
+        android:pathData="m35,9h11v11h-11z" />
+    <path
+        android:fillColor="@color/activity_icon_color"
+        android:pathData="m35,33h11v-11h-11zM40.5,24.9399c1.4199,0 2.5599,1.1401 2.5599,2.5601 0,1.4102 -1.14,2.5601 -2.5599,2.5601 -1.42,0 -2.5601,-1.1499 -2.5601,-2.5601 0,-1.4199 1.14,-2.5601 2.5601,-2.5601z" />
+    <path
+        android:fillColor="@color/activity_icon_color"
+        android:pathData="m35,35h11v11h-11z" />
+    <path
+        android:fillColor="@color/activity_icon_color"
+        android:pathData="m35,59h11v-11h-11zM40.5,50.9399c1.4199,0 2.5599,1.1401 2.5599,2.5601 0,1.4102 -1.14,2.5601 -2.5599,2.5601 -1.42,0 -2.5601,-1.1499 -2.5601,-2.5601 0,-1.4199 1.14,-2.5601 2.5601,-2.5601z" />
+    <path
+        android:fillColor="@color/activity_icon_color"
+        android:pathData="m48,20h11v-11h-11zM53.5,11.9399c1.4199,0 2.5599,1.1401 2.5599,2.5601 0,1.4102 -1.14,2.5601 -2.5599,2.5601 -1.42,0 -2.5601,-1.1499 -2.5601,-2.5601 0,-1.4199 1.14,-2.5601 2.5601,-2.5601z" />
+    <path
+        android:fillColor="@color/activity_icon_color"
+        android:pathData="m48,22h11v11h-11z" />
+    <path
+        android:fillColor="@color/activity_icon_color"
+        android:pathData="m48,35h11v11h-11z" />
+    <path
+        android:fillColor="@color/activity_icon_color"
+        android:pathData="m48,48h11v11h-11z" />
+    <path
+        android:fillColor="@color/activity_icon_color"
+        android:pathData="m61,2h-54c-2.75,0 -5,2.24 -5,5v54c0,2.76 2.25,5 5,5h54c2.76,0 5,-2.24 5,-5v-54c0,-2.76 -2.24,-5 -5,-5zM61,60c0,0.55 -0.4501,1 -1,1h-52c-0.55,0 -1,-0.45 -1,-1v-52c0,-0.55 0.45,-1 1,-1h52c0.5499,0 1,0.45 1,1z" />
+</vector>

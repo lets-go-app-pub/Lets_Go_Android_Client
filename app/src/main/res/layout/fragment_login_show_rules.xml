@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/showRulesTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/show_rules_and_promotional_title_spacing"
+        android:gravity="center_horizontal"
+        android:text="@string/show_rules_rules_title"
+        android:textSize="@dimen/show_rules_and_promotional_screen_title_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentLoginShowRulesCardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fragmentLoginShowRulesCardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/card_background_margin_with_custom_card_compat"
+        app:cardBackgroundColor="@color/card_background_color"
+        app:cardCornerRadius="@dimen/various_items_border_radius"
+        app:cardElevation="@dimen/card_general_elevation"
+        app:contentPadding="@dimen/card_general_inner_padding"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@+id/showRulesContinueButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showRulesTitleTextView">
+
+        <ScrollView
+            android:id="@+id/rulesScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/show_rules_intro_text"
+                    android:textSize="@dimen/show_rules_and_promotional_screen_body_text_size" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/show_rules_authenticity_title"
+                    android:textSize="@dimen/show_rules_and_promotional_screen_body_text_size" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/show_rules_and_promotional_text_spacing"
+                    android:layout_marginStart="@dimen/show_rules_and_promotional_screen_text_indentation"
+                    android:text="@string/show_rules_authenticity_body"
+                    android:textSize="@dimen/show_rules_and_promotional_screen_body_text_size" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/show_rules_kindness_title"
+                    android:textSize="@dimen/show_rules_and_promotional_screen_body_text_size" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/show_rules_and_promotional_text_spacing"
+                    android:layout_marginStart="@dimen/show_rules_and_promotional_screen_text_indentation"
+                    android:text="@string/show_rules_kindness_body"
+                    android:textSize="@dimen/show_rules_and_promotional_screen_body_text_size" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/show_rules_be_safe_title"
+                    android:textSize="@dimen/show_rules_and_promotional_screen_body_text_size" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/show_rules_and_promotional_text_spacing"
+                    android:layout_marginStart="@dimen/show_rules_and_promotional_screen_text_indentation"
+                    android:text="@string/show_rules_be_safe_text"
+                    android:textSize="@dimen/show_rules_and_promotional_screen_body_text_size" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/show_rules_be_toxic_title"
+                    android:textSize="@dimen/show_rules_and_promotional_screen_body_text_size" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/show_rules_and_promotional_text_spacing"
+                    android:layout_marginStart="@dimen/show_rules_and_promotional_screen_text_indentation"
+                    android:text="@string/show_rules_be_toxic_text"
+                    android:textSize="@dimen/show_rules_and_promotional_screen_body_text_size" />
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/showRulesContinueButton"
+        style="@style/initial_login_button"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/IAccept"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentLoginShowRulesCardView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

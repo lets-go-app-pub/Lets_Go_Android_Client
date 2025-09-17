@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".applicationActivityFragments.profileScreenFragment.ProfileScreenFragment"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp"
+    android:background="@color/outside_card_background_color">
+
+    <!-- NOTE: If layout_margin is used, this CardView will not display-->
+    <!-- properly on older versions of Android.-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="@dimen/various_items_border_radius"
+        app:cardElevation="@dimen/card_general_elevation"
+        app:contentPadding="@dimen/card_general_inner_padding"
+        app:cardBackgroundColor="@color/card_background_color">
+
+        <!--NOTE: The padding for the card is set here instead of above because of-->
+        <!-- how it behaves when the ScrollView comes into play (the screen gets too long).-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/card_general_inner_padding">
+
+            <include
+                android:id="@+id/userProfileInclude"
+                android:layout_width="@dimen/user_picture_settings_size"
+                android:layout_height="@dimen/user_picture_settings_size"
+                android:layout_margin="8dp"
+                layout="@layout/view_user_picture"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <ImageView
+                android:id="@+id/userProfileEditIconImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@drawable/background_menu_profile_picture_edit_image"
+                android:contentDescription="@string/profile_screen_edit_image_view_content_description"
+                android:elevation="10dp"
+                android:maxWidth="@dimen/profile_screen_edit_image_max_height_width"
+                android:maxHeight="@dimen/profile_screen_edit_image_max_height_width"
+                android:padding="5dp"
+                android:src="@drawable/icon_round_edit_control_color_24"
+                app:layout_constraintBottom_toBottomOf="@+id/userProfileInclude"
+                app:layout_constraintEnd_toEndOf="@+id/userProfileInclude" />
+
+            <LinearLayout
+                android:id="@+id/menuActivitiesLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/userProfileInclude"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/menuActivitiesConstraintLayout"
+                    style="@style/profile_screen_button"
+                    android:layout_marginBottom="@dimen/profile_screen_spacing_between_buttons"
+                    android:background="@drawable/background_menu_activities"
+                    app:layout_constraintBottom_toTopOf="@+id/menuFeedbackConstraintLayout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/userProfileInclude">
+
+                    <TextView
+                        android:id="@+id/menuActivitiesLargeTextView"
+                        style="@style/profile_screen_button_text_view"
+                        android:text="@string/activities_menu_text"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/menuActivitiesImageView"
+                        style="@style/profile_screen_button_image_view"
+                        android:contentDescription="@string/profile_screen_activities_image_view_content_description"
+                        android:src="@drawable/icon_round_activities_edit"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/menuFeedbackConstraintLayout"
+                    style="@style/profile_screen_button"
+                    android:layout_marginBottom="@dimen/profile_screen_spacing_between_buttons"
+                    android:background="@drawable/background_menu_feedback"
+                    app:layout_constraintBottom_toTopOf="@+id/menuShareConstraintLayout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/menuActivitiesConstraintLayout">
+
+                    <TextView
+                        android:id="@+id/menuFeedbackLargeTextView"
+                        style="@style/profile_screen_button_text_view"
+                        android:text="@string/feedback_menu_text"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/menuFeedbackImageView"
+                        style="@style/profile_screen_button_image_view"
+                        android:contentDescription="@string/profile_screen_feedback_image_view_content_description"
+                        android:src="@drawable/icon_round_feedback_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/menuShareConstraintLayout"
+                    style="@style/profile_screen_button"
+                    android:background="@drawable/background_menu_share"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/menuFeedbackConstraintLayout">
+
+                    <TextView
+                        android:id="@+id/menuShareLargeTextView"
+                        style="@style/profile_screen_button_text_view"
+                        android:text="@string/share_menu_text"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/menuShareImageView"
+                        style="@style/profile_screen_button_image_view"
+                        android:contentDescription="@string/profile_screen_share_image_view_content_description"
+                        android:src="@drawable/icon_round_share_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</ScrollView>

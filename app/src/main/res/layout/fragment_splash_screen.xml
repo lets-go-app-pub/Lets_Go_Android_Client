@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/back"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loginActivityFragments.splashScreenFragment.SplashScreenFragment">
+
+    <ImageView
+        android:id="@+id/splashScreenLogoImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/logo_content_description"
+        android:src="@drawable/lets_go_logo"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/splashScreenPBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="@dimen/progress_bar_width"
+        android:layout_height="@dimen/progress_bar_height"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/splashScreenLogoImageView" />
+
+    <TextView
+        android:id="@+id/splashScreenTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/holo_red_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/splashScreenLogoImageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

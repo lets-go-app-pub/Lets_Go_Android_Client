@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--NOTE: The id field in these items must be named after the fragment they navigate to.-->
+
+    <item
+        android:id="@+id/profileScreenFragment"
+        android:icon="@drawable/inset_user_menu_item"
+        android:title="" />
+
+    <item
+        android:id="@+id/matchScreenFragment"
+        android:icon="@drawable/lets_go_icon"
+        android:title="" />
+
+    <item
+        android:id="@+id/messengerScreenFragment"
+        android:icon="@drawable/inset_no_message_menu_item"
+        android:title="" />
+
+</menu>

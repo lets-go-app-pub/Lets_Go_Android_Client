@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/application_nav_host"
+    app:startDestination="@id/blankLoadingFragment">
+
+    <fragment
+        android:id="@+id/matchScreenFragment"
+        android:name="site.letsgoapp.letsgo.applicationActivityFragments.matchScreenFragment.MatchScreenFragment"
+        tools:layout="@layout/fragment_match_screen" >
+        <action
+            android:id="@+id/action_matchScreenFragment_to_matchMadeScreenFragment"
+            app:destination="@id/matchMadeScreenFragment" />
+        <action
+            android:id="@+id/action_matchScreenFragment_to_profileScreenFragment"
+            app:destination="@id/profileScreenFragment"
+            app:popUpTo="@id/matchScreenFragment" />
+        <action
+            android:id="@+id/action_matchScreenFragment_to_messengerScreenFragment"
+            app:destination="@id/messengerScreenFragment"
+            app:popUpTo="@id/matchScreenFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/messengerScreenFragment"
+        android:name="site.letsgoapp.letsgo.applicationActivityFragments.messengerScreenFragment.MessengerScreenFragment"
+        tools:layout="@layout/fragment_primary_messenger_screen" >
+        <action
+            android:id="@+id/action_messengerScreenFragment_to_chatRoomFragment"
+            app:destination="@id/chatRoomFragment" />
+        <action
+            android:id="@+id/action_messengerScreenFragment_to_profileScreenFragment"
+            app:destination="@id/profileScreenFragment"
+            app:popUpTo="@id/matchScreenFragment" />
+        <action
+            android:id="@+id/action_messengerScreenFragment_to_matchScreenFragment"
+            app:destination="@id/matchScreenFragment"
+            app:popUpTo="@id/matchMadeScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileScreenFragment"
+        android:name="site.letsgoapp.letsgo.applicationActivityFragments.profileScreenFragment.ProfileScreenFragment"
+        tools:layout="@layout/fragment_profile_screen" >
+        <action
+            android:id="@+id/action_profileScreenFragment_to_selectCategoriesFragment2"
+            app:destination="@id/selectCategoriesFragmentApplication" />
+        <action
+            android:id="@+id/action_profileScreenFragment_to_modifyProfileScreenFragment"
+            app:destination="@id/modifyProfileScreenFragment" />
+        <action
+            android:id="@+id/action_profileScreenFragment_to_messengerScreenFragment"
+            app:destination="@id/messengerScreenFragment"
+            app:popUpTo="@id/matchScreenFragment" />
+        <action
+            android:id="@+id/action_profileScreenFragment_to_matchScreenFragment"
+            app:destination="@id/matchScreenFragment"
+            app:popUpTo="@id/matchScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/selectCategoriesFragmentApplication"
+        android:name="site.letsgoapp.letsgo.reUsedFragments.selectCategoriesFragment.SelectCategoriesFragment"
+        tools:layout="@layout/fragment_select_categories" />
+
+    <fragment
+        android:id="@+id/modifyProfileScreenFragment"
+        android:name="site.letsgoapp.letsgo.applicationActivityFragments.modifyProfileScreenFragment.ModifyProfileScreenFragment"
+        tools:layout="@layout/fragment_modify_profile_screen"/>
+
+    <fragment
+        android:id="@+id/blankLoadingFragment"
+        android:name="site.letsgoapp.letsgo.applicationActivityFragments.blankLoadingFragment.BlankLoadingFragment"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_blankLoadingFragment_to_matchScreenFragment"
+            app:destination="@id/matchScreenFragment"
+            app:popUpTo="@id/blankLoadingFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_blankLoadingFragment_to_messengerScreenFragment"
+            app:destination="@id/messengerScreenFragment"
+            app:popUpTo="@id/blankLoadingFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_blankLoadingFragment_to_timeFrameTutorialFragment"
+            app:destination="@id/timeFrameTutorialFragment"
+            app:popUpTo="@id/blankLoadingFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chatRoomFragment"
+        android:name="site.letsgoapp.letsgo.applicationActivityFragments.chatRoomFragment.ChatRoomFragment"
+        tools:layout="@layout/fragment_chat_room" >
+        <action
+            android:id="@+id/action_chatRoomFragment_to_messengerScreenFragment"
+            app:destination="@id/messengerScreenFragment"
+            app:popUpTo="@id/messengerScreenFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_chatRoomFragment_to_chatRoomInfoFragment"
+            app:destination="@id/chatRoomInfoFragment" />
+        <action
+            android:id="@+id/action_chatRoomFragment_to_selectLocationScreen"
+            app:destination="@id/selectLocationScreen" />
+        <action
+            android:id="@+id/action_chatRoomFragment_to_selectChatRoomForInviteFragment"
+            app:destination="@id/selectChatRoomForInviteFragment" />
+        <action
+            android:id="@+id/action_chatRoomFragment_self"
+            app:destination="@id/chatRoomFragment"
+            app:popUpTo="@id/chatRoomFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/chatRoomInfoFragment"
+        android:name="site.letsgoapp.letsgo.applicationActivityFragments.chatRoomInfoFragment.ChatRoomInfoFragment"
+        tools:layout="@layout/fragment_chat_room_info" >
+        <action
+            android:id="@+id/action_chatRoomInfoFragment_to_chatRoomMemberFragment"
+            app:destination="@id/chatRoomMemberFragment" />
+        <action
+            android:id="@+id/action_chatRoomInfoFragment_to_messengerScreenFragment"
+            app:destination="@id/messengerScreenFragment"
+            app:popUpTo="@id/messengerScreenFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_chatRoomInfoFragment_to_selectChatRoomForInviteFragment"
+            app:destination="@id/selectChatRoomForInviteFragment" />
+        <action
+            android:id="@+id/action_chatRoomInfoFragment_to_selectLocationScreen"
+            app:destination="@id/selectLocationScreen" />
+        <action
+            android:id="@+id/action_chatRoomInfoFragment_to_displayQrCodeFragment"
+            app:destination="@id/displayQrCodeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chatRoomMemberFragment"
+        android:name="site.letsgoapp.letsgo.applicationActivityFragments.chatRoomMemberFragment.ChatRoomMemberFragment"
+        tools:layout="@layout/fragment_chat_room_member" >
+        <argument
+            android:name="memberIndex"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_chatRoomMemberFragment_to_messengerScreenFragment"
+            app:destination="@id/messengerScreenFragment"
+            app:popUpTo="@id/messengerScreenFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_chatRoomMemberFragment_to_chatRoomInfoFragment"
+            app:destination="@id/chatRoomInfoFragment"
+            app:popUpTo="@id/chatRoomInfoFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_chatRoomMemberFragment_to_selectChatRoomForInviteFragment"
+            app:destination="@id/selectChatRoomForInviteFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/matchMadeScreenFragment"
+        android:name="site.letsgoapp.letsgo.applicationActivityFragments.matchMadeScreenFragment.MatchMadeScreenFragment"
+        tools:layout="@layout/fragment_match_made_screen" >
+        <action
+            android:id="@+id/action_matchMadeScreenFragment_to_matchScreenFragment"
+            app:destination="@id/matchScreenFragment"
+            app:popUpTo="@id/matchMadeScreenFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_matchMadeScreenFragment_to_chatRoomFragment"
+            app:destination="@id/chatRoomFragment"
+            app:popUpTo="@id/matchMadeScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/selectLocationScreen"
+        android:name="site.letsgoapp.letsgo.applicationActivityFragments.selectLocationScreenFragment.SelectLocationScreen"
+        tools:layout="@layout/fragment_select_location_screen" >
+        <action
+            android:id="@+id/action_selectLocationScreen_to_chatRoomFragment"
+            app:destination="@id/chatRoomFragment"
+            app:popUpTo="@id/chatRoomFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_selectLocationScreen_to_messengerScreenFragment"
+            app:destination="@id/messengerScreenFragment"
+            app:popUpTo="@id/messengerScreenFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_selectLocationScreen_to_chatRoomInfoFragment"
+            app:destination="@id/chatRoomInfoFragment"
+            app:popUpTo="@id/chatRoomInfoFragment"
+            app:popUpToInclusive="true" />
+        <argument android:name="location_called_for"
+            app:argType="site.letsgoapp.letsgo.utilities.ReasonSelectLocationCalled" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/selectChatRoomForInviteFragment"
+        android:name="site.letsgoapp.letsgo.applicationActivityFragments.selectChatRoomForInviteFragment.SelectChatRoomForInviteFragment"
+        tools:layout="@layout/fragment_select_chat_room_for_invite" >
+        <action
+            android:id="@+id/action_selectChatRoomForInviteFragment_to_chatRoomFragment"
+            app:destination="@id/chatRoomFragment"
+            app:popUpTo="@id/chatRoomFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_selectChatRoomForInviteFragment_to_chatRoomInfoFragment"
+            app:destination="@id/chatRoomInfoFragment"
+            app:popUpTo="@id/chatRoomInfoFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_selectChatRoomForInviteFragment_to_chatRoomMemberFragment"
+            app:destination="@id/chatRoomMemberFragment"
+            app:popUpTo="@id/chatRoomFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_selectChatRoomForInviteFragment_to_messengerScreenFragment"
+            app:destination="@id/messengerScreenFragment"
+            app:popUpTo="@id/messengerScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/timeFrameTutorialFragment"
+        android:name="site.letsgoapp.letsgo.applicationActivityFragments.timeFrameTutorialFragment.TimeFrameTutorialFragment"
+        android:label="fragment_time_frame_tutorial"
+        tools:layout="@layout/fragment_time_frame_tutorial" >
+        <action
+            android:id="@+id/action_timeFrameTutorialFragment_to_matchScreenFragment"
+            app:destination="@id/matchScreenFragment"
+            app:popUpTo="@id/timeFrameTutorialFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/displayQrCodeFragment"
+        android:name="site.letsgoapp.letsgo.applicationActivityFragments.displayQrCodeFragment.DisplayQrCodeFragment"
+        android:label="fragment_display_qr_code"
+        tools:layout="@layout/fragment_display_qr_code" >
+        <action
+            android:id="@+id/action_displayQrCodeFragment_to_messengerScreenFragment"
+            app:destination="@id/messengerScreenFragment"
+            app:popUpTo="@id/messengerScreenFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_displayQrCodeFragment_to_chatRoomInfoFragment"
+            app:destination="@id/chatRoomInfoFragment"
+            app:popUpTo="@id/chatRoomInfoFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>

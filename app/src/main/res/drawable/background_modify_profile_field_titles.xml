@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="@dimen/modify_profile_fragment_title_border_radius" />
+    <!--    <solid android:color="@color/fifth_color" />-->
+    <gradient
+        android:angle="0"
+        android:endColor="#a96c61"
+        android:startColor="@color/fifth_color" />
+    <corners android:radius="@dimen/modify_profile_fragment_selection_border_radius" />
+</shape>

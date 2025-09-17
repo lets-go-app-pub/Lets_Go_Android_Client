@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--NOTE: Using a NestedScrollView instead of a ScrollView because the bottom of-->
+<!-- the inner card view is cut off when using the later.-->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp"
+    android:background="@color/outside_card_background_color"
+    android:fillViewport="true">
+
+    <!--NOTE: The CardView is inside the ScrollView instead of vice versa -->
+    <!-- in order to allow the background color to be set for this fragment and not-->
+    <!-- rely on the activity background color.  -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_background_margin_with_custom_card_compat"
+        app:cardCornerRadius="@dimen/various_items_border_radius"
+        app:cardElevation="@dimen/card_general_elevation"
+        app:contentPadding="@dimen/card_general_inner_padding"
+        app:cardBackgroundColor="@color/modify_profile_background_color">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/modifyUserPicturesProgressBarConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/modifyUserPicturesLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/modifyUserProfileLinearLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed">
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/modifyUserPicturesFragmentContainerView"
+                    android:name="site.letsgoapp.letsgo.reUsedFragments.selectPicturesFragment.SelectPicturesFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:layout="@layout/fragment_select_pictures">
+
+                </androidx.fragment.app.FragmentContainerView>
+
+                <TextView
+                    android:id="@+id/modifyUserPicturesErrorTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/holo_red_light"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modifyUserProfileLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/modify_profile_fragment_linear_layout_distance_from_edges"
+                android:orientation="vertical"
+                android:scrollbars="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/modifyUserPicturesLinearLayout">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/modifyAlgorithmMatchOptionsConstraintLayout"
+                    style="@style/modify_profile_unit_linear_layout">
+
+                    <TextView
+                        android:id="@+id/modifyAlgorithmMatchOptionsTitleTextView"
+                        style="@style/modify_profile_non_slider_matching_by_text_views"
+                        android:text="@string/modify_profile_screen_algorithm_match_options_title"
+                        app:drawableEndCompat="@drawable/icon_round_info_24"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/modifyAlgorithmMatchOptionsStateTextView"
+                        style="@style/modify_profile_non_slider_matching_by_text_views"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/modify_profile_screen_categories_and_activities"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/modifyAlgorithmMatchOptionsTitleTextView" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/modifyAlgorithmMatchOptionsStateSwitchCompat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/modifyAlgorithmMatchOptionsStateTextView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/modifyAlgorithmMatchOptionsTitleTextView" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/modifyUserBioTitleTextView"
+                    style="@style/modify_profile_non_slider_title_text_view"
+                    android:text="@string/modify_profile_layout_bio_title" />
+
+                <EditText
+                    android:id="@+id/modifyUserBioBodyEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="488dp"
+                    android:background="@drawable/background_borders_modify_profile_selections"
+                    android:gravity="top|start"
+                    android:hint="@string/modify_profile_layout_bio_body_hint"
+                    android:importantForAutofill="no"
+                    android:inputType="textMultiLine"
+                    android:minLines="3"
+                    android:padding="@dimen/modify_profile_fragment_text_padding" />
+
+                <TextView
+                    android:id="@+id/modifyUserCityTitleTextView"
+                    style="@style/modify_profile_non_slider_title_text_view"
+                    android:text="@string/modify_profile_layout_city_title" />
+
+                <EditText
+                    android:id="@+id/modifyUserCityBodyEditText"
+                    style="@style/modify_profile_unit_linear_layout"
+                    android:maxWidth="488dp"
+                    android:background="@drawable/background_borders_modify_profile_selections"
+                    android:gravity="top|start"
+                    android:hint="@string/modify_profile_layout_city_body_hint"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:padding="@dimen/modify_profile_fragment_text_padding" />
+
+                <TextView
+                    android:id="@+id/modifyUserAgeRangeTitleTextView"
+                    style="@style/modify_profile_non_slider_title_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/modify_profile_fragment_linear_layout_spacing"
+                    android:text="@string/modify_profile_layout_age_range_title" />
+
+                <LinearLayout
+                    android:id="@+id/modifyUserAgeRangeLinearLayout"
+                    style="@style/modify_profile_surrounded_unit_linear_layout"
+                    android:layout_marginTop="0dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/modifyUserAgeRangeValueTextView"
+                        style="@style/modify_profile_title_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="@string/modify_profile_layout_age_range_title_value_placeholder" />
+
+                    <com.google.android.material.slider.RangeSlider
+                        android:id="@+id/modifyUserAgeRangeRangeRangeSlider"
+                        style="@style/modify_profile_range_sliders"
+                        android:valueFrom="18"
+                        android:valueTo="80" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/modifyUserMaxDistanceTitleTextView"
+                    style="@style/modify_profile_non_slider_title_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/modify_profile_layout_max_distance_title" />
+
+                <LinearLayout
+                    android:id="@+id/modifyUserMaxDistanceLinearLayout"
+                    style="@style/modify_profile_surrounded_unit_linear_layout"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/modifyUserMaxDistanceValueTextView"
+                        style="@style/modify_profile_title_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="@string/modify_profile_layout_max_distance_title_value_placeholder" />
+
+                    <com.google.android.material.slider.RangeSlider
+                        android:id="@+id/modifyUserMaxDistanceRangeSlider"
+                        style="@style/modify_profile_range_sliders"
+                        android:valueFrom="1"
+                        android:valueTo="100" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/modifyUserEmailAddressTitleTextView"
+                    style="@style/modify_profile_non_slider_title_text_view"
+                    android:text="@string/modify_profile_layout_email_title" />
+
+                <LinearLayout
+                    android:id="@+id/modifyUserEmailAddressLinearLayout"
+                    style="@style/modify_profile_surrounded_unit_linear_layout"
+                    android:orientation="vertical">
+
+                    <ProgressBar
+                        android:id="@+id/modifyUserEmailAddressProgressBar"
+                        android:layout_width="@dimen/progress_bar_width"
+                        android:layout_height="@dimen/progress_bar_height"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/modifyUserEmailAddressBodyTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:padding="@dimen/modify_profile_fragment_text_padding"
+                        android:text="@string/general_placeholder"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:id="@+id/modifyUserEmailVerificationConstraintLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ProgressBar
+                            android:id="@+id/verifyEmailProgressBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/sendVerifyEmailButton"
+                            style="@style/modify_profile_button"
+                            android:text="@string/modify_profile_layout_verify_email_button_text"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/modifyUserEmailAddressVerificationTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:background="@drawable/background_modify_profile_email_not_verified_message"
+                            android:gravity="center"
+                            android:padding="@dimen/modify_profile_fragment_text_padding"
+                            android:text="@string/modify_profile_screen_verify_email_requires_verification"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/modifyUserEmailAddressErrorTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/holo_red_light"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/modifyUserGenderTitleTextView"
+                    style="@style/modify_profile_non_slider_title_text_view"
+                    android:text="@string/modify_profile_layout_gender_title" />
+
+                <FrameLayout
+                    android:id="@+id/modifyUserGenderFrameLayout"
+                    style="@style/modify_profile_surrounded_unit_linear_layout"
+                    android:orientation="vertical">
+
+                    <androidx.fragment.app.FragmentContainerView
+                        android:id="@+id/modifyUserGenderTitleFragmentContainerView"
+                        android:name="site.letsgoapp.letsgo.reUsedFragments.selectGenderFragment.SelectGenderFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:layout="@layout/fragment_select_gender" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/modifyUserGenderRangeTitleTextView"
+                    style="@style/modify_profile_non_slider_title_text_view"
+                    android:text="@string/modify_profile_layout_gender_range_title" />
+
+                <LinearLayout
+                    android:id="@+id/modifyUserGenderRangeLinearLayout"
+                    style="@style/modify_profile_surrounded_unit_linear_layout"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/modifyUserGenderRangeEveryoneCheckBox"
+                        style="@style/modify_profile_text_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/modify_profile_layout_gender_range_everyone_text"
+                        android:visibility="gone" />
+
+                    <CheckBox
+                        android:id="@+id/modifyUserGenderRangeMaleCheckBox"
+                        style="@style/modify_profile_text_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/modify_profile_layout_gender_range_male_text" />
+
+                    <CheckBox
+                        android:id="@+id/modifyUserGenderRangeFemaleCheckBox"
+                        style="@style/modify_profile_text_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/modify_profile_layout_gender_range_female_text" />
+
+                    <LinearLayout
+                        android:id="@+id/modifyUserGenderRangeOtherLinearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/modifyUserGenderRangeOtherTitleLinearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="5dp"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <TextView
+                                android:id="@+id/modifyUserGenderRangeOtherTitleTextView"
+                                style="@style/modify_profile_text_size"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/modify_profile_layout_gender_range_other_genders_text"
+                                android:textColor="@color/colorBlack" />
+
+                            <ImageView
+                                android:id="@+id/modifyUserGenderRangeOtherChevronImageView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:contentDescription="@string/modify_profile_layout_gender_range_other_genders_chevron_content_description"
+                                app:srcCompat="@android:drawable/arrow_down_float" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/modifyUserGenderRangeOtherExpandLinearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <Button
+                                android:id="@+id/modifyUserGenderRangeOtherButton"
+                                style="@style/modify_profile_button"
+                                android:text="@string/modify_profile_layout_gender_range_other_genders_button_text" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/modifyUserGenderRangeOtherErrorTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/modify_profile_layout_gender_range_other_genders_error_text"
+                        android:textColor="@android:color/holo_red_light"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/optedInToPromotionalEmailsCheckBox"
+                    style="@style/modify_profile_text_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/modify_profile_layout_opted_in_to_promotional_email_title" />
+
+                <TextView
+                    android:id="@+id/modifyUserWebPageLinkTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/modify_profile_screen_visit_web_page_text"/>
+
+                <TextView
+                    android:id="@+id/modifyUserPrivacyPolicyLinkTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/modify_profile_screen_privacy_policy_text"/>
+
+                <LinearLayout
+                    android:id="@+id/modifyUserLogoutDeleteLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/modifyUserLogoutButton"
+                        style="@style/modify_profile_button"
+                        android:text="@string/modify_profile_layout_log_out_button_text" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2" />
+
+                    <Button
+                        android:id="@+id/modifyUserDeleteButton"
+                        style="@style/modify_profile_button"
+                        android:text="@string/modify_profile_layout_delete_button_text" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.core.widget.NestedScrollView>
+
+

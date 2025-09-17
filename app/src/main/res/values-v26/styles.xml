@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="input_phone_number_text_input_edit_text">
+        <item name="android:textSize">@dimen/login_edit_text_values_generic_size</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:autofillHints">phoneNumber</item>
+        <item name="android:ems">10</item>
+        <item name="android:inputType">phone|number</item>
+        <item name="android:maxLength">16</item>
+    </style>
+
+    <!-- DatePickerEditText -->
+    <style name="date_picker_edit_text_general">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:hint">@string/get_birthday_date</item>
+        <item name="android:importantForAutofill">no</item>
+        <item name="android:inputType">none</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/login_edit_text_values_generic_size</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+</resources>

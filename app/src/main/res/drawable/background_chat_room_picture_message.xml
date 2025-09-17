@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/colorWhite" />
+
+    <corners android:radius="@dimen/match_list_item_message_corner_radius" />
+
+    <!--The 1 dp width is the 'purpose' of this drawable. It is needed because sometimes images can
+    show a small white line on their border somewhere when the image doesn't perfectly overlap
+    with the border.-->
+    <stroke android:color="@color/colorTransparent" android:width="1dp"/>
+
+</shape>

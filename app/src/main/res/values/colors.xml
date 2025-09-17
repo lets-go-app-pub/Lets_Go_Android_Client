@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!-- General -->
+    <color name="colorPrimary">@color/second_color</color>
+    <color name="colorPrimaryDark">#014f54</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGrey">#808080</color>
+    <color name="colorDarkGrey">#4d4d4d</color>
+    <color name="colorLightGrey">#DBDBDB</color>
+    <color name="colorLighterGrey">#F0F0F0</color>
+
+    <color name="colorTransparent">#00000000</color>
+
+    <color name="plus_solid_color">#74000000</color>
+
+    <color name="general_text_color">@color/colorGrey</color>
+
+    <color name="activity_icon_color">@color/colorBlack</color>
+
+    <color name="outside_card_background_color">@color/colorWhite</color>
+    <color name="card_background_color">#F3FFFE</color>
+    <color name="general_border_color">#C2CCCB</color> <!--Slightly darker than card_background_color.-->
+
+    <!--Color Scheme-->
+    <color name="first_color">#98B8B7</color> <!--152, 184, 183 -->
+    <color name="second_color">#01848C</color> <!--1, 132, 140 -->
+    <color name="third_color">#C86C17</color> <!--200, 108, 23 -->
+    <color name="fourth_color">#D98350</color> <!--217, 131, 80 -->
+    <color name="fifth_color">#93473A</color> <!--147, 71, 58 -->
+    <color name="sixth_color">#745B5E</color> <!--116, 91, 94 -->
+
+    <!-- 30% tint on color scheme colors. -->
+    <color name="second_color_thirty_percent_tint">#4da9af</color>
+    <color name="third_color_thirty_percent_tint">#e9c4a2</color>
+    <color name="fifth_color_thirty_percent_tint">#b37e75</color>
+
+    <!-- 70% tint on color scheme colors. -->
+    <color name="second_color_seventy_percent_tint">#b3dadd</color>
+
+    <!-- Select method, home screen -->
+    <color name="home_screen_text_color">@color/colorWhite</color>
+
+    <!--Selection Screen -->
+    <color name="selection_screen_activities_border">@color/general_border_color</color>
+
+    <!--Border color for rounded corner borders (dialog buttons for example).-->
+    <color name="color_rounded_corner_borders">@color/colorGrey</color>
+
+    <!--Background and foreground for activities and match screen-->
+    <color name="color_activities_background">#F2F2F2</color>
+
+    <!--Background and foreground for activities and match screen-->
+    <color name="color_grey_background">@color/colorLightGrey</color>
+    <color name="color_activity_box_background">@color/colorLightGrey</color>
+    <color name="color_white_foreground">#F2F2F2</color>
+
+    <!--Background for 'dialog_rounded_corners' layout-->
+    <color name="color_dialog_rounded_corners_solid">@color/colorWhite</color>
+
+    <!--Match list item colors-->
+    <color name="match_list_border_separator_color">@color/colorPrimary</color>
+    <color name="match_list_item_text_color">@color/colorPrimary</color>
+    <color name="match_list_item_matching_user_time_frame_bar">#3875CE</color> <!--NOTE: This hex code is also used in strings.xml. -->
+    <color name="match_list_item_current_user_time_frame_bar">#E29D42</color> <!--NOTE: This hex code is also used in strings.xml. -->
+
+    <!--Background for initial login buttons-->
+    <color name="initial_login_buttons">@color/colorLightGrey</color>
+
+    <!--Chat message adapter, Edit Text layout -->
+    <color name="color_green_check_mark">#009b3b</color>
+    <color name="color_red_close_icon">#f44336</color>
+
+    <color name="color_red_google_icon">#ea4335</color>
+    <color name="color_red_google_icon_center">#b31412</color>
+
+    <color name="message_received_background_color">#E9E9E9</color>
+    <color name="message_received_text_color">@color/colorBlack</color>
+
+    <color name="message_sent_background_color">#275BEB</color>
+    <color name="message_sent_text_color">@color/colorWhite</color>
+
+    <!-- Profile Screen -->
+    <color name="profile_screen_image_view_color">@color/card_background_color</color>
+
+    <!-- Modify Profile Screen -->
+    <color name="modify_profile_background_color">@color/card_background_color</color>
+    <color name="modify_profile_email_verified_border_color">@color/general_border_color</color>
+    <color name="modify_profile_email_verified_color">@color/third_color_thirty_percent_tint</color>
+    <color name="modify_profile_email_not_verified_color">@android:color/holo_red_light</color>
+
+    <!-- Match Made Screen -->
+    <color name="match_made_background_gradient_top">@color/colorPrimary</color>
+    <color name="match_made_background_gradient_bottom">@color/colorWhite</color>
+    <color name="match_made_background_color">@color/card_background_color</color>
+
+    <!-- The two colors below form a triad color scheme with colorPrimary.-->
+    <color name="match_made_button_gradient_start">#E0695E</color>
+    <color name="match_made_button_gradient_end">#C6E031</color>
+    <color name="match_made_keep_swiping_button_background">#e8f1fb</color>
+
+    <!-- Chat Room List-->
+    <color name="chat_room_list_chat_room_item_background_color">@color/colorLighterGrey</color>
+
+    <!-- Match Made Screen-->
+    <color name="match_made_screen_buttons_border">@color/general_border_color</color>
+
+</resources>

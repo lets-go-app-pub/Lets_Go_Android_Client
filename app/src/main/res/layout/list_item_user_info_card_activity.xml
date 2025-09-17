@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/matchListItemWholeCardLinearLayout"
+    android:background="@drawable/background_activity_user_card_border_gradient"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/matchListItemEntireTitleConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_match_list_item_header"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/matchListItemImageImageView"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:contentDescription="@string/match_screen_fragment_activity_image_content_description"
+            android:src="@drawable/a_icon_adventures_boating"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/matchListItemLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingStart="5dp"
+            android:paddingEnd="0dp"
+            android:text="@string/general_placeholder"
+            android:textColor="@color/match_list_item_text_color"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/matchListItemImageImageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/matchListItemChevronImageView"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="5dp"
+            android:contentDescription="@string/match_screen_fragment_chevron_activity_image_content_description"
+            android:src="@android:drawable/arrow_down_float"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/matchListItemLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="3dp">
+
+    </LinearLayout>
+
+</LinearLayout>

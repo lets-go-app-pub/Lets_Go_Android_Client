@@ -86,9 +86,15 @@ Android client for the Lets Go platform. Users pick activities and timeframes, s
 ---
 
 ## Related
-- **Server (C++)** — https://github.com/lets-go-app-pub/Lets_Go_Server  
-- **Desktop Admin (Qt)** — https://github.com/lets-go-app-pub/Lets_Go_Desktop_Interface  
-- **Protobuf Definitions** — https://github.com/lets-go-app-pub/Lets_Go_Protobuf
+
+- **Server (C++)** — stateless hub, gRPC/Protobuf, MongoDB  
+  👉 [`Lets_Go_Server`](https://github.com/lets-go-app-pub/Lets_Go_Server)
+
+- **Desktop Admin (Qt)** — admin/ops console for moderation, events, stats, and controls  
+  👉 [`Lets_Go_Interface`](https://github.com/lets-go-app-pub/Lets_Go_Interface)
+
+- **Protobuf Files** — protobuf files used to communicate between server and clients  
+  👉 [`Lets_Go_Protobuf`](https://github.com/lets-go-app-pub/Lets_Go_Protobuf)
 
 ## Status & compatibility
 Portfolio reference of a completed app. SDK/Gradle versions are legacy; modern toolchains may require updates.

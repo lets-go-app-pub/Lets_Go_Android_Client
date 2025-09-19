@@ -10,12 +10,12 @@ Android client for the Lets Go platform. Users pick activities and timeframes, s
 ## Product snapshots
 
 <p align="center">
-  <img src="docs/images/home_screen.png" alt="Home/Login" width="260">
-  <img src="docs/images/swiping.png" alt="Swipe Cards" width="260">
-  <img src="docs/images/tutorial.png" alt="Timeframe Tutorial" width="260"><br/>
-  <img src="docs/images/user_card.png" alt="User Card" width="260">
-  <img src="docs/images/activities.png" alt="Select Activities" width="260">
-  <img src="docs/images/chat_room.png" alt="Chat Room" width="260">
+  <img src="images/home_screen.png" alt="Home/Login" width="260">
+  <img src="images/swiping.png" alt="Swipe Cards" width="260">
+  <img src="images/tutorial.png" alt="Timeframe Tutorial" width="260"><br/>
+  <img src="images/user_card.png" alt="User Card" width="260">
+  <img src="images/activities.png" alt="Select Activities" width="260">
+  <img src="images/chat_room.png" alt="Chat Room" width="260">
 </p>
 
 > _Tip:_ keep images under `docs/images/` in this repo and reference them as above.

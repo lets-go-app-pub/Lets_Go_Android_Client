@@ -18,8 +18,6 @@ Android client for the Lets Go platform. Users pick activities and timeframes, s
   <img src="images/chat_room.png" alt="Chat Room" width="260">
 </p>
 
-> _Tip:_ keep images under `docs/images/` in this repo and reference them as above.
-
 ---
 
 ## Highlights (skim me)
